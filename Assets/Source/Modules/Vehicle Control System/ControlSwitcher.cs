@@ -12,11 +12,9 @@ public class ControlSwitcher : MonoBehaviour
     [SerializeField] private Vehicle _vehicle;
 
     private IControl _control;
-    private IFollower _follower;
 
     private void Awake()
     {
-        _follower = _camera.TryGetComponent(out IFollower follower) ? follower : throw new ArgumentNullException(nameof(follower));
         _control = _moveInput;
 
         _screen.Hide();
@@ -37,7 +35,7 @@ public class ControlSwitcher : MonoBehaviour
     private void SetVehicle()
     {
         _control.Set(_vehicle.Movable);
-        _follower.SetTarget(_vehicle);
+        _camera.SetTarget(_vehicle);
         _screen.Show();
         _driver.Deactivate();
     }
@@ -45,7 +43,7 @@ public class ControlSwitcher : MonoBehaviour
     private void SetDriver()
     {
         _control.Set(_driver.Movable);
-        _follower.SetTarget(_driver);
+        _camera.SetTarget(_driver);
         _screen.Hide();
         _driver.transform.position = _vehicle.ExitPosition;
         _driver.Activate();
