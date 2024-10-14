@@ -14,7 +14,7 @@ internal class Mover : MonoBehaviour, IMovable
 
     private void Update()
     {
-       Rotate();
+        Rotate();
         Move();
     }
 

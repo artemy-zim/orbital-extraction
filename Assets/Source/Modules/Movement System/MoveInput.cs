@@ -1,19 +1,39 @@
+using AYellowpaper;
 using System;
+using UniRx;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-internal class MoveInput : MonoBehaviour, IControl
+internal class MoveInput : MonoBehaviour
 {
-    private PlayerInput _input;
-    private IMovable _movable;
+    [SerializeField] private InterfaceReference<IMovable, VehicleMover> _vehicle;
+    [SerializeField] private InterfaceReference<IMovable, DriverMover> _driver;
 
-    public void Initialize(IMovable movable, PlayerInput input)
+    private IMovable _currentMovable;
+    private PlayerInput _input;
+
+    private void Awake()
     {
-        _input = input ?? throw new ArgumentNullException(nameof(input));
-        Set(movable);
+        Initialize();
+        Subscribe();
+    }
+
+    private void Subscribe()
+    {
+        MessageBroker.Default.Receive<VehicleControlMessage>()
+            .Subscribe(_ => Set(_vehicle.Value))
+            .AddTo(this);
+
+        MessageBroker.Default.Receive<DriverControlMessage>()
+            .Subscribe(_ => Set(_driver.Value))
+            .AddTo(this);
+    }
+
+    private void Initialize()
+    {
+        _input = new PlayerInput();
 
         _input.Enable();
-
         _input.Player.Move.performed += OnMove;
         _input.Player.Move.canceled += OnMove;
     }
@@ -22,22 +42,22 @@ internal class MoveInput : MonoBehaviour, IControl
     {
         _input.Player.Move.performed -= OnMove;
         _input.Player.Move.canceled -= OnMove;
-
         _input.Disable();
     }
 
-    public void Set(IMovable movable)
+    private void Set(IMovable movable)
     {
-        _movable?.SetDirection(Vector2.zero);
+        _currentMovable?.SetDirection(Vector2.zero);
 
-        _movable = movable ?? throw new ArgumentNullException(nameof(movable));
+        _currentMovable = movable ??
+            throw new ArgumentNullException(nameof(movable));
     }
 
     private void OnMove(InputAction.CallbackContext context)
     {
-        if (_movable == null)
-            throw new InvalidOperationException(nameof(_movable));
+        if (_currentMovable == null)
+            throw new InvalidOperationException(nameof(_currentMovable));
 
-        _movable.SetDirection(context.ReadValue<Vector2>());
+        _currentMovable.SetDirection(context.ReadValue<Vector2>());
     }
 }

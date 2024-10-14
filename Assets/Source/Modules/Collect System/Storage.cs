@@ -7,13 +7,18 @@ internal class Storage : MonoBehaviour
 
     private int _currentValue;
 
-    public int CurrentValue => _currentValue;
+    public int Capacity => _capacity;
 
-    public event Action Changed;
+    public event Action<int> ValueChanged;
 
-    public void OnValidate()
+    private void OnValidate()
     {
         _capacity = Mathf.Clamp(_capacity, 0, int.MaxValue);
+    }
+
+    private void Start()
+    {
+        ValueChanged?.Invoke(_currentValue);
     }
 
     public void Add()
@@ -21,16 +26,13 @@ internal class Storage : MonoBehaviour
         if(_currentValue < _capacity)
         {
             _currentValue++;
-            Changed?.Invoke();
+            ValueChanged?.Invoke(_currentValue);
         }
     }
 
-    public void Remove()
+    public void Clear()
     {
-        if(_currentValue > 0)
-        {
-            _currentValue--;
-            Changed?.Invoke();
-        }
+        _currentValue = 0;
+        ValueChanged?.Invoke(_currentValue);
     }
 }

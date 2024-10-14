@@ -1,29 +1,49 @@
-using System;
 using UnityEngine;
 
-[RequireComponent (typeof(Collider))]
-internal abstract class Collector : MonoBehaviour 
+internal class Collector : MonoBehaviour, ITarget
 {
-    private Collider _collectZone;
+    [SerializeField] private CollectTrigger _trigger;
+    [SerializeField] private Storage _storage;
 
-    public event Action<ICollectable> Collected;
+    private Transform _transform;
 
     private void Awake()
     {
-        _collectZone = GetComponent<Collider>();
-        _collectZone.isTrigger = true;
+        _transform = transform;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnEnable()
     {
-        if(other.TryGetComponent(out ICollectable collectable))
+        _storage.ValueChanged += OnValueChanged;
+        _trigger.Triggered += OnTriggered;
+    }
+
+    private void OnDisable()
+    {
+        _storage.ValueChanged -= OnValueChanged;
+        _trigger.Triggered -= OnTriggered;
+    }
+
+    public Vector3 GetPosition()
+    {
+        return _transform.position;
+    }
+
+    private void OnTriggered(ICollectable collectable)
+    {
+        collectable.OnCollect(this);
+        _storage.Add();
+    }
+
+    private void OnValueChanged(int value)
+    {
+        if(value <= 0)
         {
-            if (CanCollect(collectable))
-            {
-                Collected?.Invoke(collectable);
-            }
+            _trigger.Activate();
+        }
+        else if(value >= _storage.Capacity) 
+        {
+            _trigger.Deactivate();
         }
     }
-
-    protected abstract bool CanCollect(ICollectable collectable);
 }

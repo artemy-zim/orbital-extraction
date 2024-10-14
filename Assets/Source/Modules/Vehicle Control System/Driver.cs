@@ -1,34 +1,44 @@
+using System;
+using UniRx;
 using UnityEngine;
 
-[RequireComponent (typeof(IMovable))]
 [RequireComponent(typeof(Collider))]
-internal class Driver : MonoBehaviour, ICameraTarget
+internal class Driver : Player
 {
-    private Collider _collider;
-    private IMovable _movable;
+    [SerializeField] private Vehicle _vehicle;
 
-    public IMovable Movable => _movable;
+    private Collider _collider;
 
     private void Awake()
     {
-        _movable = GetComponent<IMovable>();
-        _collider = GetComponent<Collider>();
+        _collider = TryGetComponent(out Collider collider)
+            ? collider
+            : throw new ArgumentNullException(nameof(collider));
+
+        Subscribe();
     }
 
-    public void Activate()
+    private void Subscribe()
     {
+        MessageBroker.Default.Receive<VehicleControlMessage>()
+            .Subscribe(_ => Deactivate())
+            .AddTo(this);
+
+        MessageBroker.Default.Receive<DriverControlMessage>()
+            .Subscribe(_ => Activate())
+            .AddTo(this);
+    }
+
+    private void Activate()
+    {
+        transform.position = _vehicle.ExitPosition;
         _collider.enabled = true;
         gameObject.SetActive(true);
     }
 
-    public void Deactivate()
+    private void Deactivate()
     {
         _collider.enabled = false;
         gameObject.SetActive(false);
-    }
-
-    public Vector3 GetPosition()
-    {
-        return transform.position;
     }
 }

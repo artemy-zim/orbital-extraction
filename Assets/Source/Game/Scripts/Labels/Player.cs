@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour, ICameraTarget
+public class Player : MonoBehaviour, ITarget
 {
     public Vector3 GetPosition()
     {

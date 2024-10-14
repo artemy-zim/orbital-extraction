@@ -1,4 +1,5 @@
 using System;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,19 @@ internal class VehicleControlScreen : MonoBehaviour
     [SerializeField] private Button _exitButton;
 
     public event Action ExitButtonClicked;
+
+    private void Awake()
+    {
+        Hide();
+
+        MessageBroker.Default.Receive<VehicleControlMessage>()
+            .Subscribe(_ => Show())
+            .AddTo(this);
+
+        MessageBroker.Default.Receive<DriverControlMessage>()
+            .Subscribe(_ => Hide())
+            .AddTo(this);
+    }
 
     private void OnEnable()
     {
@@ -19,13 +33,13 @@ internal class VehicleControlScreen : MonoBehaviour
         _exitButton.onClick.RemoveListener(OnButtonClick);
     }
 
-    public void Show()
+    private void Show()
     {
         _canvasGroup.alpha = 1f;
         _exitButton.interactable = true;
     }
 
-    public void Hide()
+    private void Hide()
     {
         _canvasGroup.alpha = 0f;
         _exitButton.interactable = false;
