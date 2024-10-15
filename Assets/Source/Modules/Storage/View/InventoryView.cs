@@ -1,18 +1,18 @@
 using UnityEngine;
 
-internal class StorageView : MonoBehaviour
+internal class InventoryView : MonoBehaviour
 {
-    [SerializeField] private Storage _storage;
-    [SerializeField] private StorageSlider _slider;
+    [SerializeField] private Inventory _inventory;
+    [SerializeField] private InventorySlider _slider;
 
     private void OnEnable()
     {
-        _storage.ValueChanged += UpdateView;
+        _inventory.ValueChanged += UpdateView;
     }
 
     private void OnDisable()
     {
-        _storage.ValueChanged -= UpdateView;
+        _inventory.ValueChanged -= UpdateView;
     }
 
     private void UpdateView(int value)
@@ -26,7 +26,7 @@ internal class StorageView : MonoBehaviour
             _slider.Activate();
         }
 
-        float fillValue = (float)value / _storage.Capacity;
+        float fillValue = (float)value / _inventory.Capacity;
 
         _slider.SetValue(fillValue);
     }

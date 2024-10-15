@@ -1,38 +1,32 @@
+using AYellowpaper;
 using UnityEngine;
 
-internal class Collector : MonoBehaviour, ITarget
+internal class Collector : MonoBehaviour
 {
+    [SerializeField] private InterfaceReference<ITarget> _target;
     [SerializeField] private CollectTrigger _trigger;
+
+    [SerializeField] private Inventory _inventory;
     [SerializeField] private Storage _storage;
-
-    private Transform _transform;
-
-    private void Awake()
-    {
-        _transform = transform;
-    }
 
     private void OnEnable()
     {
-        _storage.ValueChanged += OnValueChanged;
+        _inventory.ValueChanged += OnValueChanged;
         _trigger.Triggered += OnTriggered;
     }
 
     private void OnDisable()
     {
-        _storage.ValueChanged -= OnValueChanged;
+        _inventory.ValueChanged -= OnValueChanged;
         _trigger.Triggered -= OnTriggered;
-    }
-
-    public Vector3 GetPosition()
-    {
-        return _transform.position;
     }
 
     private void OnTriggered(ICollectable collectable)
     {
-        collectable.OnCollect(this);
+        collectable.OnCollect(_target.Value);
+        _inventory.Add();
         _storage.Add();
+        
     }
 
     private void OnValueChanged(int value)
@@ -41,7 +35,7 @@ internal class Collector : MonoBehaviour, ITarget
         {
             _trigger.Activate();
         }
-        else if(value >= _storage.Capacity) 
+        else if(value >= _inventory.Capacity) 
         {
             _trigger.Deactivate();
         }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StorageSlider : MonoBehaviour
+public class InventorySlider : MonoBehaviour
 {
     [SerializeField] private Image _fill;
     public float FillAmount => _fill.fillAmount;

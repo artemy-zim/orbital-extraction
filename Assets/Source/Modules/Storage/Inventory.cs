@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-internal class Storage : MonoBehaviour
+internal class Inventory : MonoBehaviour
 {
     [SerializeField] private int _capacity;
 
