@@ -1,9 +1,7 @@
-using AYellowpaper;
 using UnityEngine;
 
 internal class Collector : MonoBehaviour
 {
-    [SerializeField] private InterfaceReference<ITarget> _target;
     [SerializeField] private CollectTrigger _trigger;
 
     [SerializeField] private Inventory _inventory;
@@ -11,33 +9,31 @@ internal class Collector : MonoBehaviour
 
     private void OnEnable()
     {
-        _inventory.ValueChanged += OnValueChanged;
+        _inventory.ValueChanged += HandleInventoryChange;
         _trigger.Triggered += OnTriggered;
     }
 
     private void OnDisable()
     {
-        _inventory.ValueChanged -= OnValueChanged;
+        _inventory.ValueChanged -= HandleInventoryChange;
         _trigger.Triggered -= OnTriggered;
     }
 
     private void OnTriggered(ICollectable collectable)
     {
-        collectable.OnCollect(_target.Value);
-        _inventory.Add();
+        _inventory.Add(collectable);
         _storage.Add();
-        
     }
 
-    private void OnValueChanged(int value)
+    private void HandleInventoryChange(int value)
     {
-        if(value <= 0)
-        {
-            _trigger.Activate();
-        }
-        else if(value >= _inventory.Capacity) 
+        if(value >= _inventory.Capacity)
         {
             _trigger.Deactivate();
+        }
+        else if(value == 0)
+        {
+            _trigger.Activate();
         }
     }
 }

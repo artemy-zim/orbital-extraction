@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour, ICollectable
 {
-    public event Action<ICollectable> Collected;
-
-    public void OnCollect(ITarget collector)
+    public void OnCollect(Cell cell)
     {
         throw new NotImplementedException();
     }

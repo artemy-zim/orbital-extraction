@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Gem : MonoBehaviour, ICollectable, ISpawnable
+public class Gem : MonoBehaviour, ICollectable
 {
     [SerializeField] private PhysicsActivator _physicsActivator;
     [SerializeField] private DistanceThresholdChecker _distanceChecker;
@@ -9,29 +9,27 @@ public class Gem : MonoBehaviour, ICollectable, ISpawnable
     [SerializeField] private float _collectSpeed;
     [SerializeField] private float _collectAcceleration;
 
-    public void OnCollect(ITarget collector)
+    private Transform _transform;
+
+    private void Awake()
     {
-        if (collector == null)
+        _transform = transform;
+    }
+
+    public void OnCollect(Cell cell)
+    {
+        if (cell == null)
             return;
 
+        _transform.SetParent(cell.transform);
         _physicsActivator.Deactivate();
-        StartCoroutine(FollowCoroutine(collector));
-    }
-
-    public void OnSpawn()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnDespawn()
-    {
-        throw new System.NotImplementedException();
+        StartCoroutine(FollowCoroutine(cell));
     }
 
     private IEnumerator FollowCoroutine(ITarget target)
     {
-        IFollower follower = new AcceleratingFollower(transform, target, Vector3.zero, _collectSpeed, _collectAcceleration);
-        _distanceChecker.Init(transform, target);
+        IFollower follower = new AcceleratingFollower(_transform, target, Vector3.zero, _collectSpeed, _collectAcceleration);
+        _distanceChecker.Init(_transform, target);
 
         while (_distanceChecker.IsFar())
         {
@@ -39,8 +37,5 @@ public class Gem : MonoBehaviour, ICollectable, ISpawnable
 
             yield return null;
         }
-
-        _physicsActivator.Activate();
-        Destroy(gameObject);
     }
 }
