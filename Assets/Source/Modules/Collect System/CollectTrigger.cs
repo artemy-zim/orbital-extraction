@@ -30,6 +30,9 @@ internal abstract class CollectTrigger : MonoBehaviour
 
     public void Activate()
     {
+        if (gameObject.activeSelf)
+            return;
+
         gameObject.SetActive(true);
     }
 

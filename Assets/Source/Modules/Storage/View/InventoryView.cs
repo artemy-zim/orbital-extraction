@@ -5,6 +5,11 @@ internal class InventoryView : MonoBehaviour
     [SerializeField] private Inventory _inventory;
     [SerializeField] private InventorySlider _slider;
 
+    private void Awake()
+    {
+        _slider.Deactivate();
+    }
+
     private void OnEnable()
     {
         _inventory.ValueChanged += UpdateView;
@@ -17,17 +22,17 @@ internal class InventoryView : MonoBehaviour
 
     private void UpdateView(int value)
     {
-        if (value <= 0)
-        {
-            _slider.Deactivate();
-        }
-        else if(value > 0) 
-        {
-            _slider.Activate();
-        }
-
         float fillValue = (float)value / _inventory.Capacity;
 
         _slider.SetValue(fillValue);
+
+        if (value > 0)
+        {
+            _slider.Activate();
+        }
+        else
+        {
+            _slider.Deactivate();
+        }
     }
 }
