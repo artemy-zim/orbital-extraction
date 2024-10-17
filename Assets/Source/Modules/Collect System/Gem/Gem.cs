@@ -1,41 +1,40 @@
-using System.Collections;
+using System;
+using UniRx;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class Gem : MonoBehaviour, ICollectable
+public class Gem : Resource
 {
-    [SerializeField] private PhysicsActivator _physicsActivator;
-    [SerializeField] private DistanceThresholdChecker _distanceChecker;
-
     [SerializeField] private float _collectSpeed;
     [SerializeField] private float _collectAcceleration;
 
-    private Transform _transform;
+    private IDisposable _followSubscription;
 
-    private void Awake()
+    protected override void Follow(ITarget target, Transform transform)
     {
-        _transform = transform;
+        IFollower follower = new AcceleratingFollower(transform, target, Vector3.zero, _collectSpeed, _collectAcceleration);
+
+        _followSubscription?.Dispose();
+
+        _followSubscription = Observable.EveryUpdate()
+            .TakeWhile
+            (
+                _ => IsFar(target.GetPosition(), transform.position)
+            )
+            .Subscribe
+            (
+                _ => follower.Follow(),
+                () => transform.rotation = Random.rotation
+            );
     }
 
-    public void OnCollect(Cell cell)
+    private bool IsFar(Vector3 targetPosition, Vector3 position)
     {
-        if (cell == null)
-            return;
-
-        _transform.SetParent(cell.transform);
-        _physicsActivator.Deactivate();
-        StartCoroutine(FollowCoroutine(cell));
+        return Vector3.Distance(targetPosition, position) > 0;
     }
 
-    private IEnumerator FollowCoroutine(ITarget target)
+    private void OnDestroy()
     {
-        IFollower follower = new AcceleratingFollower(_transform, target, Vector3.zero, _collectSpeed, _collectAcceleration);
-        _distanceChecker.Init(_transform, target);
-
-        while (_distanceChecker.IsFar())
-        {
-            follower.Follow();
-
-            yield return null;
-        }
+        _followSubscription?.Dispose();
     }
 }

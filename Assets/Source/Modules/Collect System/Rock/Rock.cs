@@ -1,10 +1,13 @@
-using System;
 using UnityEngine;
 
-public class Rock : MonoBehaviour, ICollectable
+public class Rock : Resource
 {
-    public void OnCollect(Cell cell)
+    protected override void Follow(ITarget target, Transform transform)
     {
-        throw new NotImplementedException();
+        IFollower follower = new LinearFollower(transform, target, Vector3.zero);
+
+        follower.Follow();
+
+        transform.rotation = Random.rotation;
     }
 }
