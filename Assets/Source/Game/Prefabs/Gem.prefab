@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3a150177361ef4d8aa66b4dfcf88e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _physicsActivator:
+    _rigidbody: {fileID: 0}
+    _collider: {fileID: 0}
   _distanceChecker:
     _threshold: 0.1
   _collectSpeed: 35
@@ -160,7 +163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 08c11709d2206954d9930658bbc550f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
