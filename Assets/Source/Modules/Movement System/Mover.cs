@@ -2,7 +2,8 @@ using UnityEngine;
 
 internal class Mover : MonoBehaviour, IMovable
 {
-    [SerializeField] private float _speed;
+    [SerializeField] private float _movementSpeed;
+    [SerializeField] private float _rotationSpeed;
 
     private Transform _transform;
     private Vector3 _direction;
@@ -30,11 +31,11 @@ internal class Mover : MonoBehaviour, IMovable
     {
         Quaternion targetRotation = Quaternion.LookRotation(_direction, Vector3.up);
 
-        _transform.rotation = targetRotation;
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);   
     }
 
     private void Move()
     {
-        _transform.Translate(_speed * Time.deltaTime * _direction, Space.World);
+        _transform.Translate(_movementSpeed * Time.deltaTime * _direction, Space.World);
     }
 }

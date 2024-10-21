@@ -2464,7 +2464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cdade6dde95164c8d6153839f128e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _movementSpeed: 3
+  _rotationSpeed: 5
 --- !u!1 &1091269716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4876,6 +4877,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 4164127920997597970, guid: 00b48c5ba64ec494584591cd6100faca, type: 3}
+      propertyPath: _movementSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164127920997597970, guid: 00b48c5ba64ec494584591cd6100faca, type: 3}
+      propertyPath: _rotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4164187305677104595, guid: 00b48c5ba64ec494584591cd6100faca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.4
