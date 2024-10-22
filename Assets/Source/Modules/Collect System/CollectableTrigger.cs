@@ -1,23 +1,11 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
-internal abstract class CollectTrigger : MonoBehaviour
+internal abstract class CollectableTrigger : TriggerHandler
 {
-    private Collider _collectZone;
-
     public event Action<ICollectable> Triggered;
 
-    private void Awake()
-    {
-        _collectZone = TryGetComponent(out Collider collider)
-            ? collider 
-            : throw new ArgumentNullException(nameof(collider));
-
-        _collectZone.isTrigger = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
+    protected override void TryTrigger(Collider other)
     {
         if (other.TryGetComponent(out ICollectable collectable))
         {

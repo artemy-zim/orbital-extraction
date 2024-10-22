@@ -1,10 +1,10 @@
 using UnityEngine;
-using Vector3 = UnityEngine.Vector3;
 
-internal class ZoneCheckerView : MonoBehaviour
+internal class DriverTriggerView : MonoBehaviour
 {
     [SerializeField] private TakeControlTimer _timer;
-    [SerializeField] private ZoneChecker _zoneChecker;
+    [SerializeField] private DriverTrigger _trigger;
+    [SerializeField] private SphereCollider _collider;
 
     [SerializeField] private LineRenderer _lineRenderer;
     [SerializeField] private float groundOffset;
@@ -19,22 +19,25 @@ internal class ZoneCheckerView : MonoBehaviour
 
     private void OnEnable()
     {
-        _zoneChecker.DriverEntered += Draw;
-        _zoneChecker.DriverExit += Erase;
+        _trigger.EnterTriggered += Draw;
+        _trigger.ExitTriggered += Erase;
         _timer.Completed += Erase;
     }
 
     private void OnDisable()
     {
-        _zoneChecker.DriverEntered -= Draw;
-        _zoneChecker.DriverExit -= Erase;
+        _trigger.EnterTriggered -= Draw;
+        _trigger.ExitTriggered -= Erase;
         _timer.Completed -= Erase;
     }
 
     private void Draw()
     {
         _lineRenderer.positionCount = _vertexCount;
-        Render(_zoneChecker.Center, _zoneChecker.Radius);
+        Vector3 center = _collider.transform.TransformPoint(_collider.center);
+        float radius = _collider.radius * Mathf.Max(_collider.transform.localScale.x, _collider.transform.localScale.y, _collider.transform.localScale.z);
+
+        Render(center, radius);
     }
 
     private void Erase()

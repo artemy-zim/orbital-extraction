@@ -2,7 +2,7 @@ using UnityEngine;
 
 internal class Collector : MonoBehaviour
 {
-    [SerializeField] private CollectTrigger _trigger;
+    [SerializeField] private CollectableTrigger _trigger;
 
     [SerializeField] private Inventory _inventory;
     [SerializeField] private Storage _storage;
