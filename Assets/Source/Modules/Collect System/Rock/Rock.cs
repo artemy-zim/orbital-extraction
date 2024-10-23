@@ -1,13 +1,14 @@
+using System;
+using UniRx;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Rock : Resource
 {
-    protected override void Follow(ITarget target, Transform transform)
+    [SerializeField] private float _speed;
+
+    protected override IFollower CreateFollower(ITarget target, Transform transform)
     {
-        IFollower follower = new LinearFollower(transform, target, Vector3.zero);
-
-        follower.Follow();
-
-        transform.rotation = Random.rotation;
+        return new LinearFollower(transform, target, Vector3.zero, _speed);
     }
 }

@@ -47,13 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3a150177361ef4d8aa66b4dfcf88e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _physicsActivator:
-    _rigidbody: {fileID: 0}
-    _collider: {fileID: 0}
-  _distanceChecker:
-    _threshold: 0.1
-  _collectSpeed: 35
-  _collectAcceleration: 55
+  _speed: 5
+  _acceleration: 55
 --- !u!135 &1091793932829356638
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using UniRx;
 using UnityEngine;
 
 internal class InventoryView : MonoBehaviour
@@ -7,17 +8,9 @@ internal class InventoryView : MonoBehaviour
 
     private void Awake()
     {
-        _slider.Deactivate();
-    }
-
-    private void OnEnable()
-    {
-        _inventory.ValueChanged += UpdateView;
-    }
-
-    private void OnDisable()
-    {
-        _inventory.ValueChanged -= UpdateView;
+        _inventory.ObservableValue
+            .Subscribe(value => UpdateView(value))
+            .AddTo(this);
     }
 
     private void UpdateView(int value)
