@@ -10,6 +10,7 @@ public class Resource : MonoBehaviour, ICollectable
     private Collider _collider;
     private Rigidbody _rigidbody;
     private Transform _transform;
+
     private Follower _follower;
 
     private IDisposable _followSubscription;
