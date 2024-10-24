@@ -5,11 +5,12 @@ using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
-public abstract class Resource : MonoBehaviour, ICollectable
+public class Resource : MonoBehaviour, ICollectable
 {
     private Collider _collider;
     private Rigidbody _rigidbody;
     private Transform _transform;
+    private Follower _follower;
 
     private IDisposable _followSubscription;
 
@@ -26,27 +27,27 @@ public abstract class Resource : MonoBehaviour, ICollectable
         _transform = transform;
     }
 
-    public void OnCollect(Cell cell)
+    public void OnCollect(Cell cell, IFollowStrategy followPolicy)
     {
-        if (cell == null)
+        if (cell == null || followPolicy == null)
             return;
 
         _transform.SetParent(cell.transform);
 
         DisablePhysics();
-        Follow(cell);
+        Follow(cell, followPolicy);
+
+        _transform.rotation = Random.rotation;
     }
 
-    private void Follow(ITarget target)
+    private void Follow(ITarget target, IFollowStrategy followPolicy)
     {
-        IFollower follower = CreateFollower(target, _transform);
+        _follower = new Follower(_transform, target, Vector3.zero, followPolicy);
         _followSubscription?.Dispose();
 
         _followSubscription = Observable.EveryUpdate()
             .TakeWhile(_ => IsFar(target.GetPosition()))
-            .Subscribe(_ => follower.Follow());
-
-        _transform.rotation = Random.rotation;
+            .Subscribe(_ => _follower.Follow());
     }
 
     private void DisablePhysics()
@@ -64,6 +65,4 @@ public abstract class Resource : MonoBehaviour, ICollectable
     {
         _followSubscription?.Dispose();
     }
-
-    protected abstract IFollower CreateFollower(ITarget target, Transform transform);
 }

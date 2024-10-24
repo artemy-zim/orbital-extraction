@@ -1,14 +1,22 @@
 using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.Linq;
 using UniRx;
 using UnityEngine;
 
 internal class GemStorage : Storage
 {
+    [SerializeField] private Vector3 _curveAmplitude;
+    [SerializeField] private float _speed;
+
     [SerializeField] private float _addDelay;
 
-    protected override void ProcessCollectibles(Collection<ICollectable> collectibles, Action<ICollectable> add)
+    protected override IFollowStrategy CreatePolicy()
+    {
+        return new CurveFollower(_speed, _curveAmplitude);
+    }
+
+    protected override void ProcessCollectibles(IReadOnlyCollection<ICollectable> collectibles, Action<ICollectable> Add)
     {
         IObservable<ICollectable> delayedCollectibles = collectibles.Skip(1)
         .ToObservable()
@@ -17,7 +25,7 @@ internal class GemStorage : Storage
 
         Observable.Return(collectibles.First())
             .Concat(delayedCollectibles)
-            .Subscribe(collectible => add(collectible))
+            .Subscribe(collectible => Add(collectible))
             .AddTo(this);
     }
 }

@@ -6,7 +6,6 @@ internal class Collector : MonoBehaviour
     [SerializeField] private CollectableTrigger _trigger;
 
     [SerializeField] private Inventory _inventory;
-    [SerializeField] private ResourceCounter _counter;
 
     private void Awake()
     {
@@ -28,7 +27,6 @@ internal class Collector : MonoBehaviour
     private void OnTriggered(ICollectable collectable)
     {
         _inventory.Add(collectable);
-        _counter.Add();
     }
 
     private void HandleInventoryChange(int value)

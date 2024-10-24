@@ -1,13 +1,21 @@
 using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using UnityEngine;
 
 internal class RockStorage : Storage
 {
-    protected override void ProcessCollectibles(Collection<ICollectable> collectibles, Action<ICollectable> add)
+    [SerializeField] private float _speed;
+
+    protected override IFollowStrategy CreatePolicy()
+    {
+        return new LinearFollower(_speed);
+    }
+
+    protected override void ProcessCollectibles(IReadOnlyCollection<ICollectable> collectibles, Action<ICollectable> Add)
     {
         foreach (var collectable in collectibles)
         {
-            add(collectable);
+            Add(collectable);
         }
     }
 }

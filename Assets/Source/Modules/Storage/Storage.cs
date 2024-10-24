@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using UniRx;
@@ -46,9 +47,10 @@ internal abstract class Storage : MonoBehaviour
             cluster.TryGetNextCell(out cell);
         }
 
-        collectible.OnCollect(cell);
+        collectible.OnCollect(cell, CreatePolicy());
         cell.Put(collectible);
     }
 
-    protected abstract void ProcessCollectibles(Collection<ICollectable> collectibles, Action<ICollectable> add);
+    protected abstract void ProcessCollectibles(IReadOnlyCollection<ICollectable> collectibles, Action<ICollectable> Add);
+    protected abstract IFollowStrategy CreatePolicy();
 }

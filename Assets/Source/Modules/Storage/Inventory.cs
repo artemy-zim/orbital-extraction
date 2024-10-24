@@ -1,20 +1,23 @@
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using UniRx;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public abstract class Inventory : MonoBehaviour
 {
     [SerializeField] private CellPositionRandomizer _cellShuffler;
     [SerializeField] private Cell _prefab;
     [SerializeField] private int _capacity;
 
-    private readonly IReactiveCollection<Cell> _cells = new ReactiveCollection<Cell>();
+    private readonly ReactiveCollection<Cell> _cells = new();
 
     public int Capacity => _capacity;
     public IReadOnlyReactiveProperty<int> ObservableValue => _cells
         .ObserveEveryValueChanged(_ => _cells.Count(cell => !cell.IsEmpty))
         .ToReactiveProperty();
+
+    public event Action ResourceAdded;
 
     private void Awake()
     {
@@ -34,8 +37,10 @@ public class Inventory : MonoBehaviour
 
         Cell cell = _cells.First(cell => cell.IsEmpty);
 
+        collectable.OnCollect(cell, CreatePolicy());
         cell.Put(collectable);
-        collectable.OnCollect(cell);
+
+        ResourceAdded?.Invoke();
     }
 
     public Collection<ICollectable> TakeOutCollectibles()
@@ -47,4 +52,6 @@ public class Inventory : MonoBehaviour
 
         return collectibles;
     }
+
+    protected abstract IFollowStrategy CreatePolicy();
 }
