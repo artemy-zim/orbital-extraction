@@ -1,6 +1,4 @@
-using UnityEngine;
-
 public interface ICollectable 
 {
-    public void OnCollect(Cell cell);
+    public void OnCollect(Cell cell, IFollowStrategy followPolicy);
 }

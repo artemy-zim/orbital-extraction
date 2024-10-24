@@ -1,20 +1,56 @@
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using UniRx;
 using UnityEngine;
 
-internal class Storage : MonoBehaviour
+internal abstract class Storage : MonoBehaviour
 {
-    private int _currentValue;
+    [SerializeField] private CellCluster _prefab;
+    [SerializeField] private CellPositionRandomizer _cellShuffler;
+    [SerializeField] private Vector3 _clusterOffset;
 
-    public event Action<int> ValueChanged;
+    private readonly Collection<CellCluster> _clusters = new();
+    private Transform _transform;
 
-    private void Start()
+    private void Awake()
     {
-        ValueChanged?.Invoke(_currentValue);
+        _transform = transform;
+        CreateCluster(transform.position);
     }
 
-    public void Add()
+    public void Store(Collection<ICollectable> collectibles)
     {
-        _currentValue++;
-        ValueChanged?.Invoke(_currentValue);
+        if (collectibles.Count == 0 || collectibles == null) 
+            return;
+
+        ProcessCollectibles(collectibles, Add);
     }
+
+    private CellCluster CreateCluster(Vector3 position)
+    {
+        CellCluster cluster = Instantiate(_prefab, position, Quaternion.identity, _transform);
+
+        cluster.Init(_cellShuffler);
+        _clusters.Add(cluster);
+        return cluster;
+    }
+
+    private void Add(ICollectable collectible)
+    {
+        CellCluster cluster = _clusters.Last();
+
+        if (cluster.TryGetNextCell(out Cell cell) == false)
+        {
+            cluster = CreateCluster(cluster.transform.position + _clusterOffset);
+            cluster.TryGetNextCell(out cell);
+        }
+
+        collectible.OnCollect(cell, CreatePolicy());
+        cell.Put(collectible);
+    }
+
+    protected abstract void ProcessCollectibles(IReadOnlyCollection<ICollectable> collectibles, Action<ICollectable> Add);
+    protected abstract IFollowStrategy CreatePolicy();
 }

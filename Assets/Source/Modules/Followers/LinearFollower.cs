@@ -1,14 +1,20 @@
 using UnityEngine;
 
-internal class LinearFollower : Follower
+internal class LinearFollower : IFollowStrategy
 {
-    public LinearFollower(Transform transform, ITarget target, Vector3 offset) : base(transform, target, offset) { }
+    private readonly float _speed;
 
-    protected override void TakeStep(Transform transform, Vector3 newPosition)
+    public LinearFollower(float speed)
+    {
+        _speed = Mathf.Clamp(speed, 0, float.MaxValue);
+    }
+
+    public void ApplyMovement(Transform transform, Vector3 targetPosition)
     {
         if (transform == null)
             return;
 
-        transform.position = newPosition;
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, _speed * Time.deltaTime);
     }
+
 }

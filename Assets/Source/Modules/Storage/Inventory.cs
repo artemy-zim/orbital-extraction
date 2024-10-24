@@ -1,20 +1,23 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using UniRx;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public abstract class Inventory : MonoBehaviour
 {
-    [SerializeField] private CellShuffler _cellShuffler;
+    [SerializeField] private CellPositionRandomizer _cellShuffler;
     [SerializeField] private Cell _prefab;
     [SerializeField] private int _capacity;
 
-    private readonly Collection<Cell> _cells = new();
+    private readonly ReactiveCollection<Cell> _cells = new();
 
     public int Capacity => _capacity;
-    private int CurrentAmount => _cells.Count(cell => cell.Collectable != null);
+    public IReadOnlyReactiveProperty<int> ObservableValue => _cells
+        .ObserveEveryValueChanged(_ => _cells.Count(cell => !cell.IsEmpty))
+        .ToReactiveProperty();
 
-    public event Action<int> ValueChanged;
+    public event Action ResourceAdded;
 
     private void Awake()
     {
@@ -22,22 +25,33 @@ public class Inventory : MonoBehaviour
         {
             Cell cell = Instantiate(_prefab, transform, false);
 
+            _cellShuffler.Shuffle(transform.position, cell);
             _cells.Add(cell);
         }
-
-        _cellShuffler.Shuffle(transform.position, _cells);
     }
 
     public void Add(ICollectable collectable)
     {
-        if (CurrentAmount >= Capacity)
+        if (ObservableValue.Value >= Capacity)
             return;
 
-        Cell cell = _cells.First(cell => cell.Collectable == null);
+        Cell cell = _cells.First(cell => cell.IsEmpty);
 
+        collectable.OnCollect(cell, CreatePolicy());
         cell.Put(collectable);
-        collectable.OnCollect(cell);
 
-        ValueChanged?.Invoke(CurrentAmount);
+        ResourceAdded?.Invoke();
     }
+
+    public Collection<ICollectable> TakeOutCollectibles()
+    {
+        Collection<ICollectable> collectibles = _cells
+            .Where(cell => cell.IsEmpty == false)
+            .Select(cell => cell.TakeOut())
+            .ToReactiveCollection();
+
+        return collectibles;
+    }
+
+    protected abstract IFollowStrategy CreatePolicy();
 }

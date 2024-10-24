@@ -1,23 +1,23 @@
 using UnityEngine;
 
-internal class AcceleratingFollower : Follower
+internal class AcceleratingFollower : IFollowStrategy
 {
     private float _speed;
     private readonly float _acceleration;
 
-    public AcceleratingFollower(Transform transform, ITarget target, Vector3 offset, float speed, float acceleration) : base(transform, target, offset)
+    public AcceleratingFollower(float speed, float acceleration)
     {
         _speed = Mathf.Clamp(speed, 0, float.MaxValue);
         _acceleration = Mathf.Clamp(acceleration, 0, float.MaxValue);
     }
 
-    protected override void TakeStep(Transform transform, Vector3 newPosition)
+    public void ApplyMovement(Transform transform, Vector3 targetPosition)
     {
-        if (transform == null)
+        if(transform == null) 
             return;
 
-        _speed += _acceleration * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, _speed * Time.deltaTime);
 
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, _speed * Time.deltaTime);
+        _speed += _acceleration * Time.deltaTime;
     }
 }

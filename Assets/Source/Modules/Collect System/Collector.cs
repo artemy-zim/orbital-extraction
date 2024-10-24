@@ -1,28 +1,32 @@
+using UniRx;
 using UnityEngine;
 
 internal class Collector : MonoBehaviour
 {
-    [SerializeField] private CollectTrigger _trigger;
+    [SerializeField] private CollectableTrigger _trigger;
 
     [SerializeField] private Inventory _inventory;
-    [SerializeField] private Storage _storage;
+
+    private void Awake()
+    {
+        _inventory.ObservableValue
+            .Subscribe(value => HandleInventoryChange(value))
+            .AddTo(this);
+    }
 
     private void OnEnable()
     {
-        _inventory.ValueChanged += HandleInventoryChange;
         _trigger.Triggered += OnTriggered;
     }
 
     private void OnDisable()
     {
-        _inventory.ValueChanged -= HandleInventoryChange;
         _trigger.Triggered -= OnTriggered;
     }
 
     private void OnTriggered(ICollectable collectable)
     {
         _inventory.Add(collectable);
-        _storage.Add();
     }
 
     private void HandleInventoryChange(int value)
