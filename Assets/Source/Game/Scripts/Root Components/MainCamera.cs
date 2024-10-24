@@ -10,7 +10,7 @@ public class MainCamera : MonoBehaviour
     [SerializeField] private Vector3 _offset;
     [SerializeField] float _smoothTime;
 
-    private IFollower _follower;
+    private Follower _follower;
 
     private void Awake()
     {
@@ -20,7 +20,7 @@ public class MainCamera : MonoBehaviour
 
     private void Initialize(ITarget target)
     {
-        _follower = new SmoothFollower(transform, target, _offset, _smoothTime);
+        _follower = new Follower(transform, target, _offset, new SmoothFollower(_smoothTime));
         transform.LookAt(target.GetPosition());
     }
 
