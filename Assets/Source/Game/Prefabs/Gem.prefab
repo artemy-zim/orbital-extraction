@@ -47,8 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3a150177361ef4d8aa66b4dfcf88e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
-  _acceleration: 55
+  _physicsSwitcher:
+    _collider: {fileID: 1091793932829356638}
+    _rigidbody: {fileID: 2657320230216821244}
 --- !u!135 &1091793932829356638
 SphereCollider:
   m_ObjectHideFlags: 0

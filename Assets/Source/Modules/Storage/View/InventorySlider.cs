@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class InventorySlider : MonoBehaviour
 {
     [SerializeField] private Image _fill;
+
     public float FillAmount => _fill.fillAmount;
 
     public void SetValue(float value)
