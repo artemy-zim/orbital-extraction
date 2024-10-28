@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5787e0e573b78794480e42c90368fa9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _physicsSwitcher:
+    _collider: {fileID: 3717245809474185996}
+    _rigidbody: {fileID: 6923853855551933106}
 --- !u!65 &3717245809474185996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,7 +162,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8839151427265571731}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

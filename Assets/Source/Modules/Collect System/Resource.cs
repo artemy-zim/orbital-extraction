@@ -3,12 +3,10 @@ using UniRx;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Rigidbody))]
 public class Resource : MonoBehaviour, ICollectable
 {
-    private Collider _collider;
-    private Rigidbody _rigidbody;
+    [SerializeField] private PhysicsSwitcher _physicsSwitcher;
+
     private Transform _transform;
     private Follower _follower;
 
@@ -16,14 +14,6 @@ public class Resource : MonoBehaviour, ICollectable
 
     private void Awake()
     {
-        _collider = TryGetComponent(out Collider collider) 
-            ? collider
-            : throw new ArgumentNullException(nameof(collider));
-
-        _rigidbody = TryGetComponent(out Rigidbody rigidbody)
-            ? rigidbody
-            : throw new ArgumentNullException(nameof(rigidbody));
-
         _transform = transform;
     }
 
@@ -34,7 +24,7 @@ public class Resource : MonoBehaviour, ICollectable
 
         _transform.SetParent(cell.transform);
 
-        DisablePhysics();
+        _physicsSwitcher.DisablePhysics();
         Follow(cell, followPolicy);
 
         _transform.rotation = Random.rotation;
@@ -48,12 +38,6 @@ public class Resource : MonoBehaviour, ICollectable
         _followSubscription = Observable.EveryUpdate()
             .TakeWhile(_ => IsFar(target.GetPosition()))
             .Subscribe(_ => _follower.Follow());
-    }
-
-    private void DisablePhysics()
-    {
-        _collider.enabled = false;
-        _rigidbody.isKinematic = true;
     }
 
     private bool IsFar(Vector3 targetPosition)

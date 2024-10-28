@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class PhysicsSwitcher : MonoBehaviour
+[Serializable]
+public class PhysicsSwitcher
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Collider _collider;
+    [SerializeField] private Rigidbody _rigidbody;
+
+    public void EnablePhysics() 
     {
-        
+        _collider.enabled = true;
+        _rigidbody.isKinematic = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisablePhysics()
     {
-        
+        _collider.enabled = false;
+        _rigidbody.isKinematic = true;
     }
 }
