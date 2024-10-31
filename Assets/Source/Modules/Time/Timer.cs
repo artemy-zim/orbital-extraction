@@ -4,18 +4,17 @@ using UnityEngine;
 
 public abstract class Timer : MonoBehaviour
 {
-    [SerializeField] private float _value;
-
     private Coroutine _tickCoroutine;
+    private float _value;
 
     public float DefaultValue => _value;
 
     public event Action Completed;
     public event Action<float> Ticking;
 
-    private void OnValidate()
+    protected void Init(float value)
     {
-        _value = Mathf.Clamp(_value, 0, float.MaxValue);
+        _value = Mathf.Clamp(value, 0, float.MaxValue); 
     }
 
     protected void Launch()
@@ -23,15 +22,6 @@ public abstract class Timer : MonoBehaviour
         Reset();
 
         _tickCoroutine = StartCoroutine(OnTickCoroutine());
-    }
-
-    protected void Reset()
-    {
-        if(_tickCoroutine != null)
-        {
-            Ticking?.Invoke(_value);
-            StopCoroutine(_tickCoroutine);
-        }
     }
 
     private IEnumerator OnTickCoroutine()
@@ -49,6 +39,16 @@ public abstract class Timer : MonoBehaviour
         Reset();
         Completed?.Invoke();
     }
+
+    protected void Reset()
+    {
+        if (_tickCoroutine != null)
+        {
+            Ticking?.Invoke(_value);
+            StopCoroutine(_tickCoroutine);
+        }
+    }
+
 
     protected abstract void OnEnable();
     protected abstract void OnDisable();

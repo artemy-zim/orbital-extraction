@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameplayTimerView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private GameplayTimer _timer;
+    [SerializeField] private Timer _timer;
 
     private readonly int _secondsPerMinute = 60;
 
@@ -20,6 +20,8 @@ public class GameplayTimerView : MonoBehaviour
 
     private void UpdateView(float value)
     {
+        value = Mathf.CeilToInt(value);
+
         int minutes = Mathf.FloorToInt(value / _secondsPerMinute);
         int seconds = Mathf.FloorToInt(value % _secondsPerMinute);
 

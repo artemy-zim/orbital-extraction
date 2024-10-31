@@ -36,13 +36,13 @@ internal class VehicleControlScreen : MonoBehaviour
     private void Show()
     {
         _canvasGroup.alpha = 1f;
-        _exitButton.interactable = true;
+        _canvasGroup.interactable = true;
     }
 
     private void Hide()
     {
         _canvasGroup.alpha = 0f;
-        _exitButton.interactable = false;
+        _canvasGroup.interactable = false;
     }
 
     private void OnButtonClick()

@@ -38,4 +38,9 @@ public class PanelAnimator : MonoBehaviour
             .SetAutoKill(false)
             .Pause();
     }
+
+    private void OnDestroy()
+    {
+        _sequence.Kill();
+    }
 }

@@ -1,9 +1,14 @@
-
 using UnityEngine;
 
 internal class TakeControlTimer : Timer
 {
     [SerializeField] private DriverTrigger _trigger;
+    [SerializeField] private float _value;
+
+    private void Awake()
+    {
+        Init(_value);
+    }
 
     protected override void OnEnable()
     {

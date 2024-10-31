@@ -1,11 +1,21 @@
 using System;
 using UnityEngine;
 
-[Serializable]
 public class PhysicsSwitcher
 {
-    [SerializeField] private Collider _collider;
-    [SerializeField] private Rigidbody _rigidbody;
+    private readonly Collider _collider;
+    private readonly Rigidbody _rigidbody;
+
+    public PhysicsSwitcher(Collider collider, Rigidbody rigidbody)
+    {
+        _collider = collider != null 
+            ? collider 
+            : throw new ArgumentNullException(nameof(collider));
+
+        _rigidbody = rigidbody != null 
+            ? rigidbody 
+            : throw new ArgumentNullException(nameof(rigidbody));
+    }
 
     public void EnablePhysics() 
     {
