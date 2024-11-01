@@ -5,8 +5,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(CanvasGroup))]
 public class SettingsWindow : MonoBehaviour
 {
-    [SerializeField] private Button _exitButton;
-    [SerializeField] private Button _settingsButton;
+    [SerializeField] private Button _hideButton;
+    [SerializeField] private Button _showButton;
 
     private CanvasGroup _canvasGroup;
 
@@ -21,14 +21,14 @@ public class SettingsWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        _settingsButton.onClick.AddListener(Show);
-        _exitButton.onClick.AddListener(Hide);
+        _showButton.onClick.AddListener(Show);
+        _hideButton.onClick.AddListener(Hide);
     }
 
     private void OnDisable()
     {
-        _settingsButton.onClick.RemoveListener(Show);
-        _exitButton.onClick.RemoveListener(Hide);
+        _showButton.onClick.RemoveListener(Show);
+        _hideButton.onClick.RemoveListener(Hide);
     }
 
     private void Show()

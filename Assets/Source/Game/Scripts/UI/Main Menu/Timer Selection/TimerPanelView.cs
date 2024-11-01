@@ -6,7 +6,7 @@ public class TimerPanelView : MonoBehaviour
 {
     [SerializeField] private Button _playButton;
 
-    [SerializeField] private Button _timerSelectShowButton;
+    [SerializeField] private Button _showButton;
     [SerializeField] private PanelAnimator _panelAnimator;
 
     private void Awake()
@@ -20,12 +20,12 @@ public class TimerPanelView : MonoBehaviour
 
     private void OnEnable()
     {
-        _timerSelectShowButton.onClick.AddListener(_panelAnimator.Play);
+        _showButton.onClick.AddListener(_panelAnimator.Play);
     }
 
     private void OnDisable()
     {
-        _timerSelectShowButton.onClick.RemoveListener(_panelAnimator.Play);
+        _showButton.onClick.RemoveListener(_panelAnimator.Play);
     }
 
     private void TryActivatePlayButton(int minutes)

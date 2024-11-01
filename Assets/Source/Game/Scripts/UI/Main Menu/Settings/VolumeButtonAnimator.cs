@@ -1,24 +1,22 @@
+using AYellowpaper;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class VolumeButtonAnimator : MonoBehaviour
 {
     [SerializeField] private AudioPanel _audioPanel;
 
-    [SerializeField] private Image _iconOn;
-    [SerializeField] private Image _iconOff;
+    [SerializeField] private InterfaceReference<IAnimatable> _animatable;
     [SerializeField, Min(0)] private float _duration;
+    [SerializeField] private float _distanceX;
 
-    private float _iconsDistance;
-    private float _iconOnInitialPositionX;
-    private float _iconOffInitialPositionX;
+    private RectTransform _transform;
+    private float _initialPositionX;
 
     private void Awake()
     {
-        _iconsDistance = Mathf.Abs(_iconOn.rectTransform.localPosition.x - _iconOff.rectTransform.localPosition.x);
-        _iconOnInitialPositionX = _iconOn.rectTransform.localPosition.x;
-        _iconOffInitialPositionX = _iconOff.rectTransform.localPosition.x;
+        _transform = _animatable.Value.GetTransform() as RectTransform;
+        _initialPositionX = _transform.localPosition.x;
     }
 
     private void OnEnable()
@@ -33,28 +31,11 @@ public class VolumeButtonAnimator : MonoBehaviour
 
     private void OnVolumeToggled(bool isVolumeOn)
     {
-        float distance = GetMoveDistance(isVolumeOn);
+        float distance = isVolumeOn ? -_distanceX : 0;
 
-        Play(distance);
-    }
+        _transform.DOLocalMoveX(_initialPositionX + distance, _duration)
+            .SetEase(Ease.InOutQuad);
 
-    private float GetMoveDistance(bool isVolumeOn)
-    {
-        return isVolumeOn ? -_iconsDistance : 0;
-    }
-
-    private void Play(float distance)
-    {
-        float targetPosIconOn = _iconOnInitialPositionX + distance;
-        float targetPosIconOff = _iconOffInitialPositionX + distance;
-
-        _iconOn.rectTransform.DOLocalMoveX(targetPosIconOn, _duration).SetEase(Ease.InOutQuad);
-        _iconOff.rectTransform.DOLocalMoveX(targetPosIconOff, _duration).SetEase(Ease.InOutQuad);
-    }
-
-    private void OnDestroy()
-    {
-        _iconOn.rectTransform.DOKill();
-        _iconOff.rectTransform.DOKill();
+        Debug.Log(distance);
     }
 }

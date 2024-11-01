@@ -12,8 +12,8 @@ public class MainMenuWindow : MonoBehaviour
 
     [SerializeField] private Button _exitSettingsButton;
     [SerializeField] private Button _exitTimerSelectButton;
-    //[SerializeField] private Button _exitLeaderboardButton;
-    //[SerializeField] private Button _exitShopButton;
+    [SerializeField] private Button _exitLeaderboardButton;
+    [SerializeField] private Button _exitShopButton;
 
     private CanvasGroup _canvasGroup;
 
@@ -35,8 +35,8 @@ public class MainMenuWindow : MonoBehaviour
 
         _exitSettingsButton.onClick.AddListener(Show);
         _exitTimerSelectButton.onClick.AddListener(Show);
-        //_exitLeaderboardButton.onClick.AddListener(Show);
-        //_exitShopButton.onClick.AddListener(Show);
+        _exitLeaderboardButton.onClick.AddListener(Show);
+        _exitShopButton.onClick.AddListener(Show);
     }
 
     private void OnDisable()
@@ -48,8 +48,8 @@ public class MainMenuWindow : MonoBehaviour
 
         _exitSettingsButton.onClick.RemoveListener(Show);
         _exitTimerSelectButton.onClick.RemoveListener(Show);
-        //_exitLeaderboardButton.onClick.RemoveListener(Show);
-        //_exitShopButton.onClick.RemoveListener(Show);
+        _exitLeaderboardButton.onClick.RemoveListener(Show);
+        _exitShopButton.onClick.RemoveListener(Show);
     }
 
     private void Show()

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(CanvasGroup))]
 public class TimerWindow : MonoBehaviour
 {
-    [SerializeField] private Button _exitButton;
-    [SerializeField] private Button _timerSelectButton;
+    [SerializeField] private Button _hideButton;
+    [SerializeField] private Button _showButton;
 
     private CanvasGroup _canvasGroup;
 
@@ -21,14 +21,14 @@ public class TimerWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        _timerSelectButton.onClick.AddListener(Show);
-        _exitButton.onClick.AddListener(Hide);
+        _showButton.onClick.AddListener(Show);
+        _hideButton.onClick.AddListener(Hide);
     }
 
     private void OnDisable()
     {
-        _timerSelectButton.onClick.RemoveListener(Show);
-        _exitButton.onClick.RemoveListener(Hide);
+        _showButton.onClick.RemoveListener(Show);
+        _hideButton.onClick.RemoveListener(Hide);
     }
 
     private void Show()
