@@ -5,12 +5,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(CanvasGroup))]
 public class PauseWindow : MonoBehaviour
 {
-    [SerializeField] private Button _pauseButton;
-    [SerializeField] private PausePanel _pausePanel;
+    [SerializeField] private Button _showButton;
+    [SerializeField] private Button _hideButton;
 
     private CanvasGroup _canvasGroup;
-
-    public event Action PauseButtonClicked;
 
     private void Awake()
     {
@@ -23,20 +21,14 @@ public class PauseWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        _pauseButton.onClick.AddListener(OnButtonClick);
-        _pausePanel.ContinueButtonClicked += Hide;
+        _showButton.onClick.AddListener(Show);
+        _hideButton.onClick.AddListener(Hide);
     }
 
     private void OnDisable()
     {
-        _pauseButton.onClick.RemoveListener(OnButtonClick);
-        _pausePanel.ContinueButtonClicked += Hide;
-    }
-
-    private void OnButtonClick()
-    {
-        PauseButtonClicked?.Invoke();
-        Show();
+        _showButton.onClick.RemoveListener(Show);
+        _hideButton.onClick.RemoveListener(Hide);
     }
 
     private void Hide()
@@ -51,6 +43,5 @@ public class PauseWindow : MonoBehaviour
         _canvasGroup.alpha = 1f;
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
-        _pausePanel.OnShow();
     }
 }

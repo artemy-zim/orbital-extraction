@@ -1,57 +1,29 @@
-using System;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 
 public class AudioPanel : MonoBehaviour
 {
     [SerializeField] private AudioMixer _mixer;
 
-    [SerializeField] private Slider _musicSlider;
-    [SerializeField] private Slider _effectsSlider;
-    [SerializeField] private Slider _interfaceSlider;
-    [SerializeField] private Button _volumeButton;
-
-    private bool _isVolumeOn;
-
-    public event Action<bool> VolumeToggled;
-
-    private void Awake()
-    {
-        _isVolumeOn = false;
-        ToggleVolume();
-    }
+    [SerializeField] private MusicVolume _musicVolume;
+    [SerializeField] private EffectsVolume _effectsVolume;
+    [SerializeField] private InterfaceVolume _interfaceVolume;
+    [SerializeField] private MasterVolume _masterVolume;
 
     private void OnEnable()
     {
-        _musicSlider.onValueChanged.AddListener(value => ChangeVolume(AudioMixerData.Params.MusicVolume, value));
-        _effectsSlider.onValueChanged.AddListener(value => ChangeVolume(AudioMixerData.Params.EffectsVolume, value));
-        _interfaceSlider.onValueChanged.AddListener(value => ChangeVolume(AudioMixerData.Params.InterfaceVolume, value));
-        _volumeButton.onClick.AddListener(ToggleVolume);
+        _musicVolume.Changed += ChangeVolume;
+        _effectsVolume.Changed += ChangeVolume;
+        _interfaceVolume.Changed += ChangeVolume;
+        _masterVolume.Changed += ChangeVolume;
     }
 
     private void OnDisable()
     {
-        _musicSlider.onValueChanged.RemoveListener(value => ChangeVolume(AudioMixerData.Params.MusicVolume, value));
-        _effectsSlider.onValueChanged.RemoveListener(value => ChangeVolume(AudioMixerData.Params.EffectsVolume, value));
-        _interfaceSlider.onValueChanged.RemoveListener(value => ChangeVolume(AudioMixerData.Params.InterfaceVolume, value));
-        _volumeButton.onClick.RemoveListener(ToggleVolume);
-    }
-
-    private void ToggleVolume()
-    {
-        _isVolumeOn = !_isVolumeOn;
-        ChangeVolume(AudioMixerData.Params.MasterVolume, GetToggleValue());
-
-        VolumeToggled?.Invoke(_isVolumeOn);
-    }
-
-    private float GetToggleValue()
-    {
-        float minValue = -80f;
-        float maxValue = 0f;
-
-        return _isVolumeOn ? maxValue : minValue;
+        _musicVolume.Changed -= ChangeVolume;
+        _effectsVolume.Changed -= ChangeVolume;
+        _interfaceVolume.Changed -= ChangeVolume;
+        _masterVolume.Changed -= ChangeVolume;
     }
 
     private void ChangeVolume(string parameterName, float value)
@@ -59,5 +31,7 @@ public class AudioPanel : MonoBehaviour
         int volumeScalingFactor = 20;
 
         _mixer.SetFloat(parameterName, volumeScalingFactor * Mathf.Log10(value));
+
+        PlayerPrefs.SetFloat(parameterName, value);
     }
 }

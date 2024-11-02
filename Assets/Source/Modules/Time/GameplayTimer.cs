@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameplayTimer : Timer
 {
-    [SerializeField] private GameLevel _level;
+    [SerializeField] private Game _game;
 
     private readonly int _secondsPerMinute = 60;
 
@@ -13,11 +13,11 @@ public class GameplayTimer : Timer
 
     protected override void OnEnable()
     {
-        _level.Started += Launch;
+        _game.Started += Launch;
     }
 
     protected override void OnDisable()
     {
-        _level.Started -= Launch;
+        _game.Started -= Launch;
     }
 }
