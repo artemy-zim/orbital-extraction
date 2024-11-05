@@ -33,11 +33,11 @@ public abstract class VolumeButton : MonoBehaviour
 
         if (PlayerPrefs.HasKey(parameter))
         {
-            CallEvents(parameter, PlayerPrefs.GetFloat(parameter));
+            SetValue(parameter, PlayerPrefs.GetFloat(parameter));
         }
         else
         {
-            CallEvents(parameter, _onValue);
+            SetValue(parameter, _onValue);
         }
     }
 
@@ -47,13 +47,11 @@ public abstract class VolumeButton : MonoBehaviour
 
         if(PlayerPrefs.GetFloat(parameter) == _onValue)
         {
-            PlayerPrefs.SetFloat(parameter, _offValue);
-            CallEvents(parameter, _offValue);
+            SetValue(parameter, _offValue);
         }
         else
         {
-            PlayerPrefs.SetFloat(parameter, _onValue);
-            CallEvents(parameter, _onValue);
+            SetValue(parameter, _onValue);
         }
     }
 
@@ -62,8 +60,9 @@ public abstract class VolumeButton : MonoBehaviour
         return value == _onValue;
     }
 
-    private void CallEvents(string parameter, float value)
+    private void SetValue(string parameter, float value)
     {
+        PlayerPrefs.SetFloat(parameter, value);
         Changed?.Invoke(parameter, value);
         Toggled?.Invoke(GetToggleValue(value));
     }
