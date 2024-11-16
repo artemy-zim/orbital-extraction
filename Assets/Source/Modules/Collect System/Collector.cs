@@ -4,12 +4,11 @@ using UnityEngine;
 internal class Collector : MonoBehaviour
 {
     [SerializeField] private CollectableTrigger _trigger;
-
     [SerializeField] private Inventory _inventory;
 
     private void Awake()
     {
-        _inventory.ObservableValue
+        _inventory.CurrentAmount
             .Subscribe(value => HandleInventoryChange(value))
             .AddTo(this);
     }

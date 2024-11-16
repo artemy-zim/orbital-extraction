@@ -50,6 +50,12 @@ MonoBehaviour:
   _physicsSwitcher:
     _collider: {fileID: 2178762210497400196}
     _rigidbody: {fileID: 2657320230216821244}
+  _impulseApplier:
+    _minForce: 45
+    _maxForce: 75
+    _radius: 4
+    _upwardsModifier: 1
+  _rigidbody: {fileID: 2657320230216821244}
 --- !u!136 &2178762210497400196
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -81,7 +87,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929799638295659827}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 4
   m_Drag: 0.5
   m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -99,7 +105,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &5789884387192401915
 GameObject:
   m_ObjectHideFlags: 0

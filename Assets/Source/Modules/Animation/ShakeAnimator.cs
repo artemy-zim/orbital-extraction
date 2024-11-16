@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShakeAnimator : MonoBehaviour
 {
-    [SerializeField] private InterfaceReference<IAnimatable> _animatable;
+    [SerializeField] private InterfaceReference<ITransformable> _animatable;
 
     [SerializeField] private Vector3 _angle;
     [SerializeField] private float _shakeDuration;

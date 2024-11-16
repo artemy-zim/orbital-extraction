@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using UniRx;
 using UnityEngine;
 
 public class CellCluster : MonoBehaviour
@@ -11,7 +12,10 @@ public class CellCluster : MonoBehaviour
     [SerializeField] private float _width;
     [SerializeField] private float _length;
 
-    private readonly ICollection<Cell> _cells = new Collection<Cell>();
+    private readonly Collection<Cell> _cells = new();
+
+    public bool HasEmptyCell => _cells.Any(cell => cell.IsEmpty);
+    public bool HasFilledCell => _cells.Any(cell => cell.IsEmpty == false);
     
     public void Init(CellPositionRandomizer shuffler)
     {
@@ -24,13 +28,14 @@ public class CellCluster : MonoBehaviour
         }
     }
 
-    public bool TryGetNextCell(out Cell cell)
+    public Cell GetNextEmptyCell()
     {
-        cell = _cells.Where(cell => cell.IsEmpty)
-                  .OrderBy(_ => Random.value)
-                  .FirstOrDefault();
+        return _cells.FirstOrDefault(cell => cell.IsEmpty);
+    }
 
-        return cell != null;
+    public Cell GetLastFilledCell()
+    {
+        return _cells.LastOrDefault(cell => cell.IsEmpty == false);
     }
 
     private Vector3 GenerateCellPosition()

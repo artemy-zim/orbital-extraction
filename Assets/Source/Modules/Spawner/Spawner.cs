@@ -1,37 +1,45 @@
-using System;
 using UnityEngine;
-using UnityEngine.Pool;
 
-internal abstract class Spawner<T> : MonoBehaviour where T : MonoBehaviour, ISpawnable 
+internal class Spawner<T> : MonoBehaviour where T : MonoBehaviour, ISpawnable
 {
     [SerializeField] private T _prefab;
-    [SerializeField] private int _poolSize;
-    [SerializeField] private int _poolMaxSize;
+    [SerializeField] private Transform _container;
+    [SerializeField] private float _chance;
 
-    private ObjectPool<T> _pool;
+    [SerializeField] private TargetTrigger _targetTrigger;
 
-    private void Awake()
+    private readonly float _minChance = 0f;
+    private readonly float _maxChance = 100f;
+
+    private void OnValidate()
     {
-        _pool = new ObjectPool<T>(
-            createFunc: () => Instantiate(_prefab),
-            actionOnGet: (spawnable) => Spawn(spawnable),
-            actionOnRelease: (spawnable) => spawnable.OnDespawn(),
-            actionOnDestroy: (spawnable) => Destroy(spawnable),
-            collectionCheck: true,
-            defaultCapacity: _poolSize,
-            maxSize: _poolMaxSize
-            );
+        _chance = Mathf.Clamp(_chance, _minChance, _maxChance);
     }
 
-    private void Release()
+    private void OnEnable()
     {
-        throw new NotImplementedException(nameof(Release));
+        _targetTrigger.Triggered += Spawn;
     }
 
-    private void Get()
+    private void OnDisable()
     {
-        _pool.Get();
+        _targetTrigger.Triggered -= Spawn;
     }
 
-    protected abstract void Spawn(T prefab);
+    private void Spawn(ITarget target)
+    {
+        if (CanSpawn())
+        {
+            Vector3 position = target.GetPosition();
+            T spawnable = Instantiate(_prefab, _container);
+
+            spawnable.transform.position = position;
+            spawnable.OnSpawn();
+        }
+    }
+
+    private bool CanSpawn()
+    {
+        return Random.Range(_minChance, _maxChance) <= _chance;
+    }
 }

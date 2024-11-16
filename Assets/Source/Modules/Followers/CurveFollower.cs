@@ -1,7 +1,6 @@
-using TMPro;
 using UnityEngine;
 
-public class CurveFollower : IFollowStrategy
+internal class CurveFollower : BaseFollower
 {
     private const float ProgressMaxValue = 1f;
     private const float ProgressMinValue = 0f;
@@ -13,13 +12,14 @@ public class CurveFollower : IFollowStrategy
     private Vector3 _currentTargetPosition;
     private float _progress;
 
-    public CurveFollower(float speed, Vector3 curveAmplitude)
+    public CurveFollower(ITarget target, Vector3 offset, float speed, Vector3 curveAmplitude, IFollowStrategy innerFollower = null) 
+        : base(target, offset, innerFollower)
     {
         _speed = Mathf.Clamp(speed, 0, float.MaxValue);
         _curveAmplitude = curveAmplitude;
     }
 
-    public void ApplyMovement(Transform transform, Vector3 targetPosition)
+    protected override void Move(Transform transform, Vector3 targetPosition)
     {
         UpdateStartPosition(transform, targetPosition);
 

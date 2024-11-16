@@ -9,7 +9,7 @@ public class ResourceCounterView : MonoBehaviour
 
     private void Start()
     {
-        _counter.CurrentValue
+        _counter.Amount
             .Subscribe(value => UpdateView(value))
             .AddTo(this);
     }

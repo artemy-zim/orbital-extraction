@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    [SerializeField] private InterfaceReference<IAnimatable> _animatable;
+    [SerializeField] private InterfaceReference<ITransformable> _animatable;
 
     [SerializeField] private float _speed;
     [SerializeField] private Vector3 _angle;

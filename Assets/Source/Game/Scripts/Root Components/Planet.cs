@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Planet : MonoBehaviour, IAnimatable
+public class Planet : MonoBehaviour, ITransformable
 {
     public Transform GetTransform()
     {

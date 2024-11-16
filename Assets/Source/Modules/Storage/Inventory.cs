@@ -10,14 +10,14 @@ public abstract class Inventory : MonoBehaviour
     [SerializeField] private Cell _prefab;
     [SerializeField] private int _capacity;
 
-    private readonly ReactiveCollection<Cell> _cells = new();
+    private readonly Collection<Cell> _cells = new();
+
+    private readonly ReactiveProperty<int> _currentAmountProperty = new(0);
+    private readonly Subject<Unit> _resourceAddedSubject = new();
 
     public int Capacity => _capacity;
-    public IReadOnlyReactiveProperty<int> ObservableValue => _cells
-        .ObserveEveryValueChanged(_ => _cells.Count(cell => !cell.IsEmpty))
-        .ToReactiveProperty();
-
-    public event Action ResourceAdded;
+    public IReadOnlyReactiveProperty<int> CurrentAmount => _currentAmountProperty;
+    public IObservable<Unit> ResourceAddedObservable => _resourceAddedSubject;
 
     private void Awake()
     {
@@ -32,26 +32,34 @@ public abstract class Inventory : MonoBehaviour
 
     public void Add(ICollectable collectable)
     {
-        if (ObservableValue.Value >= Capacity)
+        if (_currentAmountProperty.Value >= _capacity)
             return;
 
         Cell cell = _cells.First(cell => cell.IsEmpty);
 
-        collectable.OnCollect(cell, CreatePolicy());
+        collectable.OnCollectFollow(cell.transform, CreateStrategy(cell));
         cell.Put(collectable);
 
-        ResourceAdded?.Invoke();
+        _currentAmountProperty.Value++;
+        _resourceAddedSubject.OnNext(Unit.Default);
     }
 
-    public Collection<ICollectable> TakeOutCollectibles()
+    public bool TryTakeOutCollectibles(out Collection<ICollectable> collectibles)
     {
-        Collection<ICollectable> collectibles = _cells
+        collectibles = _cells
             .Where(cell => cell.IsEmpty == false)
             .Select(cell => cell.TakeOut())
             .ToReactiveCollection();
 
-        return collectibles;
+        if(collectibles.Count > 0)
+        {
+            _currentAmountProperty.Value = 0;
+
+            return true;
+        }
+
+        return false;
     }
 
-    protected abstract IFollowStrategy CreatePolicy();
+    protected abstract IFollowStrategy CreateStrategy(ITarget target);
 }

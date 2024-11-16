@@ -5,27 +5,19 @@ internal class ResourceCounter : MonoBehaviour
 {
     [SerializeField] private Inventory _inventory;
 
-    private readonly ReactiveProperty<int> _currentValue = new();
+    private readonly ReactiveProperty<int> _amount = new();
 
-    public IReadOnlyReactiveProperty<int> CurrentValue => _currentValue;
+    public IReadOnlyReactiveProperty<int> Amount => _amount;
 
     private void Awake()
     {
-        _currentValue.Value = _inventory.ObservableValue.Value;
+        _inventory.ResourceAddedObservable
+            .Subscribe(_ => Add())
+            .AddTo(this);
     }
 
-    private void OnEnable()
+    private void Add()
     {
-        _inventory.ResourceAdded += Add;
-    }
-
-    private void OnDisable()
-    {
-        _inventory.ResourceAdded -= Add;
-    }
-
-    public void Add()
-    {
-        _currentValue.Value++;
+        _amount.Value++;
     }
 }

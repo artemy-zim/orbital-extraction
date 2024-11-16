@@ -1,10 +1,13 @@
 using System;
 using UnityEngine;
 
+[Serializable]
 public class PhysicsSwitcher
 {
-    private readonly Collider _collider;
-    private readonly Rigidbody _rigidbody;
+    [SerializeField] private Collider _collider;
+    [SerializeField] private Rigidbody _rigidbody;
+
+    private bool _isDisabled;
 
     public PhysicsSwitcher(Collider collider, Rigidbody rigidbody)
     {
@@ -19,13 +22,21 @@ public class PhysicsSwitcher
 
     public void EnablePhysics() 
     {
+        if (_isDisabled == false)
+            return;
+
         _collider.enabled = true;
         _rigidbody.isKinematic = false;
+        _isDisabled = false;
     }
 
     public void DisablePhysics()
     {
+        if (_isDisabled)
+            return;
+
         _collider.enabled = false;
         _rigidbody.isKinematic = true;
+        _isDisabled = true; 
     }
 }

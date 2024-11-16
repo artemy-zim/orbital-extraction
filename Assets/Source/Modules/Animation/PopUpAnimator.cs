@@ -1,13 +1,12 @@
 using AYellowpaper;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PopUpAnimator : MonoBehaviour
 {
-    [SerializeField] private Button _actionButton; //UnityEvent try
+    [SerializeField] private Window _window;
 
-    [SerializeField] private InterfaceReference<IAnimatable> _animatable;
+    [SerializeField] private InterfaceReference<ITransformable> _animatable;
     [SerializeField] private Vector3 _animationOffset;
     [SerializeField] private float _scaleDuration;
     [SerializeField] private float _anchorPosDuration;
@@ -23,12 +22,12 @@ public class PopUpAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        _actionButton.onClick.AddListener(Play);
+        _window.Showed += Play;
     }
 
     private void OnDisable()
     {
-        _actionButton.onClick.RemoveListener(Play);
+        _window.Showed -= Play;
     }
 
     public void Play()

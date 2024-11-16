@@ -2,12 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(CanvasGroup))]
 public class Window : MonoBehaviour
 {
-    [SerializeField] private Button _hideButton;
-    [SerializeField] private Button _showButton;
-
     private CanvasGroup _canvasGroup;
+
+    public event Action Showed;
 
     private void Awake()
     {
@@ -18,26 +18,16 @@ public class Window : MonoBehaviour
         Hide();
     }
 
-    private void OnEnable()
-    {
-        _showButton.onClick.AddListener(Show);
-        _hideButton.onClick.AddListener(Hide);
-    }
-
-    private void OnDisable()
-    {
-        _showButton.onClick.RemoveListener(Show);
-        _hideButton.onClick.RemoveListener(Hide);
-    }
-
-    private void Show()
+    public void Show()
     {
         _canvasGroup.alpha = 1f;
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
+
+        Showed?.Invoke();
     }
 
-    private void Hide()
+    public void Hide()
     {
         _canvasGroup.alpha = 0f;
         _canvasGroup.interactable = false;

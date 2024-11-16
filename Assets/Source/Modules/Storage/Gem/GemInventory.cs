@@ -5,8 +5,8 @@ internal class GemInventory : Inventory
     [SerializeField] private float _collectSpeed;
     [SerializeField] private float _collectAcceleration;
 
-    protected override IFollowStrategy CreatePolicy()
+    protected override IFollowStrategy CreateStrategy(ITarget target)
     {
-        return new AcceleratingFollower(_collectSpeed, _collectAcceleration);
+        return new AcceleratingFollower(target, Vector3.zero, _collectSpeed, _collectAcceleration);
     }
 }

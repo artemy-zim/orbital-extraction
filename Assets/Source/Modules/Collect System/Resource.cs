@@ -1,54 +1,54 @@
-using System;
-using UniRx;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Rigidbody))]
-public class Resource : MonoBehaviour, ICollectable
+public class Resource : MonoBehaviour, ICollectable, IDestroyable
 {
-    private PhysicsSwitcher _physicsSwitcher;
-    private Transform _transform;
-    private Follower _follower;
+    [SerializeField] private PhysicsSwitcher _physicsSwitcher;
 
-    private IDisposable _followSubscription;
+    private IFollowStrategy _currentFollower;
+
+    protected Transform Transform { get; private set; }
 
     private void Awake()
     {
-        _transform = transform;
-        _physicsSwitcher = new PhysicsSwitcher(GetComponent<Collider>(), GetComponent<Rigidbody>());
+        Transform = transform;
     }
 
-    public void OnCollect(Cell cell, IFollowStrategy followStrategy)
+    public void OnCollectFollow(Transform parentTransform, IFollowStrategy followStrategy)
     {
-        if (cell == null || followStrategy == null)
+        if (parentTransform == null || followStrategy == null)
             return;
 
-        _transform.SetParent(cell.transform);
-
         _physicsSwitcher.DisablePhysics();
-        Follow(cell, followStrategy);
+        Transform.SetParent(parentTransform);
+        Transform.rotation = Random.rotation;
 
-        _transform.rotation = Random.rotation;
+        Follow(followStrategy);
     }
 
-    private void Follow(ITarget target, IFollowStrategy followStrategy)
+    public void OnDestroyFollow(IFollowStrategy followStrategy)
     {
-        _follower = new Follower(_transform, target, Vector3.zero, followStrategy);
-        _followSubscription?.Dispose();
+        if (followStrategy == null)
+            return;
 
-        _followSubscription = Observable.EveryUpdate()
-            .TakeWhile(_ => IsFar(target.GetPosition()))
-            .Subscribe(_ => _follower.Follow());
+        _physicsSwitcher.EnablePhysics();
+        Follow(followStrategy);
     }
 
-    private bool IsFar(Vector3 targetPosition)
+    public void Destroy()
     {
-        return Vector3.Distance(targetPosition, _transform.position) > 0;
+        Destroy(gameObject);
+    }
+
+    private void Follow(IFollowStrategy followStrategy)
+    {
+        _currentFollower?.Stop();
+        _currentFollower = followStrategy;
+        followStrategy.Follow(Transform, UpdateMode.EveryUpdate);
     }
 
     private void OnDestroy()
     {
-        _followSubscription?.Dispose();
+        _currentFollower?.Stop();
     }
 }

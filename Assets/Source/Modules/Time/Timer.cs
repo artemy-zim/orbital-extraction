@@ -7,8 +7,6 @@ public abstract class Timer : MonoBehaviour
     private Coroutine _tickCoroutine;
     private float _value;
 
-    public float DefaultValue => _value;
-
     public event Action Completed;
     public event Action<float> Ticking;
 
@@ -48,7 +46,6 @@ public abstract class Timer : MonoBehaviour
             StopCoroutine(_tickCoroutine);
         }
     }
-
 
     protected abstract void OnEnable();
     protected abstract void OnDisable();

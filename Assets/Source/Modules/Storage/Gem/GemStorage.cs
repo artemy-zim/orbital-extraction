@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Events;
 
 internal class GemStorage : Storage
 {
@@ -11,9 +12,11 @@ internal class GemStorage : Storage
 
     [SerializeField] private float _addDelay;
 
-    protected override IFollowStrategy CreatePolicy()
+    [SerializeField] private UnityEvent _onAdded;
+
+    protected override IFollowStrategy CreateStrategy(ITarget target)
     {
-        return new CurveFollower(_speed, _curveAmplitude);
+        return new CurveFollower(target, Vector3.zero, _speed, _curveAmplitude);
     }
 
     protected override void ProcessCollectibles(IReadOnlyCollection<ICollectable> collectibles, Action<ICollectable> Add)
@@ -25,7 +28,13 @@ internal class GemStorage : Storage
 
         Observable.Return(collectibles.First())
             .Concat(delayedCollectibles)
-            .Subscribe(collectible => Add(collectible))
+            .Subscribe(collectible => ProcessCollectible(collectible, Add))
             .AddTo(this);
+    }
+
+    private void ProcessCollectible(ICollectable collectible, Action<ICollectable> Add) 
+    {
+        Add(collectible);
+        _onAdded?.Invoke();
     }
 }

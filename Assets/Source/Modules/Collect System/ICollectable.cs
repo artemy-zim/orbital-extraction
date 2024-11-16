@@ -1,4 +1,6 @@
+using UnityEngine;
+
 public interface ICollectable 
 {
-    public void OnCollect(Cell cell, IFollowStrategy followPolicy);
+    public void OnCollectFollow(Transform parentTransform, IFollowStrategy followPolicy);
 }

@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf6f171fc78bd3409a86494cc9766ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inventory: {fileID: 7985816606748412962}
 --- !u!1 &1921055136957454972
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,9 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6939d8b184fceb4687a8b7cfc641d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trigger: {fileID: 5459820415053111068}
+  _trigger: {fileID: 6341226624831198941}
   _inventory: {fileID: 7985816606748412962}
-  _storage: {fileID: 0}
 --- !u!1 &2215818634686042787
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,9 +214,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cellShuffler:
-    _maxDistance: 0.1
+    _maxOffset: 0
   _prefab: {fileID: 5537099872007817519, guid: d4f26e28adbc73f40b83079fae60c472, type: 3}
   _capacity: 10
+  _collectSpeed: 0
+  _collectAcceleration: 0
 --- !u!1 &5077551256256665670
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a3764c9ebe59c42ac6b4507086b07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _movementSpeed: 4
+  _rotationSpeed: 2
 --- !u!114 &3512169420873953260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf294c7923e5104c812b8feac0dc7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inventory: {fileID: 7985816606748412962}
   _vehicle: {fileID: 0}
 --- !u!54 &6893290751668405937
 Rigidbody:
@@ -618,7 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429574922631710638}
   - component: {fileID: 2105271779550778520}
-  - component: {fileID: 5459820415053111068}
+  - component: {fileID: 6341226624831198941}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -662,7 +666,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: -1, z: 0}
---- !u!114 &5459820415053111068
+--- !u!114 &6341226624831198941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -674,6 +678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e24fea0037ce94b9e1e91b2707eeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collider: {fileID: 2105271779550778520}
+  _onTriggered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6050923409391721364
 PrefabInstance:
   m_ObjectHideFlags: 0

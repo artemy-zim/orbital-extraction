@@ -4,7 +4,7 @@ using UnityEngine.UI;
 internal class TakeControlTimerView : MonoBehaviour
 {
     [SerializeField] private Image _image;
-    [SerializeField] private Timer _timer;
+    [SerializeField] private TakeControlTimer _timer;
 
     private void OnEnable()
     {

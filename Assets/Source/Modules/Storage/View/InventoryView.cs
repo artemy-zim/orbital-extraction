@@ -8,9 +8,9 @@ internal class InventoryView : MonoBehaviour
 
     private void Awake()
     {
-        _inventory.ObservableValue
+        _inventory.CurrentAmount
             .Subscribe(value => UpdateView(value))
-            .AddTo(this);
+            .AddTo(this);   
     }
 
     private void UpdateView(int value)

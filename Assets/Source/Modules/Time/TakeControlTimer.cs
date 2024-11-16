@@ -3,11 +3,13 @@ using UnityEngine;
 internal class TakeControlTimer : Timer
 {
     [SerializeField] private DriverTrigger _trigger;
-    [SerializeField] private float _value;
+    [SerializeField] private float _defaultValue;
+
+    public float DefaultValue => _defaultValue;
 
     private void Awake()
     {
-        Init(_value);
+        Init(_defaultValue);
     }
 
     protected override void OnEnable()

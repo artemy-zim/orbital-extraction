@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class UIElement : MonoBehaviour, IAnimatable
+public class UIElement : MonoBehaviour, ITransformable
 {
     public Transform GetTransform()
     {

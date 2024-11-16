@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Levitator : MonoBehaviour
 {
-    [SerializeField] private InterfaceReference<IAnimatable> _animatable;
+    [SerializeField] private InterfaceReference<ITransformable> _animatable;
 
     [SerializeField] private float _hoverHeight;
     [SerializeField] private float _hoverSpeed;

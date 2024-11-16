@@ -6,7 +6,7 @@ public class ToggleAnimator : MonoBehaviour
 {
     [SerializeField] private VolumeButton _volumeButton;
 
-    [SerializeField] private InterfaceReference<IAnimatable> _animatable;
+    [SerializeField] private InterfaceReference<ITransformable> _animatable;
     [SerializeField, Min(0)] private float _duration;
     [SerializeField] private float _distanceX;
 

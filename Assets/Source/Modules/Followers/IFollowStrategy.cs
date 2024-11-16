@@ -2,5 +2,6 @@ using UnityEngine;
 
 public interface IFollowStrategy
 {
-    public void ApplyMovement(Transform transform, Vector3 targetPosition);
+    public void Follow(Transform transform, UpdateMode mode);
+    public void Stop();
 }

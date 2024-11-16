@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpaceShip : MonoBehaviour, IAnimatable
+public class SpaceShip : MonoBehaviour, ITransformable
 {
     public Transform GetTransform()
     {
