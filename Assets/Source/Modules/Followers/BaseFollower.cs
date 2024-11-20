@@ -38,7 +38,7 @@ internal abstract class BaseFollower : IFollowStrategy
 
     private bool IsFar(Transform transform)
     {
-        float epsilon = 0.001f;
+        float epsilon = 0.0001f;
 
         return Vector3.Distance(GetFinalPosition(), transform.position) > epsilon;
     }

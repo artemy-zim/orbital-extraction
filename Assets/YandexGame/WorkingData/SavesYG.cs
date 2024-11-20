@@ -21,6 +21,8 @@ namespace YG
         // ...
         public int gems = 0;
         public int score = 0;
+        public int gemInventoryCapacity = 10;
+        public int rockInventoryCapacity = 15;
         
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 

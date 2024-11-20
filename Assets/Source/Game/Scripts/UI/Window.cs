@@ -1,30 +1,16 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
-[RequireComponent(typeof(CanvasGroup))]
-public class Window : MonoBehaviour
+[Serializable]
+public class Window
 {
-    private CanvasGroup _canvasGroup;
-
-    public event Action Showed;
-
-    private void Awake()
-    {
-        _canvasGroup = TryGetComponent(out CanvasGroup canvasGroup)
-            ? canvasGroup
-            : throw new ArgumentNullException(nameof(canvasGroup));
-
-        Hide();
-    }
+    [SerializeField] private CanvasGroup _canvasGroup;
 
     public void Show()
     {
         _canvasGroup.alpha = 1f;
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
-
-        Showed?.Invoke();
     }
 
     public void Hide()

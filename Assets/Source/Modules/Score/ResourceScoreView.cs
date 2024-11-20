@@ -16,6 +16,9 @@ internal class ResourceScoreView : MonoBehaviour
 
     private void UpdateView(ScoreExpressionData data)
     {
+        if (data is null)
+            return;
+
         _text.text = $"{data.ResourceCount} x {data.Multiplier} = {data.Total}";
     }
 }
