@@ -4115,7 +4115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8365b503332c6e34fa2e0e54bde8e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: GameLevel
+  _sceneName: GameLevel_1
   _button: {fileID: 762984712}
 --- !u!1 &776977306
 GameObject:
@@ -4687,11 +4687,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transformablePanel:
     _underlyingValue: {fileID: 831306725}
-  _startScale: {x: 0.005, y: 0}
+  _startScale: {x: 0.01, y: 0.015}
   _endValueY: 1
   _endValueX: 1
   _scaleDurationY: 0.25
-  _scaleDurationX: 0.45
+  _scaleDurationX: 0.25
 --- !u!225 &831306727
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13190,11 +13190,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transformablePanel:
     _underlyingValue: {fileID: 1446140356}
-  _startScale: {x: 0.005, y: 0}
+  _startScale: {x: 0.01, y: 0.015}
   _endValueY: 1
   _endValueX: 1
-  _scaleDurationY: 0.3
-  _scaleDurationX: 0.5
+  _scaleDurationY: 0.225
+  _scaleDurationX: 0.225
 --- !u!225 &1446140358
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13203,9 +13203,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446140354}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &1446140359
 MonoBehaviour:

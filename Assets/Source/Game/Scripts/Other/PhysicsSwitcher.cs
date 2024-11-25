@@ -5,7 +5,7 @@ using UnityEngine;
 public class PhysicsSwitcher
 {
     [SerializeField] private Collider _collider;
-    [SerializeField] private Rigidbody _rigidbody;
+    //[SerializeField] private Rigidbody _rigidbody;
 
     private bool _isDisabled;
 
@@ -15,9 +15,9 @@ public class PhysicsSwitcher
             ? collider 
             : throw new ArgumentNullException(nameof(collider));
 
-        _rigidbody = rigidbody != null 
+        /*_rigidbody = rigidbody != null 
             ? rigidbody 
-            : throw new ArgumentNullException(nameof(rigidbody));
+            : throw new ArgumentNullException(nameof(rigidbody));*/
     }
 
     public void EnablePhysics() 
@@ -26,7 +26,7 @@ public class PhysicsSwitcher
             return;
 
         _collider.enabled = true;
-        _rigidbody.isKinematic = false;
+       // _rigidbody.isKinematic = false;
         _isDisabled = false;
     }
 
@@ -36,7 +36,7 @@ public class PhysicsSwitcher
             return;
 
         _collider.enabled = false;
-        _rigidbody.isKinematic = true;
+      //  _rigidbody.isKinematic = true;
         _isDisabled = true; 
     }
 }

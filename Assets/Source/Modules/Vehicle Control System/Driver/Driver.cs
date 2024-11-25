@@ -31,7 +31,7 @@ internal class Driver : Player
 
     private void Activate()
     {
-        transform.position = _vehicle.ExitPosition;
+        transform.position = _vehicle.GetExitPosition(_collider);
         _collider.enabled = true;
         gameObject.SetActive(true);
     }

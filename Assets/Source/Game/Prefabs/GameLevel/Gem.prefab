@@ -48,15 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3a150177361ef4d8aa66b4dfcf88e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _physicsSwitcher:
-    _collider: {fileID: 2178762210497400196}
-    _rigidbody: {fileID: 2657320230216821244}
+  _particleSystem: {fileID: 5775109228273990428}
   _impulseApplier:
     _minForce: 45
     _maxForce: 75
     _radius: 4
     _upwardsModifier: 1
   _rigidbody: {fileID: 2657320230216821244}
+  _collider: {fileID: 2178762210497400196}
 --- !u!136 &2178762210497400196
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -240,7 +239,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 1
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:

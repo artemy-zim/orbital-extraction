@@ -7,9 +7,7 @@ internal class RockStorage : Storage
 {
     [SerializeField] private float _speed;
 
-    [SerializeField] private UnityEvent _onAdded;
-
-    public event Action Stored;
+    public UnityEvent OnAdded;
 
     protected override IFollowStrategy CreateStrategy(ITarget target)
     {
@@ -23,7 +21,6 @@ internal class RockStorage : Storage
             Add(collectable);
         }
 
-        _onAdded?.Invoke();
-        Stored?.Invoke();
+        OnAdded?.Invoke();
     }
 }

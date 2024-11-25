@@ -1,27 +1,22 @@
+using System;
+using UniRx;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class Resource : MonoBehaviour, ICollectable, IDestroyable
+public abstract class Resource : MonoBehaviour, ICollectable, IDestroyable
 {
-    [SerializeField] private PhysicsSwitcher _physicsSwitcher;
-
+    private readonly Subject<Unit> _collectedSubject = new();
     private IFollowStrategy _currentFollower;
 
-    protected Transform Transform { get; private set; }
-
-    private void Awake()
-    {
-        Transform = transform;
-    }
+    protected IObservable<Unit> CollectedObservable => _collectedSubject;
 
     public void OnCollectFollow(Transform parentTransform, IFollowStrategy followStrategy)
     {
         if (parentTransform == null || followStrategy == null)
             return;
 
-        _physicsSwitcher.DisablePhysics();
-        Transform.SetParent(parentTransform);
-        Transform.rotation = Random.rotation;
+        DisablePhysics();
+        transform.SetParent(parentTransform);
+        _collectedSubject.OnNext(Unit.Default);
 
         Follow(followStrategy);
     }
@@ -31,7 +26,7 @@ public class Resource : MonoBehaviour, ICollectable, IDestroyable
         if (followStrategy == null)
             return;
 
-        _physicsSwitcher.EnablePhysics();
+        EnablePhysics();
         Follow(followStrategy);
     }
 
@@ -44,11 +39,14 @@ public class Resource : MonoBehaviour, ICollectable, IDestroyable
     {
         _currentFollower?.Stop();
         _currentFollower = followStrategy;
-        followStrategy.Follow(Transform, UpdateMode.EveryUpdate);
+        followStrategy.Follow(transform, UpdateMode.EveryUpdate);
     }
 
     private void OnDestroy()
     {
         _currentFollower?.Stop();
     }
+
+    protected abstract void DisablePhysics();
+    protected abstract void EnablePhysics();
 }

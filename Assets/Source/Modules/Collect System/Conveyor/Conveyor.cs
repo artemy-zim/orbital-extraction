@@ -1,5 +1,5 @@
-using Mono.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
@@ -16,29 +16,24 @@ internal class Conveyor : MonoBehaviour
     [SerializeField] private DestroyableTrigger _destroyTrigger;
     [SerializeField] private RockStorage _rockStorage;
 
-    private readonly Collection<IDestroyable> _processingDestroyables = new();
-    private bool _isLaunched;
+    private readonly HashSet<IDestroyable> _processingDestroyables = new();
+    private IDisposable _processSubscription;
 
     public float MoveSpeed => _speed;
 
     public event Action Launched;
     public event Action Stopped;
 
-    private void Awake()
-    {
-        _isLaunched = false;
-    }
-
     private void OnEnable()
     {
         _destroyTrigger.Triggered += DestroyCollectible;
-        _rockStorage.Stored += Launch;
+        _rockStorage.OnAdded.AddListener(Launch);
     }
 
     private void OnDisable()
     {
         _destroyTrigger.Triggered -= DestroyCollectible;
-        _rockStorage.Stored -= Launch;
+        _rockStorage.OnAdded.AddListener(Launch);
     }
 
     private void DestroyCollectible(IDestroyable destroyable)
@@ -53,23 +48,21 @@ internal class Conveyor : MonoBehaviour
         if(_processingDestroyables.Count == 0)
         {
             Stopped?.Invoke();
-            _isLaunched = false;
         }
     }
 
     private void Launch()
     {
-        if (_isLaunched == false)
+        if (_processingDestroyables.Count == 0)
         {
             Launched?.Invoke();
-
-            Observable.Interval(TimeSpan.FromSeconds(_processDelay))
-                .TakeWhile(_ => TryProcessNextCollectible())
-                .Subscribe()
-                .AddTo(this);
-
-            _isLaunched = true;
         }
+
+        _processSubscription?.Dispose();
+        _processSubscription = Observable.Interval(TimeSpan.FromSeconds(_processDelay))
+            .TakeWhile(_ => TryProcessNextCollectible()) 
+            .Subscribe(_ => { }, () => _processSubscription = null)
+            .AddTo(this);
     }
 
     private bool TryProcessNextCollectible()

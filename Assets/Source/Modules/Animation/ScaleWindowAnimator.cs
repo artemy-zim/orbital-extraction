@@ -27,9 +27,9 @@ public class ScaleWindowAnimator : MonoBehaviour, IAnimator
         Stop();
 
         _sequence = DOTween.Sequence()
-            .Append(_transform.DOScaleY(_endValueY, _scaleDurationY)
-                .SetEase(Ease.OutSine))
             .Append(_transform.DOScaleX(_endValueX, _scaleDurationX)
+                .SetEase(Ease.InOutSine))
+            .Append(_transform.DOScaleY(_endValueY, _scaleDurationY)
                 .SetEase(Ease.OutExpo))
             .SetUpdate(true)
             .SetAutoKill(true)
