@@ -1,3 +1,4 @@
+Assets/Source/Game/Visuals/Textures/Crate/box2_emissive.png filter=lfs diff=lfs merge=lfs -text
+File filter=lfs diff=lfs merge=lfs -text
 Assets/Source/Game/Visuals/Models/Crate/box2.fbx filter=lfs diff=lfs merge=lfs -text
 Assets/Source/Game/Visuals/Textures/Crate/box2_albedo.png filter=lfs diff=lfs merge=lfs -text
-Assets/Source/Game/Visuals/Textures/Crate/box2_emissive.png filter=lfs diff=lfs merge=lfs -text
