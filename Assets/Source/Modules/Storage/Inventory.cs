@@ -1,4 +1,3 @@
-using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using UniRx;
@@ -13,11 +12,9 @@ public abstract class Inventory : MonoBehaviour
     private readonly Collection<Cell> _cells = new();
 
     private readonly ReactiveProperty<int> _currentAmountProperty = new(0);
-    private readonly Subject<Unit> _resourceAddedSubject = new();
 
     public int Capacity => _capacity;
     public IReadOnlyReactiveProperty<int> CurrentAmount => _currentAmountProperty;
-    public IObservable<Unit> ResourceAddedObservable => _resourceAddedSubject;
 
     private void Awake()
     {
@@ -41,7 +38,6 @@ public abstract class Inventory : MonoBehaviour
         cell.Put(collectable);
 
         _currentAmountProperty.Value++;
-        _resourceAddedSubject.OnNext(Unit.Default);
     }
 
     public bool TryTakeOutCollectibles(out Collection<ICollectable> collectibles)

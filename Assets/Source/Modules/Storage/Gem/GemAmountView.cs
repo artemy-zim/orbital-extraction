@@ -2,14 +2,14 @@ using TMPro;
 using UniRx;
 using UnityEngine;
 
-public class ResourceCounterView : MonoBehaviour
+public class GemAmountView : MonoBehaviour
 {
-    [SerializeField] private Inventory _inventory;
     [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private GemAmount _gemAmount;
 
-    private void Start()
+    private void Awake()
     {
-        _inventory.CurrentAmount
+        _gemAmount.AmountProperty
             .Subscribe(value => UpdateView(value))
             .AddTo(this);
     }
