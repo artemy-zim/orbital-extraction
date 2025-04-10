@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameplayTimerView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private Timer _timer;
+    [SerializeField] private GameplayTimer _timer;
 
     private readonly int _secondsPerMinute = 60;
 

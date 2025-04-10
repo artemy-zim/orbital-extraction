@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameplayTimer : Timer
 {
+    [SerializeField] private RockTotalCounter _rockTotalCounter;
     [SerializeField] private Game _game;
 
     private readonly int _secondsPerMinute = 60;
@@ -13,11 +14,13 @@ public class GameplayTimer : Timer
 
     protected override void OnEnable()
     {
+        _rockTotalCounter.AllCollected += Reset;
         _game.Started += Launch;
     }
 
     protected override void OnDisable()
     {
+        _rockTotalCounter.AllCollected -= Reset;    
         _game.Started -= Launch;
     }
 }
