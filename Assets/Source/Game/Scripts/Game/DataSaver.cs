@@ -1,42 +1,45 @@
-using UniRx;
 using UnityEngine;
 using YG;
 
 public class DataSaver : MonoBehaviour
 {
+    [SerializeField] private RockTotalCounter _rockTotalCounter;
     [SerializeField] private GameplayTimer _timer;
-    [SerializeField] private GameScore _score;
-    [SerializeField] private GemCounter _gemCounter;
 
-    private void Awake()
-    {
-        _score.Score
-            .Subscribe(value => SaveScore(value))
-            .AddTo(this);
-    }
+    [SerializeField] private GameScore _score;
+    [SerializeField] private GemInventory _gemInventory;
 
     private void OnEnable()
     {
-        _timer.Completed += SaveGems;
+        _rockTotalCounter.AllCollected += SaveResult;
+        _timer.Completed += SaveResult;
     }
 
     private void OnDisable()
     {
-        _timer.Completed -= SaveGems;
+        _rockTotalCounter.AllCollected -= SaveResult;
+        _timer.Completed -= SaveResult;
+    }
+
+    private void SaveResult()
+    {
+        SaveGems();
+        SaveScore();
     }
 
     private void SaveGems()
     {
-        YandexGame.savesData.gems += _gemCounter.Amount.Value;
+        YandexGame.savesData.gems += _gemInventory.CurrentAmount.Value;
     }
 
-    private void SaveScore(int score)
+    private void SaveScore()
     {
         int previousScore = YandexGame.savesData.score;
+        int currentScore = _score.Score.Value;
 
-        if(previousScore < score) 
+        if(previousScore < currentScore) 
         {
-            YandexGame.savesData.score = score;
+            YandexGame.savesData.score = currentScore;
         }
     }
 }
