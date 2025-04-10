@@ -233,7 +233,7 @@ namespace YG
 
         public void _RewardedShow(int id)
         {
-            Message("Rewarded Ad Show");
+            Message("Rewarded Ad Init");
 
             if (!nowFullAd && !nowVideoAd)
             {
@@ -353,7 +353,7 @@ namespace YG
 
         public static void StickyAdActivity(bool activity)
         {
-            if (activity) Message("Sticky Ad Show");
+            if (activity) Message("Sticky Ad Init");
             else Message("Sticky Ad Hide");
 #if !UNITY_EDITOR
             StickyAdActivityInternal(activity);

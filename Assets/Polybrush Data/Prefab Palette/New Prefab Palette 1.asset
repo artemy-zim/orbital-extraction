@@ -31,7 +31,7 @@ MonoBehaviour:
     name: SP_Crystal02
   - gameObject: {fileID: 8648428375196731806, guid: d17e4af726443cd4493d58b7668395cd, type: 3}
     settings:
-      m_Strength: 72.330826
+      m_Strength: 20.225563
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -63,7 +63,7 @@ MonoBehaviour:
     name: SP_Plant09
   - gameObject: {fileID: 4161150743895791228, guid: 73c246a6053362a4ab20a29df8ef198e, type: 3}
     settings:
-      m_Strength: 11.293233
+      m_Strength: 45.533836
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -79,7 +79,7 @@ MonoBehaviour:
     name: SP_Plant07
   - gameObject: {fileID: 8473364535566263831, guid: 8f7a22a83e06052459341602681b20e1, type: 3}
     settings:
-      m_Strength: 29.211273
+      m_Strength: 24.745108
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -95,7 +95,7 @@ MonoBehaviour:
     name: SP_Plant08
   - gameObject: {fileID: 5384400550676650447, guid: aba00a3a9f0d5bc4cbd0b1bc12a3c58a, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 24.691729
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}

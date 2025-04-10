@@ -31,7 +31,7 @@ MonoBehaviour:
     name: Rock Type3 04
   - gameObject: {fileID: 138554, guid: ccbe3c5efe0bbed4bbe4b8651efb2db8, type: 3}
     settings:
-      m_Strength: 86.97369
+      m_Strength: 91.98212
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -79,7 +79,7 @@ MonoBehaviour:
     name: Rock Type2 04
   - gameObject: {fileID: 160260, guid: 36cf43d46aeb7494b82aa54d61da3bd7, type: 3}
     settings:
-      m_Strength: 85.729324
+      m_Strength: 65.695595
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
