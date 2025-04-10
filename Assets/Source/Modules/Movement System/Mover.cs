@@ -12,6 +12,7 @@ internal class Mover : MonoBehaviour, IMovable, IMoverEvents
 
     public event Action Started;
     public event Action Stopped;
+    public event Action<float> Rotated;
 
     private void Awake()
     {
@@ -51,8 +52,21 @@ internal class Mover : MonoBehaviour, IMovable, IMoverEvents
     private void Rotate()
     {
         Quaternion targetRotation = Quaternion.LookRotation(_direction, Vector3.up);
+        Quaternion deltaRotation = targetRotation * Quaternion.Inverse(_transform.localRotation);
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);   
+        _transform.rotation = Quaternion.Lerp(_transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
+        deltaRotation.ToAngleAxis(out float angle, out Vector3 axis);
+
+        float sign = Mathf.Sign(Vector3.Dot(axis, Vector3.up));
+        float maxTurnAngle = 180f;
+        float maxAngle = 360f;
+
+        if (angle > maxTurnAngle)
+            angle -= maxAngle;
+
+        float normalizedAngle = Mathf.Clamp(angle / maxTurnAngle, -1f, 1f);
+
+        Rotated?.Invoke(sign * normalizedAngle);
     }
 
     private void Move()
