@@ -1,7 +1,7 @@
 using UniRx;
 using UnityEngine;
 
-internal abstract class ResourceScore : MonoBehaviour
+internal abstract class ScoreCounter : MonoBehaviour
 {
     [SerializeField] private int _multiplier;
 
@@ -10,12 +10,13 @@ internal abstract class ResourceScore : MonoBehaviour
 
     public int Calculate()
     {
-        ResourceCounter counter = GetCounter();
-        int total = _multiplier * counter.Amount.Value;
-        _expression.Value = new ScoreExpressionData(counter.Amount.Value, _multiplier, total);
+        Inventory inventory = GetInventory();
+        int total = _multiplier * inventory.CurrentAmount.Value;
+
+        _expression.Value = new ScoreExpressionData(inventory.CurrentAmount.Value, _multiplier, total);
 
         return total;
     }
 
-    protected abstract ResourceCounter GetCounter();
+    protected abstract Inventory GetInventory();
 }

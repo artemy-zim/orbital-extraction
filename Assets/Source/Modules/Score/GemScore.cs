@@ -1,11 +1,11 @@
 using UnityEngine;
 
-internal class GemScore : ResourceScore
+internal class GemScore : ScoreCounter
 {
-    [SerializeField] private GemCounter _counter;
+    [SerializeField] private GemInventory _inventory;
 
-    protected override ResourceCounter GetCounter()
+    protected override Inventory GetInventory()
     {
-        return _counter;
+        return _inventory;
     }
 }

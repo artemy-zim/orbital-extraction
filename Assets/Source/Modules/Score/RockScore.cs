@@ -1,11 +1,11 @@
 using UnityEngine;
 
-internal class RockScore : ResourceScore
+internal class RockScore : ScoreCounter
 {
-    [SerializeField] private RockCounter _counter;
+    [SerializeField] private RockInventory _inventory;
 
-    protected override ResourceCounter GetCounter()
+    protected override Inventory GetInventory()
     {
-        return _counter;
+        return _inventory;
     }
 }

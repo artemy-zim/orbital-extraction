@@ -5,18 +5,22 @@ using UnityEngine;
 internal class GameScore : MonoBehaviour
 {
     [SerializeField] private GameplayTimer _timer;
-    [SerializeField] private List<ResourceScore> _scores;
+    [SerializeField] private RockTotalCounter _rockTotalCounter;
+
+    [SerializeField] private List<ScoreCounter> _scores;
 
     private readonly ReactiveProperty<int> _score = new();
     public IReadOnlyReactiveProperty<int> Score => _score;
 
     private void OnEnable()
     {
+        _rockTotalCounter.AllCollected += Calculate;
         _timer.Completed += Calculate;
     }
 
     private void OnDisable()
     {
+        _rockTotalCounter.AllCollected -= Calculate;
         _timer.Completed -= Calculate;
     }
 

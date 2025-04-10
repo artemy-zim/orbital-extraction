@@ -5,7 +5,7 @@ using UnityEngine;
 internal class ResourceScoreView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private ResourceScore _score;
+    [SerializeField] private ScoreCounter _score;
 
     private void Awake()
     {
