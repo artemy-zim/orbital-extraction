@@ -2602,6 +2602,7 @@ MonoBehaviour:
   _window:
     _canvasGroup: {fileID: 1678355248}
   _progressSlider: {fileID: 1177009193}
+  _sceneLoader: {fileID: 317418098}
 --- !u!224 &317418097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2634,6 +2635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42435428794f3ee499fadfda47518011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 762984715}
 --- !u!1 &384289650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4161,12 +4163,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 624642122499426775, guid: be93f224034d519438645703e4b4dec1, type: 3}
   _cards:
-  - _minutes: 5
+  - _minutes: 7
     _iconColor: {r: 1, g: 1, b: 1, a: 1}
   - _minutes: 10
-    _iconColor: {r: 0.9433962, g: 0.8413888, b: 0.24385896, a: 1}
+    _iconColor: {r: 0.8867924, g: 0.67859167, b: 0.03681021, a: 1}
   - _minutes: 15
-    _iconColor: {r: 0.9528302, g: 0.3478151, b: 0.13843001, a: 1}
+    _iconColor: {r: 0.8490566, g: 0.043253757, b: 0.043253757, a: 1}
 --- !u!114 &740609885 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2825437334747665430, guid: 6076f0e94e7b7419691468e57ddd7d34, type: 3}
@@ -4192,7 +4194,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 750217800}
-  - component: {fileID: 750217802}
   - component: {fileID: 750217801}
   m_Layer: 0
   m_Name: SelectSound
@@ -4312,18 +4313,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &750217802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750217799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff321636d4c4164480efc0de2db9625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &762984710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4470,7 +4459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8365b503332c6e34fa2e0e54bde8e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: GameLevel_1
+  _scene:
+    sceneAsset: {fileID: 0}
+    scenePath: 
   _button: {fileID: 762984712}
 --- !u!1 &776977306
 GameObject:
@@ -5087,7 +5078,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 850733560}
-  - component: {fileID: 850733559}
+  - component: {fileID: 850733562}
+  - component: {fileID: 850733561}
   m_Layer: 0
   m_Name: Global Data
   m_TagString: Untagged
@@ -5095,18 +5087,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &850733559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850733558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 311fcefd0d934034ab0a70158747a096, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &850733560
 Transform:
   m_ObjectHideFlags: 0
@@ -5122,6 +5102,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &850733561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850733558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9de3aa8603797a4ab58a90e64ac01d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &850733562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850733558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311fcefd0d934034ab0a70158747a096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &863674025
 GameObject:
   m_ObjectHideFlags: 0
@@ -5676,7 +5680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82270838a4737984484fd67aa232fea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playButton: {fileID: 762984712}
+  _acceptButton: {fileID: 762984712}
 --- !u!114 &961417531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10672,9 +10676,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006981267}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &1006981271
 MonoBehaviour:
@@ -10704,14 +10708,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006981267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28755c544b5eead4aa981579f69bff6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ae6665af07b572498639b2ad14cf054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _transformablePanel:
     _underlyingValue: {fileID: 961417531}
-  _animationOffset: {x: 0, y: 1000, z: 0}
-  _scaleDuration: 1.5
-  _anchorPosDuration: 0.7
+  _startScale: {x: 0.1, y: 0.1}
+  _endValueY: 1
+  _endValueX: 1
+  _scaleDurationY: 0.2
+  _scaleDurationX: 0.1
 --- !u!1 &1026965711
 GameObject:
   m_ObjectHideFlags: 0
@@ -11831,7 +11837,7 @@ MonoBehaviour:
   _leaderboardButton: {fileID: 1853437868}
   _shopButton: {fileID: 117985920}
   _exitSettingsButton: {fileID: 1199498762}
-  _exitTimerSelectButton: {fileID: 166485662}
+  _exitLevelSelectButton: {fileID: 1080602348}
   _exitLeaderboardButton: {fileID: 47710904}
   _exitShopButton: {fileID: 2073525403}
 --- !u!225 &1225538977
@@ -13036,7 +13042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.09601278, g: 0.713923, b: 0.8207547, a: 0.73333335}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14203,11 +14209,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1225538975}
+  - {fileID: 419488244}
   - {fileID: 1006981268}
   - {fileID: 1992602973}
   - {fileID: 37757674}
   - {fileID: 873913632}
-  - {fileID: 419488244}
   m_Father: {fileID: 882124023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -15812,6 +15818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866032078}
   - component: {fileID: 1866032081}
+  - component: {fileID: 1866032082}
   - component: {fileID: 1866032080}
   - component: {fileID: 1866032079}
   m_Layer: 5
@@ -15894,6 +15901,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866032077}
   m_CullTransparentMesh: 1
+--- !u!114 &1866032082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866032077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4917321810812d848bd25cabfc3a3e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _acceptButton: {fileID: 1942259354}
 --- !u!1 &1875441814
 GameObject:
   m_ObjectHideFlags: 0
@@ -17227,6 +17247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133556119}
   - component: {fileID: 2133556120}
+  - component: {fileID: 2133556121}
   m_Layer: 5
   m_Name: Level Cards List
   m_TagString: Untagged
@@ -17279,6 +17300,40 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2133556121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133556118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774d1ac6dc8ecd64aa8e93bc23a0fd97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 6156502373356610958, guid: 03d40420c1f2ad749ab9330170d2f69b, type: 3}
+  _cards:
+  - _scene:
+      sceneAsset: {fileID: 102900000, guid: 239f10b7854d78a4aab46ca6304add0f, type: 3}
+      scenePath: Assets/Source/Game/Scenes/GameLevel_1.unity
+    _order: 1
+  - _scene:
+      sceneAsset: {fileID: 102900000, guid: ca69ab8769acb034591667a69f910fab, type: 3}
+      scenePath: Assets/Source/Game/Scenes/GameLevel_2.unity
+    _order: 2
+  - _scene:
+      sceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+      scenePath: Assets/Source/Game/Scenes/GameLevel_3.unity
+    _order: 3
+  - _scene:
+      sceneAsset: {fileID: 102900000, guid: 44a1e691fd1a4654380709993b274580, type: 3}
+      scenePath: Assets/Source/Game/Scenes/GameLevel_4.unity
+    _order: 4
+  - _scene:
+      sceneAsset: {fileID: 102900000, guid: c52a6f2a6f60d6a478f117ffaf78ada0, type: 3}
+      scenePath: Assets/Source/Game/Scenes/GameLevel_5.unity
+    _order: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

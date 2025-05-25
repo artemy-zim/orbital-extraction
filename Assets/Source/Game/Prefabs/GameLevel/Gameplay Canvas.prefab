@@ -335,7 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8365b503332c6e34fa2e0e54bde8e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: MainMenuScene
+  _scene:
+    sceneAsset: {fileID: 0}
+    scenePath: 
   _button: {fileID: 8121316412205185001}
 --- !u!114 &1932658707196217946
 MonoBehaviour:
@@ -2034,7 +2036,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8365b503332c6e34fa2e0e54bde8e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: MainMenuScene
+  _scene:
+    sceneAsset: {fileID: 0}
+    scenePath: 
   _button: {fileID: 6014585950855075956}
 --- !u!114 &4112476233327446083
 MonoBehaviour:
@@ -2584,7 +2588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8365b503332c6e34fa2e0e54bde8e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: GameLevel_1
+  _scene:
+    sceneAsset: {fileID: 0}
+    scenePath: 
   _button: {fileID: 1629816896632402238}
 --- !u!114 &7716527110127739448
 MonoBehaviour:
@@ -2711,7 +2717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451fa1f050587404791f687f923fc243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _joystick: {fileID: 0}
+  _joystick: {fileID: 6185673897025270745}
   _rightDownFocus: {fileID: 5681395253682697973}
   _leftDownFocus: {fileID: 8846857262188896674}
   _leftTopFocus: {fileID: 728565544637325137}
@@ -5002,11 +5008,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5252d66023ded6e4fbf0208dac9a1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timer: {fileID: 0}
+  _rockTotalCounter: {fileID: 0}
   _animator:
     _underlyingValue: {fileID: 6816668462765275230}
   _window:
     _canvasGroup: {fileID: 6266719581924703922}
-  _timer: {fileID: 0}
 --- !u!1 &8932458354573990190
 GameObject:
   m_ObjectHideFlags: 0

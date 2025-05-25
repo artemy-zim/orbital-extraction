@@ -12,14 +12,14 @@ internal class RockTotalCounter : MonoBehaviour
 
     private void Awake()
     {
-        _rockInventory.CurrentAmount
-            .Subscribe(amount => CheckIfAllRocksCollected(amount))
-            .AddTo(this);
-
         _rocksAmount = FindObjectsOfType(typeof(Rock)).Length;
+
+        _rockInventory.CurrentAmount
+            .Subscribe(amount => AreRocksCollected(amount))
+            .AddTo(this);
     }
 
-    private void CheckIfAllRocksCollected(int rocksCollected)
+    private void AreRocksCollected(int rocksCollected)
     {
         if (rocksCollected < _rocksAmount)
             return;

@@ -11,7 +11,7 @@ public abstract class Inventory : MonoBehaviour
 
     private readonly Collection<Cell> _cells = new();
 
-    private readonly ReactiveProperty<int> _currentAmountProperty = new(0);
+    private readonly ReactiveProperty<int> _currentAmountProperty = new();
 
     public int Capacity => _capacity;
     public IReadOnlyReactiveProperty<int> CurrentAmount => _currentAmountProperty;

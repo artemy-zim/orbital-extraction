@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
+using System.IO;
+using Tymski;
+using UniRx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public static SceneLoader Instance { get; private set; }
+    [SerializeField] private SceneLoadButton _button;
 
     public event Action LoadingStarted;
     public event Action<float> Loading;
@@ -13,25 +16,15 @@ public class SceneLoader : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null && Instance != this)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        _button.Clicked
+            .Subscribe(reference => StartCoroutine(LoadSceneCoroutine(reference)))
+            .AddTo(this);
     }
 
-    public void LoadGameScene(string sceneName)
+    private IEnumerator LoadSceneCoroutine(SceneReference scene)
     {
-        StartCoroutine(LoadSceneCoroutine(sceneName));
-    }
-
-    private IEnumerator LoadSceneCoroutine(string sceneName)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        Debug.Log("loading scene start");
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
         float sceneLoadThreshold = 0.9f;
 
         LoadingStarted?.Invoke();

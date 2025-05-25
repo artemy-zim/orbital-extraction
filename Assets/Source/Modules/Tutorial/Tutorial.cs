@@ -45,7 +45,7 @@ internal class Tutorial : MonoBehaviour
     {
         if(_pageCounter >= _cards.Count)
         {
-            Destroy(this);
+            Destroy(gameObject);
             
             return;
         }

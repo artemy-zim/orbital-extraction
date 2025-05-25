@@ -3,7 +3,7 @@ using UniRx;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class SelectCardSoundPlayer : MonoBehaviour
+public class SelectCardSoundPlayer<T> : MonoBehaviour
 {
     private AudioSource _audioSource;
 
@@ -13,7 +13,7 @@ public class SelectCardSoundPlayer : MonoBehaviour
             ? audioSource 
             : throw new ArgumentNullException(nameof(audioSource));
 
-        MessageBroker.Default.Receive<TimerCardSelectedMessage>()
+        MessageBroker.Default.Receive<CardSelectedMessage<T>>()
             .Subscribe(_ => _audioSource.Play())
             .AddTo(this);
     }

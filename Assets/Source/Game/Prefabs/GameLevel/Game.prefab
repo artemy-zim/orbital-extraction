@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3630596780166310630}
   - component: {fileID: 9160708039515659903}
-  - component: {fileID: 1478717649870670508}
+  - component: {fileID: 82091373575528373}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -281,7 +281,7 @@ MonoBehaviour:
     _underlyingValue: {fileID: 0}
   _driver:
     _underlyingValue: {fileID: 0}
---- !u!114 &1478717649870670508
+--- !u!114 &82091373575528373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

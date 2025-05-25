@@ -31,7 +31,7 @@ public class Game : MonoBehaviour
 
         if (YandexGame.savesData.isNewPlayer)
         {
-            InitTutorial();
+            LaunchTutorial();
         }
         else
         {
@@ -39,7 +39,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    private void InitTutorial()
+    private void LaunchTutorial()
     {
         _currentTutorial = Instantiate(_tutorialPrefab);
         _currentTutorial.Init(_uiSounds);
@@ -78,6 +78,8 @@ public class Game : MonoBehaviour
         Time.timeScale = 1f;
         _music.volume = _defaultMusicVolume;
         _gameplayWindow.Show();
+
+        Debug.Log("gameplay winow shown");
     }
 
     private void ActivateMobileInput()
