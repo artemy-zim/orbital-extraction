@@ -26,7 +26,6 @@ public class Game : MonoBehaviour
     {
         _pauseButton.onClick.AddListener(Pause);
         _continueButton.onClick.AddListener(Resume);
-
         _defaultMusicVolume = _music.volume;
 
         if (YandexGame.savesData.isNewPlayer)
@@ -41,6 +40,7 @@ public class Game : MonoBehaviour
 
     private void LaunchTutorial()
     {
+        _currentTutorial.Closed += GameStart;
         _currentTutorial = Instantiate(_tutorialPrefab);
         _currentTutorial.Init(_uiSounds);
         YandexGame.savesData.isNewPlayer = false;
@@ -78,8 +78,6 @@ public class Game : MonoBehaviour
         Time.timeScale = 1f;
         _music.volume = _defaultMusicVolume;
         _gameplayWindow.Show();
-
-        Debug.Log("gameplay winow shown");
     }
 
     private void ActivateMobileInput()

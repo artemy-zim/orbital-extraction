@@ -2,10 +2,10 @@ using UnityEngine;
 
 internal class RockScore : ScoreCounter
 {
-    [SerializeField] private RockInventory _inventory;
+    [SerializeField] private RockStorage _storage;
 
-    protected override Inventory GetInventory()
+    protected override Storage GetStorage()
     {
-        return _inventory;
+        return _storage;
     }
 }

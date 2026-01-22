@@ -35,13 +35,12 @@ public abstract class Timer : MonoBehaviour
             yield return null;
         }
 
+        Completed?.Invoke();
         Reset();
     }
 
     protected void Reset()
     {
-        Completed?.Invoke();
-
         if (_tickCoroutine != null)
         {
             Ticking?.Invoke(_value);

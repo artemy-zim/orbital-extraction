@@ -6,7 +6,7 @@ public class DataSaver : MonoBehaviour
     [SerializeField] private GameplayTimer _timer;
 
     [SerializeField] private GameScore _score;
-    [SerializeField] private GemInventory _gemInventory;
+    [SerializeField] private GemStorage _gemStorage;
 
     private void OnEnable()
     {
@@ -28,7 +28,8 @@ public class DataSaver : MonoBehaviour
 
     private void SaveGems()
     {
-        YandexGame.savesData.gems += _gemInventory.CurrentAmount.Value;
+        YandexGame.savesData.gems += _gemStorage.FilledCellsCount.Value;
+        Debug.Log($"SAVED: {_gemStorage.FilledCellsCount.Value} gems.");
     }
 
     private void SaveScore()
@@ -38,8 +39,12 @@ public class DataSaver : MonoBehaviour
         int previousScore = YandexGame.savesData.levelScores[levelCount];
         int currentScore = _score.Score.Value;
 
-        if(previousScore < currentScore) 
+        Debug.Log($"Previous score: {previousScore}");
+        Debug.Log($"Current score: {currentScore}");
+
+        if (previousScore < currentScore) 
         {
+            Debug.Log($"SAVED: {currentScore} score.");
             YandexGame.savesData.levelScores[levelCount] = currentScore;
         }
     }

@@ -14,7 +14,10 @@ internal abstract class Storage : MonoBehaviour
     [SerializeField] private InventoryTrigger _trigger;
 
     private readonly Collection<CellCluster> _clusters = new();
+    private readonly ReactiveProperty<int> _filledCellsCount = new();
     private Transform _transform;
+
+    public IReadOnlyReactiveProperty<int> FilledCellsCount => _filledCellsCount;
 
     private void Awake()
     {
@@ -78,6 +81,7 @@ internal abstract class Storage : MonoBehaviour
 
         collectible.OnCollectFollow(cell.transform, CreateStrategy(cell));
         cell.Put(collectible);
+        _filledCellsCount.Value++;
     }
 
     protected abstract void ProcessCollectibles(IReadOnlyCollection<ICollectable> collectibles, Action<ICollectable> Add);

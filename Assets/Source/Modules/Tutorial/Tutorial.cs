@@ -1,4 +1,5 @@
 using AYellowpaper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,6 +16,8 @@ internal class Tutorial : MonoBehaviour
     [SerializeField] private Button _actionButton;
     [SerializeField] private Sprite _exitIcon;
     [SerializeField] private Image _actionButtonIcon;
+
+    public event Action Closed;
 
     private int _pageCounter = 0;
 
@@ -45,6 +48,7 @@ internal class Tutorial : MonoBehaviour
     {
         if(_pageCounter >= _cards.Count)
         {
+            Closed?.Invoke();
             Destroy(gameObject);
             
             return;

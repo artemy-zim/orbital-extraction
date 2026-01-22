@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ResourceCounterView : MonoBehaviour
 {
-    [SerializeField] private Inventory _inventory;
+    [SerializeField] private Storage _storage;
     [SerializeField] private TextMeshProUGUI _text;
 
     private void Start()
     {
-        _inventory.CurrentAmount
+        _storage.FilledCellsCount
             .Subscribe(value => UpdateView(value))
             .AddTo(this);
     }

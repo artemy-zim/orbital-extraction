@@ -4,7 +4,7 @@ using UnityEngine;
 
 internal class RockTotalCounter : MonoBehaviour
 {
-    [SerializeField] private RockInventory _rockInventory;
+    [SerializeField] private RockStorage _rockStorage;
 
     private int _rocksAmount;
 
@@ -14,7 +14,7 @@ internal class RockTotalCounter : MonoBehaviour
     {
         _rocksAmount = FindObjectsOfType(typeof(Rock)).Length;
 
-        _rockInventory.CurrentAmount
+        _rockStorage.FilledCellsCount
             .Subscribe(amount => AreRocksCollected(amount))
             .AddTo(this);
     }

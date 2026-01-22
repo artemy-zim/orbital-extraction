@@ -23,7 +23,10 @@ internal class MobileInput : BaseInput
     {
         _joystickSubscription?.Dispose();
 
-        _joystick.enabled = false;
+        if (_joystick == null)
+        {
+            _joystick.enabled = false;
+        }
     }
 
     private void OnMove(Vector2 direction)

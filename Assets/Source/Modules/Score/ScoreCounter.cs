@@ -10,13 +10,13 @@ internal abstract class ScoreCounter : MonoBehaviour
 
     public int Calculate()
     {
-        Inventory inventory = GetInventory();
-        int total = _multiplier * inventory.CurrentAmount.Value;
+        Storage storage = GetStorage();
+        int total = _multiplier * storage.FilledCellsCount.Value;
 
-        _expression.Value = new ScoreExpressionData(inventory.CurrentAmount.Value, _multiplier, total);
+        _expression.Value = new ScoreExpressionData(storage.FilledCellsCount.Value, _multiplier, total);
 
         return total;
     }
 
-    protected abstract Inventory GetInventory();
+    protected abstract Storage GetStorage();
 }

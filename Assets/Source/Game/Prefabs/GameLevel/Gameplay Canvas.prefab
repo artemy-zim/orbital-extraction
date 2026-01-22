@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dee5352d9091a748afbcb28c8f9a879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventory: {fileID: 0}
+  _storage: {fileID: 0}
   _text: {fileID: 6607083849816401586}
 --- !u!1 &202656388481980222
 GameObject:
@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dee5352d9091a748afbcb28c8f9a879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventory: {fileID: 0}
+  _storage: {fileID: 0}
   _text: {fileID: 2742021371981060114}
 --- !u!1 &1792464777647769875
 GameObject:
@@ -2769,7 +2769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7505964927166796558}
-  - component: {fileID: 4620109171584895015}
+  - component: {fileID: 3778727383385405020}
   - component: {fileID: 8965277450289252031}
   m_Layer: 5
   m_Name: Gameplay Window
@@ -2802,7 +2802,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4620109171584895015
+--- !u!114 &3778727383385405020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5009,7 +5009,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 0}
-  _rockTotalCounter: {fileID: 0}
   _animator:
     _underlyingValue: {fileID: 6816668462765275230}
   _window:

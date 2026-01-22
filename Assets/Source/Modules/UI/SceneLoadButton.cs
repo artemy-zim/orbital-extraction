@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System;
 using Tymski;
 using UniRx;
@@ -7,7 +6,7 @@ using UnityEngine.UI;
 
 public class SceneLoadButton : MonoBehaviour
 {
-    [SerializeField, CanBeNull] private SceneReference _scene;
+    [SerializeField] private SceneReference _scene;
     [SerializeField] private Button _button;
 
     private readonly Subject<SceneReference> _clicked = new();
@@ -26,14 +25,12 @@ public class SceneLoadButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        if(_scene is null)
+        if(LevelData.Instance.SelectedValue.Scene is not null)
         {
-            _clicked.OnNext(_scene);
+            if (_scene.ScenePath != string.Empty)
+                _clicked.OnNext(_scene);
+            else
+                _clicked.OnNext(LevelData.Instance.SelectedValue.Scene);
         }
-        else
-        {
-            _clicked.OnNext(LevelData.Instance.SelectedValue.Scene);
-        }
-
     }
 }
