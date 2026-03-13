@@ -1,5 +1,5 @@
 {
-  "idSave": 24,
+  "idSave": 25,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
@@ -10,7 +10,7 @@
     true,
     false
   ],
-  "gems": 17,
+  "gems": 20,
   "gemInventoryCapacity": 10,
   "rockInventoryCapacity": 15,
   "isNewPlayer": false,
