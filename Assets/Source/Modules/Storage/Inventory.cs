@@ -16,7 +16,12 @@ public abstract class Inventory : MonoBehaviour
     public int Capacity => _capacity;
     public IReadOnlyReactiveProperty<int> CurrentAmount => _currentAmountProperty;
 
-    private void Awake()
+    public void SetCapacity(int capacity)
+    {
+        _capacity = capacity;
+    }
+
+    private void Start()
     {
         for (int i = 0; i < _capacity; i++)
         {

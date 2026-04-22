@@ -10,6 +10,7 @@ internal class MobileInput : BaseInput
 
     protected override void Initialize()
     {
+        _joystick.gameObject.SetActive(true);
         _joystick.enabled = true;
 
         _joystickSubscription = Observable.EveryUpdate()
@@ -23,9 +24,10 @@ internal class MobileInput : BaseInput
     {
         _joystickSubscription?.Dispose();
 
-        if (_joystick == null)
+        if (_joystick != null)
         {
             _joystick.enabled = false;
+            _joystick.gameObject.SetActive(false);
         }
     }
 

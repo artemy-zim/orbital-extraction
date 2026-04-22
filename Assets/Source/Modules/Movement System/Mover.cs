@@ -14,6 +14,11 @@ internal class Mover : MonoBehaviour, IMovable, IMoverEvents
     public event Action Stopped;
     public event Action<float> Rotated;
 
+    public void SetMovementSpeed(float speed)
+    {
+        _movementSpeed = speed;
+    }
+
     private void Awake()
     {
         _transform = transform;
