@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 8509587095576458749}
   - component: {fileID: 1217634914823237539}
   - component: {fileID: 4866924892587074870}
+  - component: {fileID: 8074666980108053770}
+  - component: {fileID: 4762346635853757172}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -52,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcb5c562cec6044b9781c7f83e2a2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rockInventory: {fileID: 0}
+  _rockStorage: {fileID: 0}
 --- !u!114 &3629630889146512861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,10 +147,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64865f832b5ae6488d68062e35f5b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rockTotalCounter: {fileID: 0}
   _timer: {fileID: 2067726869591402895}
   _score: {fileID: 3139404098563337967}
-  _gemInventory: {fileID: 0}
+  _gemStorage: {fileID: 0}
+--- !u!114 &8074666980108053770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231454197069163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d1887202e475b4d9c882d4f26dff4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timer: {fileID: 2067726869591402895}
+  _gemStorage: {fileID: 0}
+  _doubleButton: {fileID: 0}
+  _confirmationWindow: {fileID: 0}
+--- !u!114 &4762346635853757172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231454197069163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5227a7d9b21bec46a79a26d2abeef12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timer: {fileID: 2067726869591402895}
 --- !u!1 &856472875166579786
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 2067726869591402895}
-  _rockTotalCounter: {fileID: 0}
   _scores:
   - {fileID: 609534039352784992}
   - {fileID: 5459589791630834399}
@@ -343,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _multiplier: 100
-  _inventory: {fileID: 0}
+  _storage: {fileID: 0}
 --- !u!1 &9160514362238368745
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,4 +418,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _multiplier: 10
-  _inventory: {fileID: 0}
+  _storage: {fileID: 0}
