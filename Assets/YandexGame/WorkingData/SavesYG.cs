@@ -23,10 +23,14 @@ namespace YG
 
         // ...
         public int gems = 0;
-        public int gemInventoryCapacity = 10;
-        public int rockInventoryCapacity = 15;
         public bool isNewPlayer = true;
         public int[] levelScores = new int[5];
+        public int equippedAstroInventoryId = 1;
+        public int equippedDrillId = 1;
+        public List<int> boughtAstroBagIds = new() { 1 };
+        public List<int> boughtDrillIds = new() { 1 };
+        public string lastShopAdDate = "";
+        public int shopAdViewsToday = 0;
         
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
