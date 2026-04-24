@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     [SerializeField] private AudioSource _uiSounds;
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _continueButton;
+    [SerializeField] private Button _exitSceneButton;
 
     [SerializeField] private Tutorial _tutorialPrefab;
     [SerializeField] private GameplayWindow _gameplayWindow;
@@ -26,16 +27,19 @@ public class Game : MonoBehaviour
     {
         _pauseButton.onClick.AddListener(Pause);
         _continueButton.onClick.AddListener(Resume);
+        _exitSceneButton.onClick.AddListener(Resume);
         _defaultMusicVolume = _music.volume;
 
-        if (YandexGame.savesData.isNewPlayer)
-        {
-            LaunchTutorial();
-        }
-        else
-        {
-            GameStart();
-        }
+        Debug.Log("IN GAME START");
+        GameStart();
+        /* if (YandexGame.savesData.isNewPlayer)
+         {
+             LaunchTutorial();
+         }
+         else
+         {
+             GameStart();
+         }*/
     }
 
     private void LaunchTutorial()

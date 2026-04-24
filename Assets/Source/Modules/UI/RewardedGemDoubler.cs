@@ -12,11 +12,6 @@ internal class RewardedGemDoubler : MonoBehaviour
     private const int AdId = 1;
     private bool _rewarded;
 
-    private void Awake()
-    {
-        _doubleButton.gameObject.SetActive(false);
-    }
-
     private void OnEnable()
     {
         _timer.Completed += OnLevelCompleted;

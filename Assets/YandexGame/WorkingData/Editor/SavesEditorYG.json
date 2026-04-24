@@ -1,5 +1,5 @@
 {
-  "idSave": 32,
+  "idSave": 39,
   "isFirstSession": false,
   "language": "en",
   "promptDone": false,
@@ -10,7 +10,7 @@
     true,
     false
   ],
-  "gems": 120,
+  "gems": 179,
   "isNewPlayer": false,
   "levelScores": [
     0,
@@ -25,14 +25,22 @@
     1,
     1,
     1,
+    1,
+    1,
+    1,
+    1,
     1
   ],
   "boughtDrillIds": [
     1,
     1,
     1,
+    1,
+    1,
+    1,
+    1,
     1
   ],
   "lastShopAdDate": "2026-04-24",
-  "shopAdViewsToday": 0
+  "shopAdViewsToday": 1
 }
