@@ -1,7 +1,7 @@
 {
-  "idSave": 28,
+  "idSave": 32,
   "isFirstSession": false,
-  "language": "ru",
+  "language": "en",
   "promptDone": false,
   "money": 1,
   "newPlayerName": "Hello!",
@@ -23,12 +23,16 @@
   "equippedDrillId": 1,
   "boughtAstroBagIds": [
     1,
+    1,
+    1,
     1
   ],
   "boughtDrillIds": [
     1,
+    1,
+    1,
     1
   ],
-  "lastShopAdDate": "2026-04-23",
-  "shopAdViewsToday": 2
+  "lastShopAdDate": "2026-04-24",
+  "shopAdViewsToday": 0
 }

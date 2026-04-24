@@ -74,66 +74,6 @@ MonoBehaviour:
       score: 23
       photo: https://justplaygames.ru/public/icon_player.png
       uniqueID: 456
-    - rank: 4
-      name: dasdas
-      score: 22
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 5
-      name: asdsaa
-      score: 21
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 768
-    - rank: 6
-      name: asfaf
-      score: 21
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 999
-    - rank: 7
-      name: Tanyass
-      score: 20
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 8
-      name: 1232ww
-      score: 19
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 9
-      name: Tanyasdsa
-      score: 17
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 10
-      name: Tanya
-      score: 17
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 11
-      name: Tanya
-      score: 16
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 12
-      name: Tanyadddd
-      score: 14
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 13
-      name: This Pla
-      score: 13
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 000
-    - rank: 14
-      name: Tanyasssaa
-      score: 12
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
-    - rank: 15
-      name: Tanyaccx
-      score: 11
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
     thisPlayer:
       rank: 12
       score: 4542
@@ -235,7 +175,7 @@ MonoBehaviour:
     format: 0
     name: TranslateCSV
   languages:
-    ru: 1
+    ru: 0
     en: 1
     tr: 1
     az: 0
@@ -267,6 +207,38 @@ MonoBehaviour:
     ru: []
     en: []
     tr: []
+    az: []
+    be: []
+    he: []
+    hy: []
+    ka: []
+    et: []
+    fr: []
+    kk: []
+    ky: []
+    lt: []
+    lv: []
+    ro: []
+    tg: []
+    tk: []
+    uk: []
+    uz: []
+    es: []
+    pt: []
+    ar: []
+    id: []
+    ja: []
+    it: []
+    de: []
+    hi: []
+  fontsTMP:
+    defaultFont:
+    - {fileID: 11400000, guid: 9a2157e1f9c4c4d38841fbb92558f587, type: 2}
+    ru:
+    - {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
+    en: []
+    tr:
+    - {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
     az: []
     be: []
     he: []
