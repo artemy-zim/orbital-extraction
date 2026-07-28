@@ -1251,14 +1251,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8334402934498729915
-Transform:
+--- !u!224 &8334402934498729915
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8007615451594964206}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1268,6 +1267,11 @@ Transform:
   - {fileID: 7335152380034160108}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6670513345013605307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,54 +1286,197 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cards:
   - _order: 1
-    _info: Welcome to Orbital Extraction, space traveler. Your mission? To gather
+    _enInfo: Welcome to Orbital Extraction, space traveler. Your mission? To gather
       as many resources as possible before the expedition timer runs out. You'll
       be controlling an astronaut, and their trusty rover, extracting valuable materials
       from space rocks.
+    _ruInfo: "\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C
+      \u0432 \xABOrbital Extraction\xBB, \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u043F\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u0438\u043A!
+      \u0422\u0432\u043E\u044F \u0437\u0430\u0434\u0430\u0447\u0430 \u2014 \u0441\u043E\u0431\u0440\u0430\u0442\u044C
+      \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E \u0431\u043E\u043B\u044C\u0448\u0435
+      \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432 \u0434\u043E \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F
+      \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438.
+      \u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u0442\u044C
+      \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u043E\u043C \u0438 \u0435\u0433\u043E
+      \u0432\u0435\u0440\u043D\u044B\u043C \u0440\u043E\u0432\u0435\u0440\u043E\u043C,
+      \u0434\u043E\u0431\u044B\u0432\u0430\u044F \u0446\u0435\u043D\u043D\u044B\u0435
+      \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B \u0438\u0437 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u043F\u043E\u0440\u043E\u0434."
+    _trInfo: "Orbital Extraction'a ho\u015F geldin, uzay gezgini! G\xF6revin, ke\u015Fif
+      s\xFCresi dolmadan m\xFCmk\xFCn oldu\u011Funca fazla kaynak toplamak. Bir astronotu
+      ve onun g\xFCvenilir gezgin arac\u0131n\u0131 kontrol ederek uzay kayalar\u0131ndan
+      de\u011Ferli kaynaklar \xE7\u0131karacaks\u0131n."
     _sprite: {fileID: 21300000, guid: 831f3ff01659fd64dba9b0827d380173, type: 3}
     _clip: {fileID: 8300000, guid: 494b5504efcd60f44a42328443f3d11a, type: 3}
   - _order: 2
-    _info: "First, keep an eye on the timer at the top of your screen\u2014it shows
+    _enInfo: "First, keep an eye on the timer at the top of your screen\u2014it shows
       how much time you have left on this expedition. Gather as many resources as
       possible before it hits zero! Also, check the top-right corner to see what
       you've already collected."
+    _ruInfo: "\u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u043E\u0431\u0440\u0430\u0442\u0438
+      \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043D\u0430 \u0442\u0430\u0439\u043C\u0435\u0440
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u0439 \u0447\u0430\u0441\u0442\u0438
+      \u044D\u043A\u0440\u0430\u043D\u0430 \u2014 \u043E\u043D \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442,
+      \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438
+      \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0434\u043E \u043A\u043E\u043D\u0446\u0430
+      \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438. \u041F\u043E\u0441\u0442\u0430\u0440\u0430\u0439\u0441\u044F
+      \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E
+      \u0431\u043E\u043B\u044C\u0448\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432,
+      \u043F\u043E\u043A\u0430 \u0432\u0440\u0435\u043C\u044F \u043D\u0435 \u0438\u0441\u0442\u0435\u043A\u043B\u043E!
+      \u0422\u0430\u043A\u0436\u0435 \u0437\u0430\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u0439
+      \u0432 \u043F\u0440\u0430\u0432\u044B\u0439 \u0432\u0435\u0440\u0445\u043D\u0438\u0439
+      \u0443\u0433\u043E\u043B, \u0447\u0442\u043E\u0431\u044B \u0432\u0438\u0434\u0435\u0442\u044C
+      \u0432\u0441\u0451, \u0447\u0442\u043E \u0443\u0436\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C
+      \u0434\u043E\u0431\u044B\u0442\u044C."
+    _trInfo: "\xD6ncelikle ekran\u0131n \xFCst k\u0131sm\u0131ndaki zamanlay\u0131c\u0131ya
+      dikkat et. Ke\u015Ffin bitmesine ne kadar s\xFCre kald\u0131\u011F\u0131n\u0131
+      g\xF6sterir. S\xFCre dolmadan m\xFCmk\xFCn oldu\u011Funca fazla kaynak toplamaya
+      \xE7al\u0131\u015F! Ayr\u0131ca sa\u011F \xFCst k\xF6\u015Feden \u015Fimdiye
+      kadar toplad\u0131\u011F\u0131n kaynaklar\u0131 takip edebilirsin."
     _sprite: {fileID: 21300000, guid: 2fdb3fede440cbe4a83be5d906f1f8a6, type: 3}
     _clip: {fileID: 8300000, guid: 0275d15d9e8ec264289cc07ae09f592f, type: 3}
   - _order: 3
-    _info: Your space rover is equipped to drill rocks and collect valuable samples.
+    _enInfo: Your space rover is equipped to drill rocks and collect valuable samples.
       Just drive up to a rock, and it'll do the work automatically! Once it's done,
       head to the marked collection station to transfer everything to the spaceship.
+    _ruInfo: "\u0422\u0432\u043E\u0439 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u0440\u043E\u0432\u0435\u0440 \u043E\u0441\u043D\u0430\u0449\u0451\u043D \u0431\u0443\u0440\u043E\u043C
+      \u0434\u043B\u044F \u0434\u043E\u0431\u044B\u0447\u0438 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432
+      \u0438\u0437 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u043F\u043E\u0440\u043E\u0434. \u041F\u0440\u043E\u0441\u0442\u043E \u043F\u043E\u0434\u044A\u0435\u0434\u044C
+      \u043A \u043A\u0430\u043C\u043D\u044E, \u0438 \u043E\u043D \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438
+      \u043D\u0430\u0447\u043D\u0451\u0442 \u0434\u043E\u0431\u044B\u0447\u0443!
+      \u041A\u043E\u0433\u0434\u0430 \u0432\u0441\u0451 \u0431\u0443\u0434\u0435\u0442
+      \u0441\u043E\u0431\u0440\u0430\u043D\u043E, \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439\u0441\u044F
+      \u043A \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u043D\u043E\u0439 \u0437\u043E\u043D\u0435
+      \u0432\u044B\u0433\u0440\u0443\u0437\u043A\u0438, \u0447\u0442\u043E\u0431\u044B
+      \u043F\u0435\u0440\u0435\u0434\u0430\u0442\u044C \u0440\u0435\u0441\u0443\u0440\u0441\u044B
+      \u043D\u0430 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u043A\u043E\u0440\u0430\u0431\u043B\u044C."
+    _trInfo: "Uzay arac\u0131n, kayalar\u0131 delip de\u011Ferli kaynaklar\u0131
+      toplamak i\xE7in \xF6zel bir matkapla donat\u0131lm\u0131\u015Ft\u0131r. Bir
+      kayan\u0131n yan\u0131na s\xFCrmen yeterli, gerisini ara\xE7 otomatik olarak
+      halleder! \u0130\u015Fin bitti\u011Finde, toplad\u0131\u011F\u0131n kaynaklar\u0131
+      uzay gemisine aktarmak i\xE7in i\u015Faretli teslim noktas\u0131na git."
     _sprite: {fileID: 21300000, guid: 0aea9222e8c65574397e5ad46c34493b, type: 3}
     _clip: {fileID: 8300000, guid: 5a77d801ea5b0464dbd601945daa1af7, type: 3}
   - _order: 4
-    _info: While drilling, you might find rare gems worth a fortune! Lucky you! But
-      remember, only your astronaut has the right container to keep them safe. Grab
-      the gems and bring them to the container in the marked zone to secure them
-      properly.
+    _enInfo: While drilling, you might find rare gems worth a fortune! Lucky you!
+      But remember, only your astronaut has the right container to keep them safe.
+      Grab the gems and bring them to the container in the marked zone to secure
+      them properly.
+    _ruInfo: "\u0412\u043E \u0432\u0440\u0435\u043C\u044F \u0434\u043E\u0431\u044B\u0447\u0438
+      \u0442\u0435\u0431\u0435 \u043C\u043E\u0433\u0443\u0442 \u043F\u043E\u043F\u0430\u0441\u0442\u044C\u0441\u044F
+      \u0440\u0435\u0434\u043A\u0438\u0435 \u0434\u0440\u0430\u0433\u043E\u0446\u0435\u043D\u043D\u044B\u0435
+      \u043A\u0430\u043C\u043D\u0438, \u0441\u0442\u043E\u044F\u0449\u0438\u0435
+      \u0446\u0435\u043B\u043E\u0435 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435.
+      \u041F\u043E\u0432\u0435\u0437\u043B\u043E! \u041D\u043E \u043F\u043E\u043C\u043D\u0438:
+      \u0442\u043E\u043B\u044C\u043A\u043E \u0443 \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u0430
+      \u0435\u0441\u0442\u044C \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0439
+      \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440 \u0434\u043B\u044F \u0438\u0445
+      \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0433\u043E \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F.
+      \u041F\u043E\u0434\u0431\u0435\u0440\u0438 \u0441\u0430\u043C\u043E\u0446\u0432\u0435\u0442\u044B
+      \u0438 \u043E\u0442\u043D\u0435\u0441\u0438 \u0438\u0445 \u0432 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440
+      \u0432 \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u043D\u043E\u0439 \u0437\u043E\u043D\u0435,
+      \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C
+      \u0434\u043E\u0431\u044B\u0447\u0443."
+    _trInfo: "Kaz\u0131 s\u0131ras\u0131nda b\xFCy\xFCk de\u011Fer ta\u015F\u0131yan
+      nadir m\xFCcevherler bulabilirsin. \u015Eansl\u0131s\u0131n! Ancak unutma,
+      onlar\u0131 g\xFCvenle ta\u015F\u0131yabilecek \xF6zel kap yaln\u0131zca astronotta
+      bulunur. M\xFCcevherleri topla ve g\xFCvenli \u015Fekilde saklamak i\xE7in
+      i\u015Faretli b\xF6lgedeki konteynere g\xF6t\xFCr."
     _sprite: {fileID: 21300000, guid: b47a87a863b928945a8e64c177b1c53c, type: 3}
     _clip: {fileID: 8300000, guid: 6f3d70c93df894f46acc7654e9a79ef5, type: 3}
   - _order: 5
-    _info: Both your rover and astronaut have limited storage! The bars above them
+    _enInfo: Both your rover and astronaut have limited storage! The bars above them
       show how full they are. Once maxed out, you can't collect more. Make sure to
       unload resources in time to keep gathering!
+    _ruInfo: "\u0418 \u0443 \u0440\u043E\u0432\u0435\u0440\u0430, \u0438 \u0443 \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u0430
+      \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D\u043E \u043C\u0435\u0441\u0442\u043E
+      \u0434\u043B\u044F \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432!
+      \u041F\u043E\u043B\u043E\u0441\u043A\u0438 \u043D\u0430\u0434 \u043D\u0438\u043C\u0438
+      \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442, \u043D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043E \u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0449\u0435.
+      \u041A\u043E\u0433\u0434\u0430 \u043E\u043D\u043E \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
+      \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E, \u0441\u043E\u0431\u0438\u0440\u0430\u0442\u044C
+      \u043D\u043E\u0432\u044B\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u044B \u0443\u0436\u0435
+      \u043D\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F. \u041D\u0435
+      \u0437\u0430\u0431\u044B\u0432\u0430\u0439 \u0432\u043E\u0432\u0440\u0435\u043C\u044F
+      \u0440\u0430\u0437\u0433\u0440\u0443\u0436\u0430\u0442\u044C\u0441\u044F, \u0447\u0442\u043E\u0431\u044B
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0442\u044C \u0434\u043E\u0431\u044B\u0447\u0443!"
+    _trInfo: "Hem uzay arac\u0131n\u0131n hem de astronotun ta\u015F\u0131ma kapasitesi
+      s\u0131n\u0131rl\u0131d\u0131r! \xDCzerlerindeki g\xF6stergeler depolar\u0131n\u0131n
+      ne kadar dolu oldu\u011Funu g\xF6sterir. Depo tamamen doldu\u011Funda art\u0131k
+      yeni kaynak toplayamazs\u0131n. Madencili\u011Fe devam edebilmek i\xE7in kaynaklar\u0131n\u0131
+      zaman\u0131nda bo\u015Faltmay\u0131 unutma!"
     _sprite: {fileID: 21300000, guid: 31e5150157dbf0140bc915866ad3cab8, type: 3}
     _clip: {fileID: 8300000, guid: a05922a0e10e69245b19a48bccd7ab5d, type: 3}
   - _order: 6
-    _info: "Hopping into your rover is easy! Just walk your astronaut close, and
+    _enInfo: "Hopping into your rover is easy! Just walk your astronaut close, and
       a glowing circle above their head will fill up. Once full\u2014 you're in.
       To exit, just hit the button with the door icon. Simple as that!"
+    _ruInfo: "\u0421\u0435\u0441\u0442\u044C \u0432 \u0440\u043E\u0432\u0435\u0440
+      \u043E\u0447\u0435\u043D\u044C \u043F\u0440\u043E\u0441\u0442\u043E! \u041F\u043E\u0434\u043E\u0439\u0434\u0438
+      \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u043E\u043C \u043F\u043E\u0431\u043B\u0438\u0436\u0435,
+      \u0438 \u0441\u0432\u0435\u0442\u044F\u0449\u0438\u0439\u0441\u044F \u043A\u0440\u0443\u0433
+      \u043D\u0430\u0434 \u0435\u0433\u043E \u0433\u043E\u043B\u043E\u0432\u043E\u0439
+      \u043D\u0430\u0447\u043D\u0451\u0442 \u0437\u0430\u043F\u043E\u043B\u043D\u044F\u0442\u044C\u0441\u044F.
+      \u041A\u0430\u043A \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u043D \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
+      \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u2014 \u0442\u044B
+      \u043E\u043A\u0430\u0436\u0435\u0448\u044C\u0441\u044F \u0432\u043D\u0443\u0442\u0440\u0438
+      \u0440\u043E\u0432\u0435\u0440\u0430. \u0427\u0442\u043E\u0431\u044B \u0432\u044B\u0439\u0442\u0438,
+      \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0436\u043C\u0438 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0441 \u0438\u043A\u043E\u043D\u043A\u043E\u0439 \u0434\u0432\u0435\u0440\u0438.
+      \u0412\u0441\u0451 \u043F\u0440\u043E\u0441\u0442\u043E!"
+    _trInfo: "Araca binmek \xE7ok kolay! Astronotu arac\u0131n yan\u0131na g\xF6t\xFCr;
+      ba\u015F\u0131n\u0131n \xFCzerindeki parlayan daire dolmaya ba\u015Flayacakt\u0131r.
+      Tamamen doldu\u011Funda araca binmi\u015F olursun. \u0130nmek i\xE7in ise kap\u0131
+      simgeli d\xFC\u011Fmeye basman yeterli. Hepsi bu kadar!"
     _sprite: {fileID: 21300000, guid: 2eeedd495e7c05343a36606e9b69fc7e, type: 3}
     _clip: {fileID: 8300000, guid: fcee0c1180719a347ba610b6d4be6175, type: 3}
   - _order: 7
-    _info: "Need a break? Tap the pause icon in the top left! The expedition timer
+    _enInfo: "Need a break? Tap the pause icon in the top left! The expedition timer
       will stop, and a pause panel will appear. But beware\u2014if you leave early,
       your progress won\u2019t be saved, and all collected resources will be lost!
       Choose wisely."
+    _ruInfo: "\u041D\u0443\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C
+      \u043F\u0430\u0443\u0437\u0443? \u041D\u0430\u0436\u043C\u0438 \u043D\u0430
+      \u0437\u043D\u0430\u0447\u043E\u043A \u043F\u0430\u0443\u0437\u044B \u0432
+      \u043B\u0435\u0432\u043E\u043C \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u0443\u0433\u043B\u0443!
+      \u0422\u0430\u0439\u043C\u0435\u0440 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438
+      \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0441\u044F, \u0438
+      \u043E\u0442\u043A\u0440\u043E\u0435\u0442\u0441\u044F \u043C\u0435\u043D\u044E
+      \u043F\u0430\u0443\u0437\u044B. \u041D\u043E \u0431\u0443\u0434\u044C \u043E\u0441\u0442\u043E\u0440\u043E\u0436\u0435\u043D:
+      \u0435\u0441\u043B\u0438 \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
+      \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u044E \u0440\u0430\u043D\u044C\u0448\u0435
+      \u0432\u0440\u0435\u043C\u0435\u043D\u0438, \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441
+      \u043D\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F,
+      \u0430 \u0432\u0441\u0435 \u0441\u043E\u0431\u0440\u0430\u043D\u043D\u044B\u0435
+      \u0440\u0435\u0441\u0443\u0440\u0441\u044B \u0431\u0443\u0434\u0443\u0442 \u043F\u043E\u0442\u0435\u0440\u044F\u043D\u044B.
+      \u0420\u0435\u0448\u0430\u0439 \u0441 \u0443\u043C\u043E\u043C!"
+    _trInfo: "Mola m\u0131 vermek istiyorsun? Sol \xFCst k\xF6\u015Fedeki duraklatma
+      simgesine dokun! Ke\u015Fif zamanlay\u0131c\u0131s\u0131 duracak ve duraklatma
+      men\xFCs\xFC a\xE7\u0131lacakt\u0131r. Ancak dikkatli ol: Ke\u015Ffi erken
+      sonland\u0131r\u0131rsan ilerlemen kaydedilmez ve toplad\u0131\u011F\u0131n
+      t\xFCm kaynaklar\u0131 kaybedersin. Karar\u0131n\u0131 dikkatlice ver!"
     _sprite: {fileID: 21300000, guid: 1c9750e179d6a8d4d976e290087ad124, type: 3}
     _clip: {fileID: 8300000, guid: 24220aa5dbf37214b8a31165e5367171, type: 3}
   - _order: 8
-    _info: "And that\u2019s it mate! Hope this intro sets you up for a stellar start
-      on your mining expeditions. Best of luck, and may your drills strike riches!"
+    _enInfo: "And that\u2019s it mate! Hope this intro sets you up for a stellar
+      start on your mining expeditions. Best of luck, and may your drills strike
+      riches!"
+    _ruInfo: "\u0412\u043E\u0442 \u0438 \u0432\u0441\u0451! \u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F,
+      \u044D\u0442\u043E \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E
+      \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u0442\u0435\u0431\u0435 \u0443\u0432\u0435\u0440\u0435\u043D\u043D\u043E
+      \u043D\u0430\u0447\u0430\u0442\u044C \u0441\u0432\u043E\u0438 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+      \u0434\u043E\u0431\u044B\u0432\u0430\u044E\u0449\u0438\u0435 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438.
+      \u0423\u0434\u0430\u0447\u0438, \u0438 \u043F\u0443\u0441\u0442\u044C \u043A\u0430\u0436\u0434\u043E\u0435
+      \u0431\u0443\u0440\u0435\u043D\u0438\u0435 \u043F\u0440\u0438\u043D\u043E\u0441\u0438\u0442
+      \u0431\u043E\u0433\u0430\u0442\u0443\u044E \u0434\u043E\u0431\u044B\u0447\u0443!"
+    _trInfo: "\u0130\u015Fte bu kadar! Umar\u0131z bu k\u0131sa e\u011Fitim seni
+      uzay madencili\u011Fi macerana haz\u0131rlam\u0131\u015Ft\u0131r. Bol \u015Fans
+      ve matkab\u0131n her zaman zengin kaynaklara ula\u015Fs\u0131n!"
     _sprite: {fileID: 21300000, guid: 3dbb466d137c68c4b89f3606cd5497fa, type: 3}
     _clip: {fileID: 8300000, guid: 9b60cb115769f1c409f82e218b0bde11, type: 3}
   _cardView:
