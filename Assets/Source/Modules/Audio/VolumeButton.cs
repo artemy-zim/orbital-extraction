@@ -2,6 +2,7 @@ using System;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public abstract class VolumeButton : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public abstract class VolumeButton : MonoBehaviour
     private readonly float _onValue = 1f;
     private readonly float _offValue = 0.0001f;
 
+    private string _onString;
+    private string _offString;
+
+    public event Action<string> TextSet;
     public event Action<bool> Toggled;
 
     private void OnEnable()
@@ -30,6 +35,27 @@ public abstract class VolumeButton : MonoBehaviour
     private void Init()
     {
         string parameter = GetParameter();
+        string lang = YandexGame.lang;
+
+        switch (lang)
+        {
+            case "ru":
+                SetLang("Вкл", "Выкл");
+
+                break;
+            case "en":
+                SetLang("On", "Off");
+
+                break;
+            case "tr":
+                SetLang("açık", "kapalı");
+
+                break;
+            default:
+                SetLang("On", "Off");
+
+                break;
+        }
 
         if (PlayerPrefs.HasKey(parameter))
         {
@@ -55,6 +81,12 @@ public abstract class VolumeButton : MonoBehaviour
         }
     }
 
+    private void SetLang(string on, string off)
+    {
+        _onString = on;
+        _offString = off;
+    }
+
     private bool GetToggleValue(float value)
     {
         return value == _onValue;
@@ -63,7 +95,10 @@ public abstract class VolumeButton : MonoBehaviour
     private void CallEvent(string parameter, float value)
     {
         MessageBroker.Default.Publish(new VolumeChangedMessage(parameter, value));
-        Toggled?.Invoke(GetToggleValue(value));
+
+        bool isVolumeOn = GetToggleValue(value);
+        Toggled?.Invoke(isVolumeOn);
+        TextSet?.Invoke(isVolumeOn ? _onString : _offString);
     }
 
     protected abstract string GetParameter();

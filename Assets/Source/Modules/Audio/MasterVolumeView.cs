@@ -1,24 +1,24 @@
 using TMPro;
 using UnityEngine;
+using YG;
 
 public class MasterVolumeView : MonoBehaviour
 {
     [SerializeField] private VolumeButton _volumeButton;
-
     [SerializeField] private TextMeshProUGUI _volumeStatusText;
 
     private void OnEnable()
     {
-        _volumeButton.Toggled += SetStatus;
+        _volumeButton.TextSet += SetStatus;
     }
 
     private void OnDisable()
     {
-        _volumeButton.Toggled -= SetStatus;
+        _volumeButton.TextSet -= SetStatus;
     }
 
-    private void SetStatus(bool isVolumeOn)
+    private void SetStatus(string text)
     {
-        _volumeStatusText.text = isVolumeOn ? "On" : "Off";
+        _volumeStatusText.text = text;
     }
 }

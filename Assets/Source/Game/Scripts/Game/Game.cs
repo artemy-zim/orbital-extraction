@@ -30,22 +30,20 @@ public class Game : MonoBehaviour
         _exitSceneButton.onClick.AddListener(Resume);
         _defaultMusicVolume = _music.volume;
 
-        Debug.Log("IN GAME START");
-        GameStart();
-        /* if (YandexGame.savesData.isNewPlayer)
-         {
-             LaunchTutorial();
-         }
-         else
-         {
-             GameStart();
-         }*/
+        if (YandexGame.savesData.isNewPlayer)
+        {
+            LaunchTutorial();
+        }
+        else
+        {
+            GameStart();
+        }
     }
 
     private void LaunchTutorial()
     {
-        _currentTutorial.Closed += GameStart;
         _currentTutorial = Instantiate(_tutorialPrefab);
+        _currentTutorial.Closed += GameStart;
         _currentTutorial.Init(_uiSounds);
         YandexGame.savesData.isNewPlayer = false;
 
