@@ -13,6 +13,16 @@ namespace Assets.Source.Modules.Upgrade
             EquippedUpgradeData.Instance.SetEquippedBag(upgrade);
 
         public override float GetSecondaryStat(InventoryUpgrade upgrade) => upgrade.GatherRadius;
-        public override string GetSecondaryStatLabel() => "Radius";
+
+        public override string GetSecondaryStatLabel()
+        {
+            return YandexGame.lang switch
+            {
+                "ru" => "Радиус",
+                "en" => "Radius",
+                "tr" => "yarıçap",
+                _ => "Radius",
+            };
+        }
     }
 }

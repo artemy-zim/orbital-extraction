@@ -7,11 +7,14 @@ internal class GameScoreView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private GameScore _score;
 
-    private void Awake()
+    private void OnEnable()
     {
-        _score.Score
-            .Subscribe(value => UpdateView(value))
-            .AddTo(this);
+        _score.Calculated += UpdateView;
+    }
+
+    private void OnDisable()
+    {
+        _score.Calculated -= UpdateView;
     }
 
     private void UpdateView(int value)

@@ -24,7 +24,7 @@ internal class Tutorial : MonoBehaviour
     private void Awake()
     {
         _cards.OrderBy(card => card.Order);
-        _cards.ForEach(card => card.InitLang());
+        _cards.ForEach(card => card.Init());
     }
 
     private void OnEnable()

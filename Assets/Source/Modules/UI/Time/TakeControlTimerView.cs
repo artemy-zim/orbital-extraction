@@ -24,13 +24,11 @@ internal class TakeControlTimerView : MonoBehaviour
 
     private void ShowImage()
     {
-        Debug.Log("Showed");
         _image.enabled = true;
     }
 
     private void HideImage()
     {
-        Debug.Log("Hid");
         _image.enabled = false;
     }
 

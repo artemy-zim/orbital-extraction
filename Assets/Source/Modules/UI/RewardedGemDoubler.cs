@@ -7,7 +7,6 @@ internal class RewardedGemDoubler : MonoBehaviour
     [SerializeField] private GameplayTimer _timer;
     [SerializeField] private GemStorage _gemStorage;
     [SerializeField] private Button _doubleButton;
-    [SerializeField] private AdConfirmationWindow _confirmationWindow;
 
     private const int AdId = 1;
     private bool _rewarded;
@@ -15,16 +14,14 @@ internal class RewardedGemDoubler : MonoBehaviour
     private void OnEnable()
     {
         _timer.Completed += OnLevelCompleted;
-        _doubleButton.onClick.AddListener(OnDoubleButtonClick);
-        _confirmationWindow.Accepted += ShowAd;
+        _doubleButton.onClick.AddListener(ShowAd);
         YandexGame.RewardVideoEvent += OnRewarded;
     }
 
     private void OnDisable()
     {
         _timer.Completed -= OnLevelCompleted;
-        _doubleButton.onClick.RemoveListener(OnDoubleButtonClick);
-        _confirmationWindow.Accepted -= ShowAd;
+        _doubleButton.onClick.RemoveListener(ShowAd);
         YandexGame.RewardVideoEvent -= OnRewarded;
     }
 
@@ -32,11 +29,6 @@ internal class RewardedGemDoubler : MonoBehaviour
     {
         _rewarded = false;
         _doubleButton.gameObject.SetActive(true);
-    }
-
-    private void OnDoubleButtonClick()
-    {
-        _confirmationWindow.Show();
     }
 
     private void ShowAd()

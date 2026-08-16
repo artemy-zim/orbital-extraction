@@ -8,7 +8,6 @@ namespace Assets.Source.Modules.Upgrade
     internal class ShopRewardedAd : MonoBehaviour
     {
         [SerializeField] private Button _watchAdButton;
-        [SerializeField] private AdConfirmationWindow _confirmationWindow;
         [SerializeField] private int _gemReward = 5;
 
         private const int AdId = 2;
@@ -23,21 +22,14 @@ namespace Assets.Source.Modules.Upgrade
 
         private void OnEnable()
         {
-            _watchAdButton.onClick.AddListener(OnWatchAdClick);
-            _confirmationWindow.Accepted += ShowAd;
+            _watchAdButton.onClick.AddListener(ShowAd);
             YandexGame.RewardVideoEvent += OnRewarded;
         }
 
         private void OnDisable()
         {
-            _watchAdButton.onClick.RemoveListener(OnWatchAdClick);
-            _confirmationWindow.Accepted -= ShowAd;
+            _watchAdButton.onClick.RemoveListener(ShowAd);
             YandexGame.RewardVideoEvent -= OnRewarded;
-        }
-
-        private void OnWatchAdClick()
-        {
-            _confirmationWindow.Show();
         }
 
         private void ShowAd()

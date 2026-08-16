@@ -13,6 +13,16 @@ namespace Assets.Source.Modules.Upgrade
             EquippedUpgradeData.Instance.SetEquippedDrill(upgrade);
 
         public override float GetSecondaryStat(InventoryUpgrade upgrade) => upgrade.Speed;
-        public override string GetSecondaryStatLabel() => "Speed";
+
+        public override string GetSecondaryStatLabel()
+        {
+            return YandexGame.lang switch
+            {
+                "ru" => "Скорость",
+                "en" => "Speed",
+                "tr" => "hız",
+                _ => "Speed",
+            };
+        }
     }
 }

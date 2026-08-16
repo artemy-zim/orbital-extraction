@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 [Serializable]
 internal class TutorialCardView
@@ -12,10 +13,10 @@ internal class TutorialCardView
 
     public void Render(TutorialCard card) 
     {
+        _text.font = card.Font;
         _text.text = card.Info;
         _image.sprite = card.Sprite;
         _audio.clip = card.Clip;
         _audio.Play();
     }
-
 }

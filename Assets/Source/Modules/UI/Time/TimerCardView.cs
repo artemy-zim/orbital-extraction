@@ -17,8 +17,5 @@ public class TimerCardView : CardView<TimerCard>
         _amountText.text = card.Minutes.ToString();
     }
 
-    protected override TimerCard GetMessageValue()
-    {
-        return _card;
-    }
+    protected override TimerCard GetMessageValue() => _card;
 }

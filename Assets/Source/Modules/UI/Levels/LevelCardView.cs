@@ -14,10 +14,9 @@ public class LevelCardView : CardView<LevelCard>
         _card = card;
         _orderText.text = card.Order.ToString();
         _scoreRecordText.text = YandexGame.savesData.levelScores[card.Order - 1].ToString();
+        Debug.Log($"Rendered level card with order: {_card.Order}");
+        Debug.Log($"Rendered its saved score: {YandexGame.savesData.levelScores[card.Order - 1]}");
     }
 
-    protected override LevelCard GetMessageValue()
-    {
-        return _card;
-    }
+    protected override LevelCard GetMessageValue() => _card;
 }
