@@ -29,7 +29,6 @@ public class SessionDataSaver : MonoBehaviour
     private void SaveGems()
     {
         YandexGame.savesData.gems += _gemStorage.FilledCellsCount.Value;
-        Debug.Log($"SAVED: {_gemStorage.FilledCellsCount.Value} gems.");
     }
 
     private void SaveScore()
@@ -37,14 +36,10 @@ public class SessionDataSaver : MonoBehaviour
         int levelCount = LevelData.Instance.SelectedValue.Order - 1;
 
         int previousScore = YandexGame.savesData.levelScores[levelCount];
-        int currentScore = _score.Score.Value;
-
-        Debug.Log($"Previous score: {previousScore}");
-        Debug.Log($"Current score: {currentScore}");
+        int currentScore = _score.Calculate();
 
         if (previousScore < currentScore) 
         {
-            Debug.Log($"SAVED: {currentScore} score.");
             YandexGame.savesData.levelScores[levelCount] = currentScore;
         }
     }

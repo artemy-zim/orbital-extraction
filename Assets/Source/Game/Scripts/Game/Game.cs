@@ -16,6 +16,8 @@ public class Game : MonoBehaviour
     [SerializeField] private Button _exitSceneButton;
 
     [SerializeField] private Tutorial _tutorialPrefab;
+    [SerializeField] private Transform _tutorialParent;
+
     [SerializeField] private GameplayWindow _gameplayWindow;
 
     private Tutorial _currentTutorial;
@@ -42,7 +44,7 @@ public class Game : MonoBehaviour
 
     private void LaunchTutorial()
     {
-        _currentTutorial = Instantiate(_tutorialPrefab);
+        _currentTutorial = Instantiate(_tutorialPrefab, _tutorialParent);
         _currentTutorial.Closed += GameStart;
         _currentTutorial.Init(_uiSounds);
         YandexGame.savesData.isNewPlayer = false;

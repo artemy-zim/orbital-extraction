@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private SceneLoadButton _button;
+    [SerializeField] private SceneLoadButton[] _buttons = new SceneLoadButton[8];
 
     public event Action LoadingStarted;
     public event Action<float> Loading;
@@ -16,14 +16,17 @@ public class SceneLoader : MonoBehaviour
 
     private void Awake()
     {
-        _button.Clicked
+        foreach (SceneLoadButton button in _buttons)
+        {
+            if (button != null)
+                button.Clicked
             .Subscribe(reference => StartCoroutine(LoadSceneCoroutine(reference)))
             .AddTo(this);
+        }
     }
 
     private IEnumerator LoadSceneCoroutine(SceneReference scene)
     {
-        Debug.Log("loading scene start");
         AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
         float sceneLoadThreshold = 0.9f;
 
