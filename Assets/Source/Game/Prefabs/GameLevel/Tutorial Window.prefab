@@ -1,5 +1,192 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &190191781364286060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7629382719660714616}
+  - component: {fileID: 6038959231426519259}
+  - component: {fileID: 4298625366828959576}
+  - component: {fileID: 917174889267238745}
+  m_Layer: 0
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7629382719660714616
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190191781364286060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657084681980227116}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.32, y: 0.88}
+  m_AnchorMax: {x: 0.68, y: 0.98}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6038959231426519259
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190191781364286060}
+  m_CullTransparentMesh: 1
+--- !u!114 &4298625366828959576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190191781364286060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Tutorial
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c2f49fe8c22d94f9a9e6cd06ad490155, type: 2}
+  m_sharedMaterial: {fileID: 3074828514974314926, guid: c2f49fe8c22d94f9a9e6cd06ad490155, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 65
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: -5.260315}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &917174889267238745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190191781364286060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 4298625366828959576}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0423\u0447\u0435\u0431\u043D\u043E\u0435 \u043F\u043E\u0441\u043E\u0431\u0438\u0435"
+  en: Tutorial
+  tr: "\xF6\u011Fretici"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 3/3 completed
+  componentTextField: 1
+  countLang: 3
 --- !u!1 &848641229261641816
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +315,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2406158955047915394
+--- !u!1 &998004911167006911
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,229 +323,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8320482386844085066}
-  - component: {fileID: 2413024618466111273}
-  - component: {fileID: 2336702799683480492}
-  - component: {fileID: 2826099749574048214}
+  - component: {fileID: 830327071981490223}
+  - component: {fileID: 9185351766392356452}
+  - component: {fileID: 8682704115526097906}
+  - component: {fileID: 1371964960500615910}
   m_Layer: 0
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8320482386844085066
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2406158955047915394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3097837550758762134}
-  m_Father: {fileID: 8334402934498729915}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!223 &2413024618466111273
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2406158955047915394}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!114 &2336702799683480492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2406158955047915394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!114 &2826099749574048214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2406158955047915394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!1 &2631221755292085690
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7644504036714336436}
-  - component: {fileID: 8290143453002705258}
-  - component: {fileID: 8815664099885123652}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7644504036714336436
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2631221755292085690}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8916442396146391362}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 90, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8290143453002705258
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2631221755292085690}
-  m_CullTransparentMesh: 1
---- !u!114 &8815664099885123652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2631221755292085690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b78e1c94f1bcb42a7996ce616745e100, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &3089226916427426477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8916442396146391362}
-  - component: {fileID: 7032695910160422711}
-  - component: {fileID: 8490990668211657527}
-  - component: {fileID: 2406419591458219818}
-  m_Layer: 5
   m_Name: Action Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8916442396146391362
+--- !u!224 &830327071981490223
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089226916427426477}
+  m_GameObject: {fileID: 998004911167006911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7644504036714336436}
-  m_Father: {fileID: 6006789352208003702}
+  - {fileID: 8892811140573018793}
+  m_Father: {fileID: 657084681980227116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.4, y: 0.02}
+  m_AnchorMax: {x: 0.6, y: 0.165}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 282.1, y: 123.4}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7032695910160422711
+--- !u!222 &9185351766392356452
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089226916427426477}
+  m_GameObject: {fileID: 998004911167006911}
   m_CullTransparentMesh: 1
---- !u!114 &8490990668211657527
+--- !u!114 &8682704115526097906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089226916427426477}
+  m_GameObject: {fileID: 998004911167006911}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -382,13 +392,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2406419591458219818
+--- !u!114 &1371964960500615910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089226916427426477}
+  m_GameObject: {fileID: 998004911167006911}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -422,7 +432,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 8490990668211657527}
+  m_TargetGraphic: {fileID: 8682704115526097906}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -438,7 +448,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &3097205368478794469
+--- !u!1 &1501487557408427833
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,54 +456,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 333039370361999247}
-  - component: {fileID: 572299131325122230}
-  - component: {fileID: 7388286175482172808}
-  - component: {fileID: 7042661991283337753}
-  m_Layer: 5
-  m_Name: Title
+  - component: {fileID: 6396144674862936607}
+  - component: {fileID: 3139475999625211077}
+  - component: {fileID: 9213738147165742377}
+  m_Layer: 0
+  m_Name: Info Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &333039370361999247
+--- !u!224 &6396144674862936607
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097205368478794469}
+  m_GameObject: {fileID: 1501487557408427833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.20522662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6006789352208003702}
+  m_Father: {fileID: 657084681980227116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.92, y: 0.87}
+  m_AnchorMax: {x: 0.99, y: 0.99}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1390, y: 80}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &572299131325122230
+--- !u!222 &3139475999625211077
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097205368478794469}
+  m_GameObject: {fileID: 1501487557408427833}
   m_CullTransparentMesh: 1
---- !u!114 &7388286175482172808
+--- !u!114 &9213738147165742377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097205368478794469}
+  m_GameObject: {fileID: 1501487557408427833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -504,128 +513,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tutorial
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6ecbe1defc55a463ba1172f67f84844b, type: 2}
-  m_sharedMaterial: {fileID: 5568139486216784236, guid: 6ecbe1defc55a463ba1172f67f84844b, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7042661991283337753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097205368478794469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMPComponent: {fileID: 7388286175482172808}
-  uniqueFontTMP: {fileID: 0}
-  textLComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
-  text: 
-  ru: "\u0423\u0447\u0435\u0431\u043D\u043E\u0435 \u043F\u043E\u0441\u043E\u0431\u0438\u0435"
-  en: Tutorial
-  tr: "\xF6\u011Fretici"
-  az: 
-  be: 
-  he: 
-  hy: 
-  ka: 
-  et: 
-  fr: 
-  kk: 
-  ky: 
-  lt: 
-  lv: 
-  ro: 
-  tg: 
-  tk: 
-  uk: 
-  uz: 
-  es: 
-  pt: 
-  ar: 
-  id: 
-  ja: 
-  it: 
-  de: 
-  hi: 
-  changeOnlyFont: 0
-  fontNumber: 0
-  uniqueFont: {fileID: 0}
-  additionalText: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 3/3 completed
-  componentTextField: 1
-  countLang: 3
---- !u!1 &3314510144453037469
+  m_Sprite: {fileID: 21300000, guid: 6be115246fe9b40b8b37ad9f4e2be66a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2732616632842258550
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -633,36 +531,74 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3934457557740552756}
-  m_Layer: 5
-  m_Name: Tutorial Card
+  - component: {fileID: 160560348642326989}
+  - component: {fileID: 1575135423353527079}
+  - component: {fileID: 2851461400632406247}
+  m_Layer: 0
+  m_Name: Blur Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3934457557740552756
+--- !u!224 &160560348642326989
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3314510144453037469}
+  m_GameObject: {fileID: 2732616632842258550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6006789352208003702}
-  - {fileID: 281346072819834052}
-  m_Father: {fileID: 3097837550758762134}
+  m_Children: []
+  m_Father: {fileID: 8334402934498729915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1450, y: 880}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &3379398056931077724
+--- !u!222 &1575135423353527079
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2732616632842258550}
+  m_CullTransparentMesh: 1
+--- !u!114 &2851461400632406247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2732616632842258550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: bce99f746a3cfd14888b309da3fe7302, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4116448772849674214
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -670,50 +606,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8475707010921240635}
-  - component: {fileID: 6377707663011744086}
-  - component: {fileID: 4367003007286382577}
-  m_Layer: 5
+  - component: {fileID: 5729769099763643613}
+  - component: {fileID: 4716396161357839758}
+  - component: {fileID: 1657484333464568345}
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8475707010921240635
+--- !u!224 &5729769099763643613
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379398056931077724}
+  m_GameObject: {fileID: 4116448772849674214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4332509228701912873}
+  m_Father: {fileID: 6373230143101045092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6377707663011744086
+--- !u!222 &4716396161357839758
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379398056931077724}
+  m_GameObject: {fileID: 4116448772849674214}
   m_CullTransparentMesh: 1
---- !u!114 &4367003007286382577
+--- !u!114 &1657484333464568345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3379398056931077724}
+  m_GameObject: {fileID: 4116448772849674214}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -737,7 +673,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &3660305070776678216
+--- !u!1 &4535638304651537585
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -745,162 +681,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4332509228701912873}
-  - component: {fileID: 639340622698499212}
-  - component: {fileID: 1127871723600732097}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4332509228701912873
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3660305070776678216}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8475707010921240635}
-  m_Father: {fileID: 6006789352208003702}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1100, y: 375}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &639340622698499212
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3660305070776678216}
-  m_CullTransparentMesh: 1
---- !u!114 &1127871723600732097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3660305070776678216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &5001575009774821998
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6006789352208003702}
-  - component: {fileID: 2764709041439519886}
-  - component: {fileID: 1334361868125256808}
-  - component: {fileID: 5235083053464906130}
-  - component: {fileID: 6709188115027507516}
-  - component: {fileID: 5271106295984514672}
-  m_Layer: 5
+  - component: {fileID: 657084681980227116}
+  - component: {fileID: 4652661448953164584}
+  - component: {fileID: 2854624269622925879}
+  - component: {fileID: 6548151326249157680}
+  - component: {fileID: 4796276555229164185}
+  m_Layer: 0
   m_Name: Layout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6006789352208003702
+--- !u!224 &657084681980227116
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001575009774821998}
+  m_GameObject: {fileID: 4535638304651537585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.20522662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 333039370361999247}
-  - {fileID: 4332509228701912873}
-  - {fileID: 4700629479191233482}
-  - {fileID: 8916442396146391362}
-  m_Father: {fileID: 3934457557740552756}
+  - {fileID: 7629382719660714616}
+  - {fileID: 6373230143101045092}
+  - {fileID: 2429746105576047288}
+  - {fileID: 830327071981490223}
+  - {fileID: 6396144674862936607}
+  m_Father: {fileID: 8334402934498729915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -100, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2764709041439519886
+--- !u!222 &4652661448953164584
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001575009774821998}
+  m_GameObject: {fileID: 4535638304651537585}
   m_CullTransparentMesh: 1
---- !u!114 &1334361868125256808
+--- !u!114 &2854624269622925879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001575009774821998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72722a6120e083241bf42be46205cb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5235083053464906130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001575009774821998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28755c544b5eead4aa981579f69bff6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transformablePanel:
-    _underlyingValue: {fileID: 1334361868125256808}
-  _animationOffset: {x: 0, y: -1000, z: 0}
-  _scaleDuration: 1.5
-  _anchorPosDuration: 0.7
---- !u!114 &6709188115027507516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001575009774821998}
+  m_GameObject: {fileID: 4535638304651537585}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -924,33 +755,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5271106295984514672
+--- !u!114 &6548151326249157680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001575009774821998}
+  m_GameObject: {fileID: 4535638304651537585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 72722a6120e083241bf42be46205cb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 30
-    m_Right: 30
-    m_Top: 15
-    m_Bottom: 65
-  m_ChildAlignment: 1
-  m_Spacing: 20
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
---- !u!1 &5714888591461100771
+--- !u!114 &4796276555229164185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535638304651537585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28755c544b5eead4aa981579f69bff6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transformablePanel:
+    _underlyingValue: {fileID: 6548151326249157680}
+  _animationOffset: {x: 0, y: -1000, z: 0}
+  _scaleDuration: 1.5
+  _anchorPosDuration: 0.7
+--- !u!1 &5893254774276134175
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -958,50 +792,496 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4700629479191233482}
-  - component: {fileID: 212119597577642671}
-  - component: {fileID: 8163440496131027473}
-  m_Layer: 5
-  m_Name: Info (TMP)
+  - component: {fileID: 8892811140573018793}
+  - component: {fileID: 6445442318976392191}
+  - component: {fileID: 8494204844811497130}
+  m_Layer: 0
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4700629479191233482
+--- !u!224 &8892811140573018793
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5714888591461100771}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 5893254774276134175}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6006789352208003702}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_Father: {fileID: 830327071981490223}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.33, y: 0.125}
+  m_AnchorMax: {x: 0.67, y: 0.95}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1300, y: 192}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &212119597577642671
+--- !u!222 &6445442318976392191
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5714888591461100771}
+  m_GameObject: {fileID: 5893254774276134175}
   m_CullTransparentMesh: 1
---- !u!114 &8163440496131027473
+--- !u!114 &8494204844811497130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5714888591461100771}
+  m_GameObject: {fileID: 5893254774276134175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b78e1c94f1bcb42a7996ce616745e100, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8007615451594964206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8334402934498729915}
+  - component: {fileID: 6670513345013605307}
+  - component: {fileID: 2421543230904605536}
+  - component: {fileID: 2565326112309041645}
+  m_Layer: 0
+  m_Name: Tutorial Window
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8334402934498729915
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007615451594964206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 160560348642326989}
+  - {fileID: 657084681980227116}
+  - {fileID: 7335152380034160108}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6670513345013605307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007615451594964206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb97b5456bfc5440ab49a46c9018038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cards:
+  - _order: 1
+    _enInfo: Welcome to Orbital Extraction, space traveler. Your mission? To gather
+      as many resources as possible before the expedition timer runs out. You'll
+      be controlling an astronaut, and their trusty rover, extracting valuable materials
+      from space rocks.
+    _ruInfo: "\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C
+      \u0432 \u041E\u0440\u0431\u0438\u0442\u0430\u043B\u044C\u043D\u0443\u044E \u0434\u043E\u0431\u044B\u0447\u0443,
+      \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043F\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u0438\u043A!
+      \u0422\u0432\u043E\u044F \u0437\u0430\u0434\u0430\u0447\u0430 \u2014 \u0441\u043E\u0431\u0440\u0430\u0442\u044C
+      \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E \u0431\u043E\u043B\u044C\u0448\u0435
+      \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432 \u0434\u043E \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F
+      \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438.
+      \u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u0442\u044C
+      \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u043E\u043C \u0438 \u0435\u0433\u043E
+      \u0432\u0435\u0440\u043D\u044B\u043C \u0440\u043E\u0432\u0435\u0440\u043E\u043C,
+      \u0434\u043E\u0431\u044B\u0432\u0430\u044F \u0446\u0435\u043D\u043D\u044B\u0435
+      \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B \u0438\u0437 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u043F\u043E\u0440\u043E\u0434."
+    _trInfo: "Orbital Extraction'a ho\u015F geldin, uzay gezgini! G\xF6revin, ke\u015Fif
+      s\xFCresi dolmadan m\xFCmk\xFCn oldu\u011Funca fazla kaynak toplamak. Bir astronotu
+      ve onun g\xFCvenilir gezgin arac\u0131n\u0131 kontrol ederek uzay kayalar\u0131ndan
+      de\u011Ferli kaynaklar \xE7\u0131karacaks\u0131n."
+    _ruSprite: {fileID: 21300000, guid: 831f3ff01659fd64dba9b0827d380173, type: 3}
+    _enSprite: {fileID: 21300000, guid: 831f3ff01659fd64dba9b0827d380173, type: 3}
+    _trSprite: {fileID: 21300000, guid: 831f3ff01659fd64dba9b0827d380173, type: 3}
+    _clip: {fileID: 8300000, guid: 494b5504efcd60f44a42328443f3d11a, type: 3}
+  - _order: 2
+    _enInfo: "First, keep an eye on the timer at the top of your screen\u2014it shows
+      how much time you have left on this expedition. Gather as many resources as
+      possible before it hits zero! Also, check the top-right corner to see what
+      you've already collected."
+    _ruInfo: "\u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u043E\u0431\u0440\u0430\u0442\u0438
+      \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043D\u0430 \u0442\u0430\u0439\u043C\u0435\u0440
+      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u0439 \u0447\u0430\u0441\u0442\u0438
+      \u044D\u043A\u0440\u0430\u043D\u0430 \u2014 \u043E\u043D \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442,
+      \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438
+      \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0434\u043E \u043A\u043E\u043D\u0446\u0430
+      \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438. \u041F\u043E\u0441\u0442\u0430\u0440\u0430\u0439\u0441\u044F
+      \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E
+      \u0431\u043E\u043B\u044C\u0448\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432,
+      \u043F\u043E\u043A\u0430 \u0432\u0440\u0435\u043C\u044F \u043D\u0435 \u0438\u0441\u0442\u0435\u043A\u043B\u043E!
+      \u0422\u0430\u043A\u0436\u0435 \u0437\u0430\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u0439
+      \u0432 \u043F\u0440\u0430\u0432\u044B\u0439 \u0432\u0435\u0440\u0445\u043D\u0438\u0439
+      \u0443\u0433\u043E\u043B, \u0447\u0442\u043E\u0431\u044B \u0432\u0438\u0434\u0435\u0442\u044C
+      \u0432\u0441\u0451, \u0447\u0442\u043E \u0443\u0436\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C
+      \u0434\u043E\u0431\u044B\u0442\u044C."
+    _trInfo: "\xD6ncelikle ekran\u0131n \xFCst k\u0131sm\u0131ndaki zamanlay\u0131c\u0131ya
+      dikkat et. Ke\u015Ffin bitmesine ne kadar s\xFCre kald\u0131\u011F\u0131n\u0131
+      g\xF6sterir. S\xFCre dolmadan m\xFCmk\xFCn oldu\u011Funca fazla kaynak toplamaya
+      \xE7al\u0131\u015F! Ayr\u0131ca sa\u011F \xFCst k\xF6\u015Feden \u015Fimdiye
+      kadar toplad\u0131\u011F\u0131n kaynaklar\u0131 takip edebilirsin."
+    _ruSprite: {fileID: 21300000, guid: 2fdb3fede440cbe4a83be5d906f1f8a6, type: 3}
+    _enSprite: {fileID: 21300000, guid: 2fdb3fede440cbe4a83be5d906f1f8a6, type: 3}
+    _trSprite: {fileID: 21300000, guid: 2fdb3fede440cbe4a83be5d906f1f8a6, type: 3}
+    _clip: {fileID: 8300000, guid: 0275d15d9e8ec264289cc07ae09f592f, type: 3}
+  - _order: 3
+    _enInfo: Your space rover is equipped to drill rocks and collect valuable samples.
+      Just drive up to a rock, and it'll do the work automatically! Once it's done,
+      head to the marked collection station to transfer everything to the spaceship.
+    _ruInfo: "\u0422\u0432\u043E\u0439 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u0440\u043E\u0432\u0435\u0440 \u043E\u0441\u043D\u0430\u0449\u0451\u043D \u0431\u0443\u0440\u043E\u043C
+      \u0434\u043B\u044F \u0434\u043E\u0431\u044B\u0447\u0438 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432
+      \u0438\u0437 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0445
+      \u043F\u043E\u0440\u043E\u0434. \u041F\u0440\u043E\u0441\u0442\u043E \u043F\u043E\u0434\u044A\u0435\u0434\u044C
+      \u043A \u043A\u0430\u043C\u043D\u044E, \u0438 \u043E\u043D \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438
+      \u043D\u0430\u0447\u043D\u0451\u0442 \u0434\u043E\u0431\u044B\u0447\u0443!
+      \u041A\u043E\u0433\u0434\u0430 \u0432\u0441\u0451 \u0431\u0443\u0434\u0435\u0442
+      \u0441\u043E\u0431\u0440\u0430\u043D\u043E, \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439\u0441\u044F
+      \u043A \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u043D\u043E\u0439 \u0437\u043E\u043D\u0435
+      \u0432\u044B\u0433\u0440\u0443\u0437\u043A\u0438, \u0447\u0442\u043E\u0431\u044B
+      \u043F\u0435\u0440\u0435\u0434\u0430\u0442\u044C \u0440\u0435\u0441\u0443\u0440\u0441\u044B
+      \u043D\u0430 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u043A\u043E\u0440\u0430\u0431\u043B\u044C."
+    _trInfo: "Uzay arac\u0131n, kayalar\u0131 delip de\u011Ferli kaynaklar\u0131
+      toplamak i\xE7in \xF6zel bir matkapla donat\u0131lm\u0131\u015Ft\u0131r. Bir
+      kayan\u0131n yan\u0131na s\xFCrmen yeterli, gerisini ara\xE7 otomatik olarak
+      halleder! \u0130\u015Fin bitti\u011Finde, toplad\u0131\u011F\u0131n kaynaklar\u0131
+      uzay gemisine aktarmak i\xE7in i\u015Faretli teslim noktas\u0131na git."
+    _ruSprite: {fileID: 21300000, guid: 0aea9222e8c65574397e5ad46c34493b, type: 3}
+    _enSprite: {fileID: 21300000, guid: 0aea9222e8c65574397e5ad46c34493b, type: 3}
+    _trSprite: {fileID: 21300000, guid: 0aea9222e8c65574397e5ad46c34493b, type: 3}
+    _clip: {fileID: 8300000, guid: 5a77d801ea5b0464dbd601945daa1af7, type: 3}
+  - _order: 4
+    _enInfo: While drilling, you might find rare gems worth a fortune! Lucky you!
+      But remember, only your astronaut has the right container to keep them safe.
+      Grab the gems and bring them to the container in the marked zone to secure
+      them properly.
+    _ruInfo: "\u0412\u043E \u0432\u0440\u0435\u043C\u044F \u0434\u043E\u0431\u044B\u0447\u0438
+      \u0442\u0435\u0431\u0435 \u043C\u043E\u0433\u0443\u0442 \u043F\u043E\u043F\u0430\u0441\u0442\u044C\u0441\u044F
+      \u0440\u0435\u0434\u043A\u0438\u0435 \u0434\u0440\u0430\u0433\u043E\u0446\u0435\u043D\u043D\u044B\u0435
+      \u043A\u0430\u043C\u043D\u0438, \u0441\u0442\u043E\u044F\u0449\u0438\u0435
+      \u0446\u0435\u043B\u043E\u0435 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435.
+      \u041F\u043E\u0432\u0435\u0437\u043B\u043E! \u041D\u043E \u043F\u043E\u043C\u043D\u0438:
+      \u0442\u043E\u043B\u044C\u043A\u043E \u0443 \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u0430
+      \u0435\u0441\u0442\u044C \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0439
+      \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440 \u0434\u043B\u044F \u0438\u0445
+      \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0433\u043E \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F.
+      \u041F\u043E\u0434\u0431\u0435\u0440\u0438 \u0441\u0430\u043C\u043E\u0446\u0432\u0435\u0442\u044B
+      \u0438 \u043E\u0442\u043D\u0435\u0441\u0438 \u0438\u0445 \u0432 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440
+      \u0432 \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u043D\u043E\u0439 \u0437\u043E\u043D\u0435,
+      \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C
+      \u0434\u043E\u0431\u044B\u0447\u0443."
+    _trInfo: "Kaz\u0131 s\u0131ras\u0131nda b\xFCy\xFCk de\u011Fer ta\u015F\u0131yan
+      nadir m\xFCcevherler bulabilirsin. \u015Eansl\u0131s\u0131n! Ancak unutma,
+      onlar\u0131 g\xFCvenle ta\u015F\u0131yabilecek \xF6zel kap yaln\u0131zca astronotta
+      bulunur. M\xFCcevherleri topla ve g\xFCvenli \u015Fekilde saklamak i\xE7in
+      i\u015Faretli b\xF6lgedeki konteynere g\xF6t\xFCr."
+    _ruSprite: {fileID: 21300000, guid: b47a87a863b928945a8e64c177b1c53c, type: 3}
+    _enSprite: {fileID: 21300000, guid: b47a87a863b928945a8e64c177b1c53c, type: 3}
+    _trSprite: {fileID: 21300000, guid: b47a87a863b928945a8e64c177b1c53c, type: 3}
+    _clip: {fileID: 8300000, guid: 6f3d70c93df894f46acc7654e9a79ef5, type: 3}
+  - _order: 5
+    _enInfo: Both your rover and astronaut have limited storage! The bars above them
+      show how full they are. Once maxed out, you can't collect more. Make sure to
+      unload resources in time to keep gathering!
+    _ruInfo: "\u0418 \u0443 \u0440\u043E\u0432\u0435\u0440\u0430, \u0438 \u0443 \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u0430
+      \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D\u043E \u043C\u0435\u0441\u0442\u043E
+      \u0434\u043B\u044F \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432!
+      \u041F\u043E\u043B\u043E\u0441\u043A\u0438 \u043D\u0430\u0434 \u043D\u0438\u043C\u0438
+      \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442, \u043D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043E \u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0449\u0435.
+      \u041A\u043E\u0433\u0434\u0430 \u043E\u043D\u043E \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
+      \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E, \u0441\u043E\u0431\u0438\u0440\u0430\u0442\u044C
+      \u043D\u043E\u0432\u044B\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u044B \u0443\u0436\u0435
+      \u043D\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F. \u041D\u0435
+      \u0437\u0430\u0431\u044B\u0432\u0430\u0439 \u0432\u043E\u0432\u0440\u0435\u043C\u044F
+      \u0440\u0430\u0437\u0433\u0440\u0443\u0436\u0430\u0442\u044C\u0441\u044F, \u0447\u0442\u043E\u0431\u044B
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0442\u044C \u0434\u043E\u0431\u044B\u0447\u0443!"
+    _trInfo: "Hem uzay arac\u0131n\u0131n hem de astronotun ta\u015F\u0131ma kapasitesi
+      s\u0131n\u0131rl\u0131d\u0131r! \xDCzerlerindeki g\xF6stergeler depolar\u0131n\u0131n
+      ne kadar dolu oldu\u011Funu g\xF6sterir. Depo tamamen doldu\u011Funda art\u0131k
+      yeni kaynak toplayamazs\u0131n. Madencili\u011Fe devam edebilmek i\xE7in kaynaklar\u0131n\u0131
+      zaman\u0131nda bo\u015Faltmay\u0131 unutma!"
+    _ruSprite: {fileID: 21300000, guid: d2dcc0508e5862e4a9cc52dc0ec0d0ec, type: 3}
+    _enSprite: {fileID: 21300000, guid: d2dcc0508e5862e4a9cc52dc0ec0d0ec, type: 3}
+    _trSprite: {fileID: 21300000, guid: d2dcc0508e5862e4a9cc52dc0ec0d0ec, type: 3}
+    _clip: {fileID: 8300000, guid: a05922a0e10e69245b19a48bccd7ab5d, type: 3}
+  - _order: 6
+    _enInfo: "Hopping into your rover is easy! Just walk your astronaut close, and
+      a glowing circle above their head will fill up. Once full\u2014 you're in.
+      To exit, just hit the button with the door icon. Simple as that!"
+    _ruInfo: "\u0421\u0435\u0441\u0442\u044C \u0432 \u0440\u043E\u0432\u0435\u0440
+      \u043E\u0447\u0435\u043D\u044C \u043F\u0440\u043E\u0441\u0442\u043E! \u041F\u043E\u0434\u043E\u0439\u0434\u0438
+      \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u043E\u043C \u043F\u043E\u0431\u043B\u0438\u0436\u0435,
+      \u0438 \u0441\u0432\u0435\u0442\u044F\u0449\u0438\u0439\u0441\u044F \u043A\u0440\u0443\u0433
+      \u043D\u0430\u0434 \u0435\u0433\u043E \u0433\u043E\u043B\u043E\u0432\u043E\u0439
+      \u043D\u0430\u0447\u043D\u0451\u0442 \u0437\u0430\u043F\u043E\u043B\u043D\u044F\u0442\u044C\u0441\u044F.
+      \u041A\u0430\u043A \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u043D \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
+      \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u2014 \u0442\u044B
+      \u043E\u043A\u0430\u0436\u0435\u0448\u044C\u0441\u044F \u0432\u043D\u0443\u0442\u0440\u0438
+      \u0440\u043E\u0432\u0435\u0440\u0430. \u0427\u0442\u043E\u0431\u044B \u0432\u044B\u0439\u0442\u0438,
+      \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0436\u043C\u0438 \u043A\u043D\u043E\u043F\u043A\u0443
+      \u0441 \u0438\u043A\u043E\u043D\u043A\u043E\u0439 \u0434\u0432\u0435\u0440\u0438.
+      \u0412\u0441\u0451 \u043F\u0440\u043E\u0441\u0442\u043E!"
+    _trInfo: "Araca binmek \xE7ok kolay! Astronotu arac\u0131n yan\u0131na g\xF6t\xFCr;
+      ba\u015F\u0131n\u0131n \xFCzerindeki parlayan daire dolmaya ba\u015Flayacakt\u0131r.
+      Tamamen doldu\u011Funda araca binmi\u015F olursun. \u0130nmek i\xE7in ise kap\u0131
+      simgeli d\xFC\u011Fmeye basman yeterli. Hepsi bu kadar!"
+    _ruSprite: {fileID: 21300000, guid: ee0484dcad17e734cb0b4e220cb3ea10, type: 3}
+    _enSprite: {fileID: 21300000, guid: ee0484dcad17e734cb0b4e220cb3ea10, type: 3}
+    _trSprite: {fileID: 21300000, guid: ee0484dcad17e734cb0b4e220cb3ea10, type: 3}
+    _clip: {fileID: 8300000, guid: fcee0c1180719a347ba610b6d4be6175, type: 3}
+  - _order: 7
+    _enInfo: "Need a break? Tap the pause icon in the top left! The expedition timer
+      will stop, and a pause panel will appear. But beware\u2014if you leave early,
+      your progress won\u2019t be saved, and all collected resources will be lost!
+      Choose wisely."
+    _ruInfo: "\u041D\u0443\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C
+      \u043F\u0430\u0443\u0437\u0443? \u041D\u0430\u0436\u043C\u0438 \u043D\u0430
+      \u0437\u043D\u0430\u0447\u043E\u043A \u043F\u0430\u0443\u0437\u044B \u0432
+      \u043B\u0435\u0432\u043E\u043C \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u0443\u0433\u043B\u0443!
+      \u0422\u0430\u0439\u043C\u0435\u0440 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438
+      \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0441\u044F, \u0438
+      \u043E\u0442\u043A\u0440\u043E\u0435\u0442\u0441\u044F \u043C\u0435\u043D\u044E
+      \u043F\u0430\u0443\u0437\u044B. \u041D\u043E \u0431\u0443\u0434\u044C \u043E\u0441\u0442\u043E\u0440\u043E\u0436\u0435\u043D:
+      \u0435\u0441\u043B\u0438 \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
+      \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u044E \u0440\u0430\u043D\u044C\u0448\u0435
+      \u0432\u0440\u0435\u043C\u0435\u043D\u0438, \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441
+      \u043D\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F,
+      \u0430 \u0432\u0441\u0435 \u0441\u043E\u0431\u0440\u0430\u043D\u043D\u044B\u0435
+      \u0440\u0435\u0441\u0443\u0440\u0441\u044B \u0431\u0443\u0434\u0443\u0442 \u043F\u043E\u0442\u0435\u0440\u044F\u043D\u044B.
+      \u0420\u0435\u0448\u0430\u0439 \u0441 \u0443\u043C\u043E\u043C!"
+    _trInfo: "Mola m\u0131 vermek istiyorsun? Sol \xFCst k\xF6\u015Fedeki duraklatma
+      simgesine dokun! Ke\u015Fif zamanlay\u0131c\u0131s\u0131 duracak ve duraklatma
+      men\xFCs\xFC a\xE7\u0131lacakt\u0131r. Ancak dikkatli ol: Ke\u015Ffi erken
+      sonland\u0131r\u0131rsan ilerlemen kaydedilmez ve toplad\u0131\u011F\u0131n
+      t\xFCm kaynaklar\u0131 kaybedersin. Karar\u0131n\u0131 dikkatlice ver!"
+    _ruSprite: {fileID: 21300000, guid: d09048a22f3b3fb4ca6dbe9188bb42e3, type: 3}
+    _enSprite: {fileID: 21300000, guid: 1c9750e179d6a8d4d976e290087ad124, type: 3}
+    _trSprite: {fileID: 21300000, guid: f156d04bc49b02448b0b4d0c393d5581, type: 3}
+    _clip: {fileID: 8300000, guid: 24220aa5dbf37214b8a31165e5367171, type: 3}
+  - _order: 8
+    _enInfo: "And that\u2019s it mate! Hope this intro sets you up for a stellar
+      start on your mining expeditions. Best of luck, and may your drills strike
+      riches!"
+    _ruInfo: "\u0412\u043E\u0442 \u0438 \u0432\u0441\u0451! \u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F,
+      \u044D\u0442\u043E \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E
+      \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u0442\u0435\u0431\u0435 \u0443\u0432\u0435\u0440\u0435\u043D\u043D\u043E
+      \u043D\u0430\u0447\u0430\u0442\u044C \u0441\u0432\u043E\u0438 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+      \u0434\u043E\u0431\u044B\u0432\u0430\u044E\u0449\u0438\u0435 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438.
+      \u0423\u0434\u0430\u0447\u0438, \u0438 \u043F\u0443\u0441\u0442\u044C \u043A\u0430\u0436\u0434\u043E\u0435
+      \u0431\u0443\u0440\u0435\u043D\u0438\u0435 \u043F\u0440\u0438\u043D\u043E\u0441\u0438\u0442
+      \u0431\u043E\u0433\u0430\u0442\u0443\u044E \u0434\u043E\u0431\u044B\u0447\u0443!"
+    _trInfo: "\u0130\u015Fte bu kadar! Umar\u0131z bu k\u0131sa e\u011Fitim seni
+      uzay madencili\u011Fi macerana haz\u0131rlam\u0131\u015Ft\u0131r. Bol \u015Fans
+      ve matkab\u0131n her zaman zengin kaynaklara ula\u015Fs\u0131n!"
+    _ruSprite: {fileID: 21300000, guid: 3dbb466d137c68c4b89f3606cd5497fa, type: 3}
+    _enSprite: {fileID: 21300000, guid: 3dbb466d137c68c4b89f3606cd5497fa, type: 3}
+    _trSprite: {fileID: 21300000, guid: 3dbb466d137c68c4b89f3606cd5497fa, type: 3}
+    _clip: {fileID: 8300000, guid: 9b60cb115769f1c409f82e218b0bde11, type: 3}
+  _cardView:
+    _text: {fileID: 4180835877682708462}
+    _image: {fileID: 3414948302165506882}
+    _audio: {fileID: 5612463790412434728}
+  _animator:
+    _underlyingValue: {fileID: 4796276555229164185}
+  _window:
+    _canvasGroup: {fileID: 2421543230904605536}
+  _actionButton: {fileID: 1371964960500615910}
+  _exitIcon: {fileID: 21300000, guid: 1c4cc3242e0544967b6eb69d898a306c, type: 3}
+  _actionButtonIcon: {fileID: 8494204844811497130}
+--- !u!225 &2421543230904605536
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007615451594964206}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!222 &2565326112309041645
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007615451594964206}
+  m_CullTransparentMesh: 1
+--- !u!1 &8097358226351284058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6373230143101045092}
+  - component: {fileID: 6037565995760222436}
+  - component: {fileID: 3414948302165506882}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6373230143101045092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097358226351284058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5729769099763643613}
+  m_Father: {fileID: 657084681980227116}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.1, y: 0.464898}
+  m_AnchorMax: {x: 0.9, y: 0.87}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6037565995760222436
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097358226351284058}
+  m_CullTransparentMesh: 1
+--- !u!114 &3414948302165506882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097358226351284058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8986558019215873596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2429746105576047288}
+  - component: {fileID: 7212414107102012386}
+  - component: {fileID: 4180835877682708462}
+  m_Layer: 0
+  m_Name: Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2429746105576047288
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8986558019215873596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657084681980227116}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.1, y: 0.18265305}
+  m_AnchorMax: {x: 0.9, y: 0.43938777}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7212414107102012386
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8986558019215873596}
+  m_CullTransparentMesh: 1
+--- !u!114 &4180835877682708462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8986558019215873596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -1015,10 +1295,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u043E\u0431\u0440\u0430\u0442\u0438
+    \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043D\u0430 \u0442\u0430\u0439\u043C\u0435\u0440
+    \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u0439 \u0447\u0430\u0441\u0442\u0438
+    \u044D\u043A\u0440\u0430\u043D\u0430 \u2014 \u043E\u043D \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442,
+    \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438
+    \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0434\u043E \u043A\u043E\u043D\u0446\u0430
+    \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438. \u041F\u043E\u0441\u0442\u0430\u0440\u0430\u0439\u0441\u044F
+    \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432,
+    \u043F\u043E\u043A\u0430 \u0432\u0440\u0435\u043C\u044F \u043D\u0435 \u0438\u0441\u0442\u0435\u043A\u043B\u043E!
+    \u0422\u0430\u043A\u0436\u0435 \u0437\u0430\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u0439
+    \u0432 \u043F\u0440\u0430\u0432\u044B\u0439 \u0432\u0435\u0440\u0445\u043D\u0438\u0439
+    \u0443\u0433\u043E\u043B, \u0447\u0442\u043E\u0431\u044B \u0432\u0438\u0434\u0435\u0442\u044C
+    \u0432\u0441\u0451, \u0447\u0442\u043E \u0443\u0436\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C
+    \u0434\u043E\u0431\u044B\u0442\u044C."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7659f6d6ec9b642db8be29bc45fe97cc, type: 2}
-  m_sharedMaterial: {fileID: 8690591861142563998, guid: 7659f6d6ec9b642db8be29bc45fe97cc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4a6f87385a7ec1641832d259ea5dd8c4, type: 2}
+  m_sharedMaterial: {fileID: 1610213997130843954, guid: 4a6f87385a7ec1641832d259ea5dd8c4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1042,12 +1336,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41
+  m_fontSize: 42.9
   m_fontSizeBase: 41
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 36
-  m_fontSizeMax: 42
+  m_fontSizeMin: 10
+  m_fontSizeMax: 56
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1084,468 +1378,3 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &6539068689919615264
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 281346072819834052}
-  - component: {fileID: 1800400070198787277}
-  - component: {fileID: 1353149330952581637}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &281346072819834052
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6539068689919615264}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3934457557740552756}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -70, y: -70}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1800400070198787277
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6539068689919615264}
-  m_CullTransparentMesh: 1
---- !u!114 &1353149330952581637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6539068689919615264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6be115246fe9b40b8b37ad9f4e2be66a, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &7910999946459024140
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5456731313041533977}
-  - component: {fileID: 9068937720083167506}
-  - component: {fileID: 374710673887948356}
-  m_Layer: 5
-  m_Name: Blur Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5456731313041533977
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7910999946459024140}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3097837550758762134}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &9068937720083167506
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7910999946459024140}
-  m_CullTransparentMesh: 1
---- !u!114 &374710673887948356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7910999946459024140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: bce99f746a3cfd14888b309da3fe7302, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &8007615451594964206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8334402934498729915}
-  - component: {fileID: 6670513345013605307}
-  m_Layer: 0
-  m_Name: Tutorial Window
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8334402934498729915
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007615451594964206}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8320482386844085066}
-  - {fileID: 7335152380034160108}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6670513345013605307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007615451594964206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb97b5456bfc5440ab49a46c9018038, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cards:
-  - _order: 1
-    _enInfo: Welcome to Orbital Extraction, space traveler. Your mission? To gather
-      as many resources as possible before the expedition timer runs out. You'll
-      be controlling an astronaut, and their trusty rover, extracting valuable materials
-      from space rocks.
-    _ruInfo: "\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C
-      \u0432 \xABOrbital Extraction\xBB, \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
-      \u043F\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u0438\u043A!
-      \u0422\u0432\u043E\u044F \u0437\u0430\u0434\u0430\u0447\u0430 \u2014 \u0441\u043E\u0431\u0440\u0430\u0442\u044C
-      \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E \u0431\u043E\u043B\u044C\u0448\u0435
-      \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432 \u0434\u043E \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F
-      \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438.
-      \u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u0442\u044C
-      \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u043E\u043C \u0438 \u0435\u0433\u043E
-      \u0432\u0435\u0440\u043D\u044B\u043C \u0440\u043E\u0432\u0435\u0440\u043E\u043C,
-      \u0434\u043E\u0431\u044B\u0432\u0430\u044F \u0446\u0435\u043D\u043D\u044B\u0435
-      \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B \u0438\u0437 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0445
-      \u043F\u043E\u0440\u043E\u0434."
-    _trInfo: "Orbital Extraction'a ho\u015F geldin, uzay gezgini! G\xF6revin, ke\u015Fif
-      s\xFCresi dolmadan m\xFCmk\xFCn oldu\u011Funca fazla kaynak toplamak. Bir astronotu
-      ve onun g\xFCvenilir gezgin arac\u0131n\u0131 kontrol ederek uzay kayalar\u0131ndan
-      de\u011Ferli kaynaklar \xE7\u0131karacaks\u0131n."
-    _sprite: {fileID: 21300000, guid: 831f3ff01659fd64dba9b0827d380173, type: 3}
-    _clip: {fileID: 8300000, guid: 494b5504efcd60f44a42328443f3d11a, type: 3}
-  - _order: 2
-    _enInfo: "First, keep an eye on the timer at the top of your screen\u2014it shows
-      how much time you have left on this expedition. Gather as many resources as
-      possible before it hits zero! Also, check the top-right corner to see what
-      you've already collected."
-    _ruInfo: "\u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u043E\u0431\u0440\u0430\u0442\u0438
-      \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043D\u0430 \u0442\u0430\u0439\u043C\u0435\u0440
-      \u0432 \u0432\u0435\u0440\u0445\u043D\u0435\u0439 \u0447\u0430\u0441\u0442\u0438
-      \u044D\u043A\u0440\u0430\u043D\u0430 \u2014 \u043E\u043D \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442,
-      \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438
-      \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0434\u043E \u043A\u043E\u043D\u0446\u0430
-      \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438. \u041F\u043E\u0441\u0442\u0430\u0440\u0430\u0439\u0441\u044F
-      \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E
-      \u0431\u043E\u043B\u044C\u0448\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432,
-      \u043F\u043E\u043A\u0430 \u0432\u0440\u0435\u043C\u044F \u043D\u0435 \u0438\u0441\u0442\u0435\u043A\u043B\u043E!
-      \u0422\u0430\u043A\u0436\u0435 \u0437\u0430\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u0439
-      \u0432 \u043F\u0440\u0430\u0432\u044B\u0439 \u0432\u0435\u0440\u0445\u043D\u0438\u0439
-      \u0443\u0433\u043E\u043B, \u0447\u0442\u043E\u0431\u044B \u0432\u0438\u0434\u0435\u0442\u044C
-      \u0432\u0441\u0451, \u0447\u0442\u043E \u0443\u0436\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C
-      \u0434\u043E\u0431\u044B\u0442\u044C."
-    _trInfo: "\xD6ncelikle ekran\u0131n \xFCst k\u0131sm\u0131ndaki zamanlay\u0131c\u0131ya
-      dikkat et. Ke\u015Ffin bitmesine ne kadar s\xFCre kald\u0131\u011F\u0131n\u0131
-      g\xF6sterir. S\xFCre dolmadan m\xFCmk\xFCn oldu\u011Funca fazla kaynak toplamaya
-      \xE7al\u0131\u015F! Ayr\u0131ca sa\u011F \xFCst k\xF6\u015Feden \u015Fimdiye
-      kadar toplad\u0131\u011F\u0131n kaynaklar\u0131 takip edebilirsin."
-    _sprite: {fileID: 21300000, guid: 2fdb3fede440cbe4a83be5d906f1f8a6, type: 3}
-    _clip: {fileID: 8300000, guid: 0275d15d9e8ec264289cc07ae09f592f, type: 3}
-  - _order: 3
-    _enInfo: Your space rover is equipped to drill rocks and collect valuable samples.
-      Just drive up to a rock, and it'll do the work automatically! Once it's done,
-      head to the marked collection station to transfer everything to the spaceship.
-    _ruInfo: "\u0422\u0432\u043E\u0439 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
-      \u0440\u043E\u0432\u0435\u0440 \u043E\u0441\u043D\u0430\u0449\u0451\u043D \u0431\u0443\u0440\u043E\u043C
-      \u0434\u043B\u044F \u0434\u043E\u0431\u044B\u0447\u0438 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432
-      \u0438\u0437 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0445
-      \u043F\u043E\u0440\u043E\u0434. \u041F\u0440\u043E\u0441\u0442\u043E \u043F\u043E\u0434\u044A\u0435\u0434\u044C
-      \u043A \u043A\u0430\u043C\u043D\u044E, \u0438 \u043E\u043D \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438
-      \u043D\u0430\u0447\u043D\u0451\u0442 \u0434\u043E\u0431\u044B\u0447\u0443!
-      \u041A\u043E\u0433\u0434\u0430 \u0432\u0441\u0451 \u0431\u0443\u0434\u0435\u0442
-      \u0441\u043E\u0431\u0440\u0430\u043D\u043E, \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439\u0441\u044F
-      \u043A \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u043D\u043E\u0439 \u0437\u043E\u043D\u0435
-      \u0432\u044B\u0433\u0440\u0443\u0437\u043A\u0438, \u0447\u0442\u043E\u0431\u044B
-      \u043F\u0435\u0440\u0435\u0434\u0430\u0442\u044C \u0440\u0435\u0441\u0443\u0440\u0441\u044B
-      \u043D\u0430 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
-      \u043A\u043E\u0440\u0430\u0431\u043B\u044C."
-    _trInfo: "Uzay arac\u0131n, kayalar\u0131 delip de\u011Ferli kaynaklar\u0131
-      toplamak i\xE7in \xF6zel bir matkapla donat\u0131lm\u0131\u015Ft\u0131r. Bir
-      kayan\u0131n yan\u0131na s\xFCrmen yeterli, gerisini ara\xE7 otomatik olarak
-      halleder! \u0130\u015Fin bitti\u011Finde, toplad\u0131\u011F\u0131n kaynaklar\u0131
-      uzay gemisine aktarmak i\xE7in i\u015Faretli teslim noktas\u0131na git."
-    _sprite: {fileID: 21300000, guid: 0aea9222e8c65574397e5ad46c34493b, type: 3}
-    _clip: {fileID: 8300000, guid: 5a77d801ea5b0464dbd601945daa1af7, type: 3}
-  - _order: 4
-    _enInfo: While drilling, you might find rare gems worth a fortune! Lucky you!
-      But remember, only your astronaut has the right container to keep them safe.
-      Grab the gems and bring them to the container in the marked zone to secure
-      them properly.
-    _ruInfo: "\u0412\u043E \u0432\u0440\u0435\u043C\u044F \u0434\u043E\u0431\u044B\u0447\u0438
-      \u0442\u0435\u0431\u0435 \u043C\u043E\u0433\u0443\u0442 \u043F\u043E\u043F\u0430\u0441\u0442\u044C\u0441\u044F
-      \u0440\u0435\u0434\u043A\u0438\u0435 \u0434\u0440\u0430\u0433\u043E\u0446\u0435\u043D\u043D\u044B\u0435
-      \u043A\u0430\u043C\u043D\u0438, \u0441\u0442\u043E\u044F\u0449\u0438\u0435
-      \u0446\u0435\u043B\u043E\u0435 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435.
-      \u041F\u043E\u0432\u0435\u0437\u043B\u043E! \u041D\u043E \u043F\u043E\u043C\u043D\u0438:
-      \u0442\u043E\u043B\u044C\u043A\u043E \u0443 \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u0430
-      \u0435\u0441\u0442\u044C \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0439
-      \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440 \u0434\u043B\u044F \u0438\u0445
-      \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0433\u043E \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F.
-      \u041F\u043E\u0434\u0431\u0435\u0440\u0438 \u0441\u0430\u043C\u043E\u0446\u0432\u0435\u0442\u044B
-      \u0438 \u043E\u0442\u043D\u0435\u0441\u0438 \u0438\u0445 \u0432 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440
-      \u0432 \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u043D\u043E\u0439 \u0437\u043E\u043D\u0435,
-      \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C
-      \u0434\u043E\u0431\u044B\u0447\u0443."
-    _trInfo: "Kaz\u0131 s\u0131ras\u0131nda b\xFCy\xFCk de\u011Fer ta\u015F\u0131yan
-      nadir m\xFCcevherler bulabilirsin. \u015Eansl\u0131s\u0131n! Ancak unutma,
-      onlar\u0131 g\xFCvenle ta\u015F\u0131yabilecek \xF6zel kap yaln\u0131zca astronotta
-      bulunur. M\xFCcevherleri topla ve g\xFCvenli \u015Fekilde saklamak i\xE7in
-      i\u015Faretli b\xF6lgedeki konteynere g\xF6t\xFCr."
-    _sprite: {fileID: 21300000, guid: b47a87a863b928945a8e64c177b1c53c, type: 3}
-    _clip: {fileID: 8300000, guid: 6f3d70c93df894f46acc7654e9a79ef5, type: 3}
-  - _order: 5
-    _enInfo: Both your rover and astronaut have limited storage! The bars above them
-      show how full they are. Once maxed out, you can't collect more. Make sure to
-      unload resources in time to keep gathering!
-    _ruInfo: "\u0418 \u0443 \u0440\u043E\u0432\u0435\u0440\u0430, \u0438 \u0443 \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u0430
-      \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D\u043E \u043C\u0435\u0441\u0442\u043E
-      \u0434\u043B\u044F \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u044F \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432!
-      \u041F\u043E\u043B\u043E\u0441\u043A\u0438 \u043D\u0430\u0434 \u043D\u0438\u043C\u0438
-      \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442, \u043D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E
-      \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043E \u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0449\u0435.
-      \u041A\u043E\u0433\u0434\u0430 \u043E\u043D\u043E \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
-      \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E, \u0441\u043E\u0431\u0438\u0440\u0430\u0442\u044C
-      \u043D\u043E\u0432\u044B\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u044B \u0443\u0436\u0435
-      \u043D\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F. \u041D\u0435
-      \u0437\u0430\u0431\u044B\u0432\u0430\u0439 \u0432\u043E\u0432\u0440\u0435\u043C\u044F
-      \u0440\u0430\u0437\u0433\u0440\u0443\u0436\u0430\u0442\u044C\u0441\u044F, \u0447\u0442\u043E\u0431\u044B
-      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0442\u044C \u0434\u043E\u0431\u044B\u0447\u0443!"
-    _trInfo: "Hem uzay arac\u0131n\u0131n hem de astronotun ta\u015F\u0131ma kapasitesi
-      s\u0131n\u0131rl\u0131d\u0131r! \xDCzerlerindeki g\xF6stergeler depolar\u0131n\u0131n
-      ne kadar dolu oldu\u011Funu g\xF6sterir. Depo tamamen doldu\u011Funda art\u0131k
-      yeni kaynak toplayamazs\u0131n. Madencili\u011Fe devam edebilmek i\xE7in kaynaklar\u0131n\u0131
-      zaman\u0131nda bo\u015Faltmay\u0131 unutma!"
-    _sprite: {fileID: 21300000, guid: 31e5150157dbf0140bc915866ad3cab8, type: 3}
-    _clip: {fileID: 8300000, guid: a05922a0e10e69245b19a48bccd7ab5d, type: 3}
-  - _order: 6
-    _enInfo: "Hopping into your rover is easy! Just walk your astronaut close, and
-      a glowing circle above their head will fill up. Once full\u2014 you're in.
-      To exit, just hit the button with the door icon. Simple as that!"
-    _ruInfo: "\u0421\u0435\u0441\u0442\u044C \u0432 \u0440\u043E\u0432\u0435\u0440
-      \u043E\u0447\u0435\u043D\u044C \u043F\u0440\u043E\u0441\u0442\u043E! \u041F\u043E\u0434\u043E\u0439\u0434\u0438
-      \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u043E\u043C \u043F\u043E\u0431\u043B\u0438\u0436\u0435,
-      \u0438 \u0441\u0432\u0435\u0442\u044F\u0449\u0438\u0439\u0441\u044F \u043A\u0440\u0443\u0433
-      \u043D\u0430\u0434 \u0435\u0433\u043E \u0433\u043E\u043B\u043E\u0432\u043E\u0439
-      \u043D\u0430\u0447\u043D\u0451\u0442 \u0437\u0430\u043F\u043E\u043B\u043D\u044F\u0442\u044C\u0441\u044F.
-      \u041A\u0430\u043A \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u043D \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
-      \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u2014 \u0442\u044B
-      \u043E\u043A\u0430\u0436\u0435\u0448\u044C\u0441\u044F \u0432\u043D\u0443\u0442\u0440\u0438
-      \u0440\u043E\u0432\u0435\u0440\u0430. \u0427\u0442\u043E\u0431\u044B \u0432\u044B\u0439\u0442\u0438,
-      \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0436\u043C\u0438 \u043A\u043D\u043E\u043F\u043A\u0443
-      \u0441 \u0438\u043A\u043E\u043D\u043A\u043E\u0439 \u0434\u0432\u0435\u0440\u0438.
-      \u0412\u0441\u0451 \u043F\u0440\u043E\u0441\u0442\u043E!"
-    _trInfo: "Araca binmek \xE7ok kolay! Astronotu arac\u0131n yan\u0131na g\xF6t\xFCr;
-      ba\u015F\u0131n\u0131n \xFCzerindeki parlayan daire dolmaya ba\u015Flayacakt\u0131r.
-      Tamamen doldu\u011Funda araca binmi\u015F olursun. \u0130nmek i\xE7in ise kap\u0131
-      simgeli d\xFC\u011Fmeye basman yeterli. Hepsi bu kadar!"
-    _sprite: {fileID: 21300000, guid: 2eeedd495e7c05343a36606e9b69fc7e, type: 3}
-    _clip: {fileID: 8300000, guid: fcee0c1180719a347ba610b6d4be6175, type: 3}
-  - _order: 7
-    _enInfo: "Need a break? Tap the pause icon in the top left! The expedition timer
-      will stop, and a pause panel will appear. But beware\u2014if you leave early,
-      your progress won\u2019t be saved, and all collected resources will be lost!
-      Choose wisely."
-    _ruInfo: "\u041D\u0443\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C
-      \u043F\u0430\u0443\u0437\u0443? \u041D\u0430\u0436\u043C\u0438 \u043D\u0430
-      \u0437\u043D\u0430\u0447\u043E\u043A \u043F\u0430\u0443\u0437\u044B \u0432
-      \u043B\u0435\u0432\u043E\u043C \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u0443\u0433\u043B\u0443!
-      \u0422\u0430\u0439\u043C\u0435\u0440 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438
-      \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0441\u044F, \u0438
-      \u043E\u0442\u043A\u0440\u043E\u0435\u0442\u0441\u044F \u043C\u0435\u043D\u044E
-      \u043F\u0430\u0443\u0437\u044B. \u041D\u043E \u0431\u0443\u0434\u044C \u043E\u0441\u0442\u043E\u0440\u043E\u0436\u0435\u043D:
-      \u0435\u0441\u043B\u0438 \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C
-      \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u044E \u0440\u0430\u043D\u044C\u0448\u0435
-      \u0432\u0440\u0435\u043C\u0435\u043D\u0438, \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441
-      \u043D\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F,
-      \u0430 \u0432\u0441\u0435 \u0441\u043E\u0431\u0440\u0430\u043D\u043D\u044B\u0435
-      \u0440\u0435\u0441\u0443\u0440\u0441\u044B \u0431\u0443\u0434\u0443\u0442 \u043F\u043E\u0442\u0435\u0440\u044F\u043D\u044B.
-      \u0420\u0435\u0448\u0430\u0439 \u0441 \u0443\u043C\u043E\u043C!"
-    _trInfo: "Mola m\u0131 vermek istiyorsun? Sol \xFCst k\xF6\u015Fedeki duraklatma
-      simgesine dokun! Ke\u015Fif zamanlay\u0131c\u0131s\u0131 duracak ve duraklatma
-      men\xFCs\xFC a\xE7\u0131lacakt\u0131r. Ancak dikkatli ol: Ke\u015Ffi erken
-      sonland\u0131r\u0131rsan ilerlemen kaydedilmez ve toplad\u0131\u011F\u0131n
-      t\xFCm kaynaklar\u0131 kaybedersin. Karar\u0131n\u0131 dikkatlice ver!"
-    _sprite: {fileID: 21300000, guid: 1c9750e179d6a8d4d976e290087ad124, type: 3}
-    _clip: {fileID: 8300000, guid: 24220aa5dbf37214b8a31165e5367171, type: 3}
-  - _order: 8
-    _enInfo: "And that\u2019s it mate! Hope this intro sets you up for a stellar
-      start on your mining expeditions. Best of luck, and may your drills strike
-      riches!"
-    _ruInfo: "\u0412\u043E\u0442 \u0438 \u0432\u0441\u0451! \u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F,
-      \u044D\u0442\u043E \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E
-      \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u0442\u0435\u0431\u0435 \u0443\u0432\u0435\u0440\u0435\u043D\u043D\u043E
-      \u043D\u0430\u0447\u0430\u0442\u044C \u0441\u0432\u043E\u0438 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0435
-      \u0434\u043E\u0431\u044B\u0432\u0430\u044E\u0449\u0438\u0435 \u044D\u043A\u0441\u043F\u0435\u0434\u0438\u0446\u0438\u0438.
-      \u0423\u0434\u0430\u0447\u0438, \u0438 \u043F\u0443\u0441\u0442\u044C \u043A\u0430\u0436\u0434\u043E\u0435
-      \u0431\u0443\u0440\u0435\u043D\u0438\u0435 \u043F\u0440\u0438\u043D\u043E\u0441\u0438\u0442
-      \u0431\u043E\u0433\u0430\u0442\u0443\u044E \u0434\u043E\u0431\u044B\u0447\u0443!"
-    _trInfo: "\u0130\u015Fte bu kadar! Umar\u0131z bu k\u0131sa e\u011Fitim seni
-      uzay madencili\u011Fi macerana haz\u0131rlam\u0131\u015Ft\u0131r. Bol \u015Fans
-      ve matkab\u0131n her zaman zengin kaynaklara ula\u015Fs\u0131n!"
-    _sprite: {fileID: 21300000, guid: 3dbb466d137c68c4b89f3606cd5497fa, type: 3}
-    _clip: {fileID: 8300000, guid: 9b60cb115769f1c409f82e218b0bde11, type: 3}
-  _cardView:
-    _text: {fileID: 8163440496131027473}
-    _image: {fileID: 1127871723600732097}
-    _audio: {fileID: 5612463790412434728}
-  _animator:
-    _underlyingValue: {fileID: 5235083053464906130}
-  _window:
-    _canvasGroup: {fileID: 8095255556117724082}
-  _actionButton: {fileID: 2406419591458219818}
-  _exitIcon: {fileID: 21300000, guid: 1c4cc3242e0544967b6eb69d898a306c, type: 3}
-  _actionButtonIcon: {fileID: 8815664099885123652}
---- !u!1 &8401525585778943029
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3097837550758762134}
-  - component: {fileID: 6143637434358040355}
-  - component: {fileID: 8095255556117724082}
-  m_Layer: 5
-  m_Name: Tutorial
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3097837550758762134
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401525585778943029}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5456731313041533977}
-  - {fileID: 3934457557740552756}
-  m_Father: {fileID: 8320482386844085066}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6143637434358040355
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401525585778943029}
-  m_CullTransparentMesh: 1
---- !u!225 &8095255556117724082
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401525585778943029}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
