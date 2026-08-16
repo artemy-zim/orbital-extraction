@@ -58,22 +58,7 @@ MonoBehaviour:
     isInvertSortOrder: 0
     decimalOffset: 0
     type: numeric
-    players:
-    - rank: 1
-      name: 223Player
-      score: 90
-      photo: https://games-sdk.yandex.ru/games/api/sdk/v1/player/avatar/0/islands-retina-small
-      uniqueID: 001
-    - rank: 2
-      name: Ivan
-      score: 40
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 321
-    - rank: 3
-      name: Tanya
-      score: 23
-      photo: https://justplaygames.ru/public/icon_player.png
-      uniqueID: 456
+    players: []
     thisPlayer:
       rank: 12
       score: 4542
@@ -205,7 +190,7 @@ MonoBehaviour:
   fonts:
     defaultFont: []
     ru:
-    - {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    - {fileID: 12800000, guid: 3c3c25bde870fb24ea6f5784a3a3f8ae, type: 3}
     en: []
     tr: []
     az: []
@@ -234,12 +219,13 @@ MonoBehaviour:
     hi: []
   fontsTMP:
     defaultFont:
-    - {fileID: 11400000, guid: 9a2157e1f9c4c4d38841fbb92558f587, type: 2}
+    - {fileID: 11400000, guid: c2f49fe8c22d94f9a9e6cd06ad490155, type: 2}
     ru:
-    - {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
-    en: []
+    - {fileID: 11400000, guid: 4a6f87385a7ec1641832d259ea5dd8c4, type: 2}
+    en:
+    - {fileID: 11400000, guid: c2f49fe8c22d94f9a9e6cd06ad490155, type: 2}
     tr:
-    - {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
+    - {fileID: 11400000, guid: 4a6f87385a7ec1641832d259ea5dd8c4, type: 2}
     az: []
     be: []
     he: []
@@ -326,5 +312,5 @@ MonoBehaviour:
   archivingBuild: 1
   logoImageFormat: 1
   backgroundImageFormat: 3
-  pixelRatioEnable: 0
-  pixelRatioValue: 1
+  pixelRatioEnable: 1
+  pixelRatioValue: 1.5

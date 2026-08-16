@@ -1,7 +1,7 @@
 {
-  "idSave": 39,
+  "idSave": 53,
   "isFirstSession": false,
-  "language": "en",
+  "language": "ru",
   "promptDone": false,
   "money": 1,
   "newPlayerName": "Hello!",
@@ -10,10 +10,10 @@
     true,
     false
   ],
-  "gems": 179,
+  "gems": 230,
   "isNewPlayer": false,
   "levelScores": [
-    0,
+    900,
     0,
     0,
     0,
@@ -29,7 +29,17 @@
     1,
     1,
     1,
-    1
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    3
   ],
   "boughtDrillIds": [
     1,
@@ -39,8 +49,17 @@
     1,
     1,
     1,
-    1
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2
   ],
-  "lastShopAdDate": "2026-04-24",
+  "lastShopAdDate": "2026-08-07",
   "shopAdViewsToday": 1
 }
