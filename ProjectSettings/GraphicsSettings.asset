@@ -33,7 +33,8 @@ GraphicsSettings:
   - {fileID: 15106, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_PreloadedShaders: []
+  m_PreloadedShaders:
+  - {fileID: 20000000, guid: c875e86fe6c63834d843a0c70827c792, type: 2}
   m_PreloadShadersBatchTimeLimit: -1
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_CustomRenderPipeline: {fileID: 0}
@@ -67,14 +68,14 @@ GraphicsSettings:
       renderingPath: 1
       hdrMode: 1
       realtimeGICPUUsage: 25
-      useReflectionProbeBoxProjection: 1
-      useReflectionProbeBlending: 1
+      useReflectionProbeBoxProjection: 0
+      useReflectionProbeBlending: 0
       useHDR: 0
-      useDetailNormalMap: 1
+      useDetailNormalMap: 0
       useCascadedShadowMaps: 0
       prefer32BitShadowMaps: 0
       enableLPPV: 0
-      useDitherMaskForAlphaBlendedShadows: 1
+      useDitherMaskForAlphaBlendedShadows: 0
     m_Automatic: 0
   - serializedVersion: 5
     m_BuildTarget: 13
@@ -84,14 +85,14 @@ GraphicsSettings:
       renderingPath: 1
       hdrMode: 1
       realtimeGICPUUsage: 25
-      useReflectionProbeBoxProjection: 1
-      useReflectionProbeBlending: 1
+      useReflectionProbeBoxProjection: 0
+      useReflectionProbeBlending: 0
       useHDR: 0
-      useDetailNormalMap: 1
+      useDetailNormalMap: 0
       useCascadedShadowMaps: 0
       prefer32BitShadowMaps: 0
       enableLPPV: 0
-      useDitherMaskForAlphaBlendedShadows: 1
+      useDitherMaskForAlphaBlendedShadows: 0
     m_Automatic: 0
   - serializedVersion: 5
     m_BuildTarget: 13
@@ -101,14 +102,14 @@ GraphicsSettings:
       renderingPath: 1
       hdrMode: 1
       realtimeGICPUUsage: 25
-      useReflectionProbeBoxProjection: 1
-      useReflectionProbeBlending: 1
+      useReflectionProbeBoxProjection: 0
+      useReflectionProbeBlending: 0
       useHDR: 0
-      useDetailNormalMap: 1
+      useDetailNormalMap: 0
       useCascadedShadowMaps: 0
       prefer32BitShadowMaps: 0
       enableLPPV: 0
-      useDitherMaskForAlphaBlendedShadows: 1
+      useDitherMaskForAlphaBlendedShadows: 0
     m_Automatic: 0
   m_LightmapStripping: 0
   m_FogStripping: 0
