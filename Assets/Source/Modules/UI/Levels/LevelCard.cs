@@ -1,6 +1,7 @@
 using System;
 using Tymski;
 using UnityEngine;
+using YG;
 
 [Serializable]
 public class LevelCard
